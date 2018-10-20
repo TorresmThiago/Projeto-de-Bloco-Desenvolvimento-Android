@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorYellow"/>
-
     <ImageView
         android:id="@+id/menuBackground"
         android:layout_width="match_parent"
