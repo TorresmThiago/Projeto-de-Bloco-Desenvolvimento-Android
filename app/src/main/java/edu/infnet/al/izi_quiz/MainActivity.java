@@ -1,20 +1,19 @@
 package edu.infnet.al.izi_quiz;
 
-import android.animation.Animator;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     ImageView image;
+    Fragment menuPrincipal = new MenuPrincipal();
+    Fragment menuOpcoes = new MenuOpcoes();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +23,25 @@ public class MainActivity extends AppCompatActivity {
         image = findViewById(R.id.menuBackground);
 
         animateBackground();
+        replaceFragment(menuPrincipal);
+    }
+
+    public void goToMenuPrincipal(View view) {
+        replaceFragment(menuPrincipal);
+    }
+
+    public void goToMenuOpcoes(View view) {
+        replaceFragment(menuOpcoes);
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+//        transaction.remove()
+        transaction.replace(R.id.menuFragments, fragment);
+        transaction.addToBackStack(null);
+
+        transaction.commit();
     }
 
     public void animateBackground() {
@@ -45,5 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         animator.start();
     }
+
+
 
 }

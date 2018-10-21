@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
 
     <ImageView
         android:id="@+id/menuBackground"
@@ -17,25 +18,12 @@
         android:background="@drawable/ic_main_background"
         tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/menuLogo"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/ic_main_logo"
-        android:contentDescription="@string/app_name" />
+    <RelativeLayout
+        android:id="@+id/menuFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/menuJogarButton"
-        android:layout_below="@+id/menuLogo"
-        android:text="@string/jogarButtonText"
-        style="@style/menuButton" />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/menuOpcoesButton"
-        android:layout_below="@+id/menuJogarButton"
-        android:text="@string/opcoesButtonText"
-        style="@style/menuButton" />
 
 </RelativeLayout>
