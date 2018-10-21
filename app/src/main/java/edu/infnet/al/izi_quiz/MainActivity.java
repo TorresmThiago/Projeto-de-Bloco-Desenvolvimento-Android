@@ -27,17 +27,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void animateBackground() {
-        ValueAnimator animator = ValueAnimator.ofFloat(0, 1);
+        ValueAnimator animator = ValueAnimator.ofFloat(-1, 1);
         animator.setDuration(10000);
         animator.setRepeatCount(-1);
-        animator.setRepeatMode(ValueAnimator.REVERSE);
+        animator.setRepeatMode(ValueAnimator.RESTART);
+        animator.setInterpolator(null);
 
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener()
         {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (Float) (animation.getAnimatedValue());
-                image.setTranslationX((float)(400.0 * Math.sin(value*Math.PI)));
+                image.setTranslationX((float)(200.0 * Math.sin(value*Math.PI)));
                 image.setTranslationY((float)(200.0 * Math.cos(value*Math.PI)));
             }
         });
