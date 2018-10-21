@@ -16,6 +16,7 @@
         android:id="@+id/menuJogarButton"
         android:layout_below="@+id/menuLogo"
         android:text="@string/jogarButtonText"
+        android:background="@drawable/ic_button_background"
         style="@style/menuButton" />
 
     <Button
