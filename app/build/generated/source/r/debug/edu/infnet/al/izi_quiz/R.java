@@ -2965,8 +2965,8 @@ public final class R {
     public static final int abc_textfield_search_material=0x7f060052;
     public static final int abc_vector_test=0x7f060053;
     public static final int ic_button=0x7f060054;
-    public static final int ic_main_logo=0x7f060055;
-    public static final int ic_menu_background=0x7f060056;
+    public static final int ic_main_background=0x7f060055;
+    public static final int ic_main_logo=0x7f060056;
     public static final int notification_action_background=0x7f060057;
     public static final int notification_bg=0x7f060058;
     public static final int notification_bg_low=0x7f060059;
@@ -3231,10 +3231,9 @@ public final class R {
     public static final int abc_toolbar_collapse_description=0x7f0c0026;
     public static final int app_name=0x7f0c0027;
     public static final int jogarButtonText=0x7f0c0028;
-    public static final int logoDescriptionText=0x7f0c0029;
-    public static final int opcoesButtonText=0x7f0c002a;
-    public static final int search_menu_title=0x7f0c002b;
-    public static final int status_bar_notification_info_overflow=0x7f0c002c;
+    public static final int opcoesButtonText=0x7f0c0029;
+    public static final int search_menu_title=0x7f0c002a;
+    public static final int status_bar_notification_info_overflow=0x7f0c002b;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;

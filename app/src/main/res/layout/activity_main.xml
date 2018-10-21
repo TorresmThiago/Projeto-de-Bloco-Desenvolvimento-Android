@@ -10,8 +10,11 @@
         android:id="@+id/menuBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/ic_menu_background"
+        android:layout_marginLeft="-200dp"
+        android:layout_marginRight="-200dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginBottom="-200dp"
+        android:background="@drawable/ic_main_background"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -21,7 +24,7 @@
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/ic_main_logo"
-        android:contentDescription="@string/logoDescriptionText" />
+        android:contentDescription="@string/app_name" />
 
     <Button
         android:id="@+id/menuJogarButton"
