@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity {
@@ -38,7 +36,6 @@ public class MainActivity extends FragmentActivity {
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-//        transaction.remove()
         transaction.replace(R.id.menuFragments, fragment);
         transaction.addToBackStack(null);
 
