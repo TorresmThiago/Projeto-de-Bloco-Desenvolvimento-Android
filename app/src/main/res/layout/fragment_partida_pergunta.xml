@@ -28,7 +28,8 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:text="Em torno de 50 caracteres são permitidos por resposta" />
+        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:onClick="goToResults"/>
 
     <Button
         android:id="@+id/perguntaOpcao2"
@@ -41,7 +42,8 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:text="Em torno de 50 caracteres são permitidos por resposta" />
+        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:onClick="goToResults"/>
 
     <Button
         android:id="@+id/perguntaOpcao3"
@@ -54,7 +56,8 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:text="Em torno de 50 caracteres são permitidos por resposta" />
+        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:onClick="goToResults"/>
 
     <Button
         android:id="@+id/perguntaOpcao4"
@@ -67,6 +70,7 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:text="Em torno de 50 caracteres são permitidos por resposta" />
+        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:onClick="goToResults"/>
 
 </RelativeLayout>

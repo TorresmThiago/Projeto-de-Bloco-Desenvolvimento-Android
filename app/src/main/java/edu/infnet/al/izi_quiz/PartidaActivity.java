@@ -1,5 +1,6 @@
 package edu.infnet.al.izi_quiz;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -27,6 +28,11 @@ public class PartidaActivity extends FragmentActivity {
 //    public void goToPowerUp(View view) {
 //        replaceFragment(powerUp);
 //    }
+
+    public void goToResults(View view) {
+        Intent intent = new Intent(this, ResultadoActivity.class);
+        startActivity(intent);
+    }
 
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();

@@ -24,7 +24,7 @@
         android:id="@+id/menuOpcoesButton"
         android:layout_below="@+id/menuJogarButton"
         android:text="@string/opcoesButtonText"
-        android:onClick="goToMenuOpcoes"
+        android:onClick="goToMenuOpcoesFragment"
         style="@style/menuButton" />
 
 </RelativeLayout>

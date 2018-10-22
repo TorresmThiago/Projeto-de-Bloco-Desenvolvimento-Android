@@ -6,7 +6,7 @@
     <ImageButton
         android:id="@+id/opcoesVoltarButton"
         android:src="@drawable/ic_voltar_button"
-        android:onClick="goToMenuPrincipal"
+        android:onClick="goToMenuPrincipalFragment"
         style="@style/voltarButton" />
 
 </RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultadoActivity"
+    android:background="@color/colorGray">
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/neutra_text_bold"
+        android:textSize="31sp"
+        android:textAlignment="center"
+        android:text="Temos um vencedor!"/>
+
+    <Button
+        android:id="@+id/jogador1"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/resultText"
+        android:background="@drawable/ic_button_resposta_certa"
+        android:text="Jogador 1"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/neutra_text_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/resultText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/jogador1"
+        android:fontFamily="@font/neutra_text_bold"
+        android:textSize="31sp"
+        android:textAlignment="center"
+        android:text="...E o resto."/>
+
+
+    <Button
+        android:id="@+id/jogador2"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/resultText2"
+        android:background="@drawable/ic_button_resposta_escolhida"
+        android:fontFamily="@font/neutra_text_bold"
+        android:text="Jogador 2"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/jogador3"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/resultText2"
+        android:background="@drawable/ic_button_resposta_escolhida"
+        android:fontFamily="@font/neutra_text_bold"
+        android:text="Jogador 3"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
+
+
+    <Button
+        android:id="@+id/jogador4"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/jogador2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_button_resposta_errada"
+        android:fontFamily="@font/neutra_text_bold"
+        android:text="Jogador 4"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_button_background"
+        android:text="Compartilhar"
+        android:fontFamily="@font/neutra_text_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_button_background"
+        android:text="Menu"
+        android:fontFamily="@font/neutra_text_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:onClick="returnToMenu"
+        android:textSize="21sp" />
+
+
+</RelativeLayout>

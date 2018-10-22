@@ -26,11 +26,11 @@ public class MainActivity extends FragmentActivity {
         replaceFragment(menuPrincipal);
     }
 
-    public void goToMenuPrincipal(View view) {
+    public void goToMenuPrincipalFragment(View view) {
         replaceFragment(menuPrincipal);
     }
 
-    public void goToMenuOpcoes(View view) {
+    public void goToMenuOpcoesFragment(View view) {
         replaceFragment(menuOpcoes);
     }
 
