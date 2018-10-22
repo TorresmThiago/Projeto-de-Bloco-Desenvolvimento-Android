@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/ic_box_pergunta"
         android:clickable="false"
-        android:text="Mais de 50 caracteres são permitidos por pergunta, mas   não vamos exagerar também."
+        android:text="Mais de 50 caracteres são permitidos por pergunta, mas       não vamos exagerar também."
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="21sp" />
