@@ -7,12 +7,11 @@
         android:id="@+id/perguntaPergunta"
         android:layout_width="325dp"
         android:layout_height="200dp"
-        android:layout_above="@+id/perguntaOpcao1"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
         android:background="@drawable/ic_box_pergunta"
-        android:onClick="goToMenuOpcoes"
+        android:clickable="false"
         android:text="Mais de 50 caracteres são permitidos por pergunta, mas   não vamos exagerar também."
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
@@ -23,13 +22,12 @@
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/perguntaOpcao2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/perguntaPergunta"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:onClick="goToMenuOpcoes"
         android:text="Em torno de 50 caracteres são permitidos por resposta" />
 
     <Button
@@ -37,13 +35,12 @@
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/perguntaOpcao3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/perguntaOpcao1"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:onClick="goToMenuOpcoes"
         android:text="Em torno de 50 caracteres são permitidos por resposta" />
 
     <Button
@@ -51,13 +48,12 @@
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@+id/perguntaOpcao4"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/perguntaOpcao2"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:onClick="goToMenuOpcoes"
         android:text="Em torno de 50 caracteres são permitidos por resposta" />
 
     <Button
@@ -65,13 +61,12 @@
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/perguntaOpcao3"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:onClick="goToMenuOpcoes"
         android:text="Em torno de 50 caracteres são permitidos por resposta" />
 
 </RelativeLayout>
