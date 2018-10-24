@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ImageView;
@@ -40,12 +41,20 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void replaceFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.menuFragments, fragment);
-        transaction.addToBackStack(null);
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        transaction.commit();
+        if (fragment.equals(menuOpcoes)) {
+            fragmentTransaction.replace(R.id.menuFragments, fragment);
+            fragmentTransaction.addToBackStack(null);
+        } else {
+            fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            fragmentTransaction.replace(R.id.menuFragments, fragment);
+        }
+
+        fragmentTransaction.commit();
+
     }
 
     public void animateBackground() {
