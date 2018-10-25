@@ -37,6 +37,7 @@ public class MainActivity extends FragmentActivity {
 
     public void startPartida(View view) {
         Intent intent = new Intent(this, PartidaActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 

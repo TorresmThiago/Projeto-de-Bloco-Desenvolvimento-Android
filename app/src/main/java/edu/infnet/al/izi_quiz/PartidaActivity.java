@@ -3,6 +3,7 @@ package edu.infnet.al.izi_quiz;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,11 +36,11 @@ public class PartidaActivity extends FragmentActivity {
     }
 
     private void replaceFragment(Fragment fragment) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        transaction.replace(R.id.partidaFragments, fragment);
-        transaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.partidaFragments, fragment);
 
-        transaction.commit();
+        fragmentTransaction.commit();
     }
 }
