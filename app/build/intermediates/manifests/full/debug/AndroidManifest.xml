@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.infnet.al.izi_quiz.PartidaActivity" />
-        <activity android:name="edu.infnet.al.izi_quiz.ResultadoActivity" />
+        <activity android:name="edu.infnet.al.izi_quiz.MatchActivity" />
+        <activity android:name="edu.infnet.al.izi_quiz.ResultsActivity" />
     </application>
 
 </manifest>

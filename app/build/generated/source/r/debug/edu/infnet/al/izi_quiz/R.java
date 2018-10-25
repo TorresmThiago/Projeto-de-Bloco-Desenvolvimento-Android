@@ -1714,7 +1714,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -2964,14 +2964,14 @@ public final class R {
     public static final int abc_textfield_search_default_mtrl_alpha=0x7f060051;
     public static final int abc_textfield_search_material=0x7f060052;
     public static final int abc_vector_test=0x7f060053;
-    public static final int ic_box_pergunta=0x7f060054;
-    public static final int ic_button_background=0x7f060055;
-    public static final int ic_button_resposta_certa=0x7f060056;
-    public static final int ic_button_resposta_errada=0x7f060057;
-    public static final int ic_button_resposta_escolhida=0x7f060058;
-    public static final int ic_main_background=0x7f060059;
-    public static final int ic_main_logo=0x7f06005a;
-    public static final int ic_voltar_button=0x7f06005b;
+    public static final int ic_back_button=0x7f060054;
+    public static final int ic_box_question=0x7f060055;
+    public static final int ic_button_answer_chosen=0x7f060056;
+    public static final int ic_button_answer_right=0x7f060057;
+    public static final int ic_button_answer_wrong=0x7f060058;
+    public static final int ic_button_background=0x7f060059;
+    public static final int ic_main_background=0x7f06005a;
+    public static final int ic_main_logo=0x7f06005b;
     public static final int notification_action_background=0x7f06005c;
     public static final int notification_bg=0x7f06005d;
     public static final int notification_bg_low=0x7f06005e;
@@ -3020,94 +3020,94 @@ public final class R {
     public static final int alertTitle=0x7f08001a;
     public static final int all=0x7f08001b;
     public static final int always=0x7f08001c;
-    public static final int async=0x7f08001d;
-    public static final int barrier=0x7f08001e;
-    public static final int beginning=0x7f08001f;
-    public static final int blocking=0x7f080020;
-    public static final int bottom=0x7f080021;
-    public static final int buttonPanel=0x7f080022;
-    public static final int center=0x7f080023;
-    public static final int center_horizontal=0x7f080024;
-    public static final int center_vertical=0x7f080025;
-    public static final int chains=0x7f080026;
-    public static final int checkbox=0x7f080027;
-    public static final int chronometer=0x7f080028;
-    public static final int clip_horizontal=0x7f080029;
-    public static final int clip_vertical=0x7f08002a;
-    public static final int collapseActionView=0x7f08002b;
-    public static final int content=0x7f08002c;
-    public static final int contentPanel=0x7f08002d;
-    public static final int custom=0x7f08002e;
-    public static final int customPanel=0x7f08002f;
-    public static final int decor_content_parent=0x7f080030;
-    public static final int default_activity_button=0x7f080031;
-    public static final int dimensions=0x7f080032;
-    public static final int direct=0x7f080033;
-    public static final int disableHome=0x7f080034;
-    public static final int edit_query=0x7f080035;
-    public static final int end=0x7f080036;
-    public static final int expand_activities_button=0x7f080037;
-    public static final int expanded_menu=0x7f080038;
-    public static final int fill=0x7f080039;
-    public static final int fill_horizontal=0x7f08003a;
-    public static final int fill_vertical=0x7f08003b;
-    public static final int forever=0x7f08003c;
-    public static final int gone=0x7f08003d;
-    public static final int group_divider=0x7f08003e;
-    public static final int groups=0x7f08003f;
-    public static final int home=0x7f080040;
-    public static final int homeAsUp=0x7f080041;
-    public static final int icon=0x7f080042;
-    public static final int icon_group=0x7f080043;
-    public static final int ifRoom=0x7f080044;
-    public static final int image=0x7f080045;
-    public static final int info=0x7f080046;
-    public static final int invisible=0x7f080047;
-    public static final int italic=0x7f080048;
-    public static final int jogador1=0x7f080049;
-    public static final int jogador2=0x7f08004a;
-    public static final int jogador3=0x7f08004b;
-    public static final int jogador4=0x7f08004c;
-    public static final int left=0x7f08004d;
-    public static final int line1=0x7f08004e;
-    public static final int line3=0x7f08004f;
-    public static final int listMode=0x7f080050;
-    public static final int list_item=0x7f080051;
-    public static final int menuBackground=0x7f080052;
-    public static final int menuFragments=0x7f080053;
-    public static final int menuJogarButton=0x7f080054;
-    public static final int menuLogo=0x7f080055;
-    public static final int menuOpcoesButton=0x7f080056;
-    public static final int message=0x7f080057;
-    public static final int middle=0x7f080058;
-    public static final int multiply=0x7f080059;
-    public static final int never=0x7f08005a;
-    public static final int none=0x7f08005b;
-    public static final int normal=0x7f08005c;
-    public static final int notification_background=0x7f08005d;
-    public static final int notification_main_column=0x7f08005e;
-    public static final int notification_main_column_container=0x7f08005f;
-    public static final int opcoesVoltarButton=0x7f080060;
-    public static final int packed=0x7f080061;
-    public static final int parent=0x7f080062;
-    public static final int parentPanel=0x7f080063;
-    public static final int partidaFragments=0x7f080064;
-    public static final int percent=0x7f080065;
-    public static final int perguntaOpcao1=0x7f080066;
-    public static final int perguntaOpcao2=0x7f080067;
-    public static final int perguntaOpcao3=0x7f080068;
-    public static final int perguntaOpcao4=0x7f080069;
-    public static final int perguntaPergunta=0x7f08006a;
-    public static final int powerupEscolha=0x7f08006b;
-    public static final int powerupOpcao1=0x7f08006c;
-    public static final int powerupOpcao2=0x7f08006d;
-    public static final int powerupOpcao3=0x7f08006e;
-    public static final int powerupPergunta=0x7f08006f;
-    public static final int progress_circular=0x7f080070;
-    public static final int progress_horizontal=0x7f080071;
-    public static final int radio=0x7f080072;
-    public static final int resultText=0x7f080073;
-    public static final int resultText2=0x7f080074;
+    public static final int announcingLosers=0x7f08001d;
+    public static final int announcingWinner=0x7f08001e;
+    public static final int async=0x7f08001f;
+    public static final int barrier=0x7f080020;
+    public static final int beginning=0x7f080021;
+    public static final int blocking=0x7f080022;
+    public static final int bottom=0x7f080023;
+    public static final int buttonPanel=0x7f080024;
+    public static final int center=0x7f080025;
+    public static final int center_horizontal=0x7f080026;
+    public static final int center_vertical=0x7f080027;
+    public static final int chains=0x7f080028;
+    public static final int checkbox=0x7f080029;
+    public static final int chronometer=0x7f08002a;
+    public static final int clip_horizontal=0x7f08002b;
+    public static final int clip_vertical=0x7f08002c;
+    public static final int collapseActionView=0x7f08002d;
+    public static final int content=0x7f08002e;
+    public static final int contentPanel=0x7f08002f;
+    public static final int custom=0x7f080030;
+    public static final int customPanel=0x7f080031;
+    public static final int decor_content_parent=0x7f080032;
+    public static final int default_activity_button=0x7f080033;
+    public static final int dimensions=0x7f080034;
+    public static final int direct=0x7f080035;
+    public static final int disableHome=0x7f080036;
+    public static final int edit_query=0x7f080037;
+    public static final int end=0x7f080038;
+    public static final int expand_activities_button=0x7f080039;
+    public static final int expanded_menu=0x7f08003a;
+    public static final int fill=0x7f08003b;
+    public static final int fill_horizontal=0x7f08003c;
+    public static final int fill_vertical=0x7f08003d;
+    public static final int forever=0x7f08003e;
+    public static final int gone=0x7f08003f;
+    public static final int group_divider=0x7f080040;
+    public static final int groups=0x7f080041;
+    public static final int home=0x7f080042;
+    public static final int homeAsUp=0x7f080043;
+    public static final int icon=0x7f080044;
+    public static final int icon_group=0x7f080045;
+    public static final int ifRoom=0x7f080046;
+    public static final int image=0x7f080047;
+    public static final int info=0x7f080048;
+    public static final int invisible=0x7f080049;
+    public static final int italic=0x7f08004a;
+    public static final int left=0x7f08004b;
+    public static final int line1=0x7f08004c;
+    public static final int line3=0x7f08004d;
+    public static final int listMode=0x7f08004e;
+    public static final int list_item=0x7f08004f;
+    public static final int matchFragments=0x7f080050;
+    public static final int menuBackground=0x7f080051;
+    public static final int menuFragments=0x7f080052;
+    public static final int menuLogo=0x7f080053;
+    public static final int menuOptionsButton=0x7f080054;
+    public static final int menuPlayButton=0x7f080055;
+    public static final int message=0x7f080056;
+    public static final int middle=0x7f080057;
+    public static final int multiply=0x7f080058;
+    public static final int never=0x7f080059;
+    public static final int none=0x7f08005a;
+    public static final int normal=0x7f08005b;
+    public static final int notification_background=0x7f08005c;
+    public static final int notification_main_column=0x7f08005d;
+    public static final int notification_main_column_container=0x7f08005e;
+    public static final int optionsBackMenu=0x7f08005f;
+    public static final int packed=0x7f080060;
+    public static final int parent=0x7f080061;
+    public static final int parentPanel=0x7f080062;
+    public static final int percent=0x7f080063;
+    public static final int player_1=0x7f080064;
+    public static final int player_2=0x7f080065;
+    public static final int player_3=0x7f080066;
+    public static final int player_4=0x7f080067;
+    public static final int powerUpBox=0x7f080068;
+    public static final int powerUpChoiceButton=0x7f080069;
+    public static final int powerUpOption_1=0x7f08006a;
+    public static final int powerUpOption_2=0x7f08006b;
+    public static final int powerUpOption_3=0x7f08006c;
+    public static final int progress_circular=0x7f08006d;
+    public static final int progress_horizontal=0x7f08006e;
+    public static final int questionBox=0x7f08006f;
+    public static final int questionOption_1=0x7f080070;
+    public static final int questionOption_2=0x7f080071;
+    public static final int questionOption_3=0x7f080072;
+    public static final int questionOption_4=0x7f080073;
+    public static final int radio=0x7f080074;
     public static final int right=0x7f080075;
     public static final int right_icon=0x7f080076;
     public static final int right_side=0x7f080077;
@@ -3199,7 +3199,7 @@ public final class R {
     public static final int abc_select_dialog_material=0x7f0a001a;
     public static final int abc_tooltip=0x7f0a001b;
     public static final int activity_main=0x7f0a001c;
-    public static final int activity_partida=0x7f0a001d;
+    public static final int activity_match=0x7f0a001d;
     public static final int activity_resultado=0x7f0a001e;
     public static final int fragment_menu_opcoes=0x7f0a001f;
     public static final int fragment_menu_principal=0x7f0a0020;
@@ -3260,11 +3260,10 @@ public final class R {
     public static final int abc_shareactionprovider_share_with_application=0x7f0c0025;
     public static final int abc_toolbar_collapse_description=0x7f0c0026;
     public static final int app_name=0x7f0c0027;
-    public static final int jogarButtonText=0x7f0c0028;
-    public static final int opcoesButtonText=0x7f0c0029;
-    public static final int opcoesVoltarButtonText=0x7f0c002a;
-    public static final int search_menu_title=0x7f0c002b;
-    public static final int status_bar_notification_info_overflow=0x7f0c002c;
+    public static final int optionsButtonText=0x7f0c0028;
+    public static final int playButtonText=0x7f0c0029;
+    public static final int search_menu_title=0x7f0c002a;
+    public static final int status_bar_notification_info_overflow=0x7f0c002b;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;
@@ -3614,9 +3613,9 @@ public final class R {
     public static final int Widget_Compat_NotificationActionContainer=0x7f0d0158;
     public static final int Widget_Compat_NotificationActionText=0x7f0d0159;
     public static final int Widget_Support_CoordinatorLayout=0x7f0d015a;
-    public static final int iziTheme=0x7f0d015b;
-    public static final int menuButton=0x7f0d015c;
-    public static final int voltarButton=0x7f0d015d;
+    public static final int backButton=0x7f0d015b;
+    public static final int iziTheme=0x7f0d015c;
+    public static final int menuButton=0x7f0d015d;
   }
   public static final class styleable {
     /**
@@ -7978,7 +7977,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

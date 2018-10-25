@@ -4,13 +4,13 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/powerupPergunta"
+        android:id="@+id/powerUpBox"
         android:layout_width="325dp"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/ic_box_pergunta"
+        android:background="@drawable/ic_box_question"
         android:clickable="false"
         android:text="Qual 'power-up' para atrapalhar seus oponentes você quer usar aqui?"
         android:textAllCaps="false"
@@ -18,46 +18,46 @@
         android:textSize="21sp" />
 
     <Button
-        android:id="@+id/powerupOpcao1"
+        android:id="@+id/powerUpOption_1"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerupPergunta"
+        android:layout_below="@+id/powerUpBox"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
-        android:background="@drawable/ic_button_resposta_escolhida"
+        android:background="@drawable/ic_button_answer_chosen"
         android:text="Power_1                x3" />
 
     <Button
-        android:id="@+id/powerupOpcao2"
+        android:id="@+id/powerUpOption_2"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerupOpcao1"
+        android:layout_below="@+id/powerUpOption_1"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
-        android:background="@drawable/ic_button_resposta_certa"
+        android:background="@drawable/ic_button_answer_right"
         android:text="Power_2                x3" />
 
     <Button
-        android:id="@+id/powerupOpcao3"
+        android:id="@+id/powerUpOption_3"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerupOpcao2"
+        android:layout_below="@+id/powerUpOption_2"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
-        android:background="@drawable/ic_button_resposta_errada"
+        android:background="@drawable/ic_button_answer_wrong"
         android:text="Power_3                x3" />
 
     <Button
-        android:id="@+id/powerupEscolha"
+        android:id="@+id/powerUpChoiceButton"
         android:layout_height="75dp"
         android:layout_width="225dp"
         android:layout_centerHorizontal="true"
@@ -67,7 +67,7 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
-        android:onClick="goToPergunta"
+        android:onClick="goToQuestionsFragment"
         android:text="Escolher" />
 
 

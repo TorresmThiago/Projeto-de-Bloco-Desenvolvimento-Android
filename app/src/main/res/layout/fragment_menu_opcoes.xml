@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/opcoesVoltarButton"
-        android:src="@drawable/ic_voltar_button"
-        android:onClick="goToMenuPrincipalFragment"
-        style="@style/voltarButton" />
+        android:id="@+id/optionsBackMenu"
+        android:src="@drawable/ic_back_button"
+        android:onClick="goToMainMenuFragment"
+        style="@style/backButton" />
 
 </RelativeLayout>

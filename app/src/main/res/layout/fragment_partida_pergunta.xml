@@ -4,13 +4,13 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/perguntaPergunta"
+        android:id="@+id/questionBox"
         android:layout_width="325dp"
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/ic_box_pergunta"
+        android:background="@drawable/ic_box_question"
         android:clickable="false"
         android:text="Mais de 50 caracteres são permitidos por pergunta, mas       não vamos exagerar também."
         android:textAllCaps="false"
@@ -18,12 +18,12 @@
         android:textSize="21sp" />
 
     <Button
-        android:id="@+id/perguntaOpcao1"
+        android:id="@+id/questionOption_1"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/perguntaPergunta"
+        android:layout_below="@+id/questionBox"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
@@ -32,12 +32,12 @@
         android:onClick="goToResults"/>
 
     <Button
-        android:id="@+id/perguntaOpcao2"
+        android:id="@+id/questionOption_2"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/perguntaOpcao1"
+        android:layout_below="@+id/questionOption_1"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
@@ -46,12 +46,12 @@
         android:onClick="goToResults"/>
 
     <Button
-        android:id="@+id/perguntaOpcao3"
+        android:id="@+id/questionOption_3"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/perguntaOpcao2"
+        android:layout_below="@+id/questionOption_2"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"
@@ -60,12 +60,12 @@
         android:onClick="goToResults"/>
 
     <Button
-        android:id="@+id/perguntaOpcao4"
+        android:id="@+id/questionOption_4"
         android:layout_height="75dp"
         android:layout_width="325dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/perguntaOpcao3"
+        android:layout_below="@+id/questionOption_3"
         android:textColor="@color/colorWhite"
         android:textSize="21sp"
         android:textAllCaps="false"

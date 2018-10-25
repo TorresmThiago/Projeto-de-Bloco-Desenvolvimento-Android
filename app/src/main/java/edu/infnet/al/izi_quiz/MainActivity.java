@@ -12,31 +12,31 @@ import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity {
 
-    ImageView image;
-    Fragment menuPrincipal = new MenuPrincipal();
-    Fragment menuOpcoes = new MenuOpcoes();
+    ImageView menuBackgroundImage;
+    Fragment menuFragment = new MenuFragment();
+    Fragment optionsFragment = new OptionsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        image = findViewById(R.id.menuBackground);
+        menuBackgroundImage = findViewById(R.id.menuBackground);
 
         animateBackground();
-        replaceFragment(menuPrincipal);
+        replaceFragment(menuFragment);
     }
 
-    public void goToMenuPrincipalFragment(View view) {
-        replaceFragment(menuPrincipal);
+    public void goToMainMenuFragment(View view) {
+        replaceFragment(menuFragment);
     }
 
-    public void goToMenuOpcoesFragment(View view) {
-        replaceFragment(menuOpcoes);
+    public void goToOptionsFragment(View view) {
+        replaceFragment(optionsFragment);
     }
 
-    public void startPartida(View view) {
-        Intent intent = new Intent(this, PartidaActivity.class);
+    public void startMatch(View view) {
+        Intent intent = new Intent(this, MatchActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
@@ -46,7 +46,7 @@ public class MainActivity extends FragmentActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        if (fragment.equals(menuOpcoes)) {
+        if (fragment.equals(optionsFragment)) {
             fragmentTransaction.replace(R.id.menuFragments, fragment);
             fragmentTransaction.addToBackStack(null);
         } else {
@@ -70,8 +70,8 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (Float) (animation.getAnimatedValue());
-                image.setTranslationX((float)(200.0 * Math.sin(value*Math.PI)));
-                image.setTranslationY((float)(200.0 * Math.cos(value*Math.PI)));
+                menuBackgroundImage.setTranslationX((float)(200.0 * Math.sin(value*Math.PI)));
+                menuBackgroundImage.setTranslationY((float)(200.0 * Math.cos(value*Math.PI)));
             }
         });
 

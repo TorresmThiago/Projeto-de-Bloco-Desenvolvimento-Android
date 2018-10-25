@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\Thiago.Torres\\Documents\\GitHub\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\bc327b7eb2ebbbe11836a8d40374aa9d\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Thiago.Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\c607e3669f6160587a670625bfb2607c\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Thiago.Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\5cea5f5500c94724282915f33e1ed3c7\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\705017be9ba995e64f29c332752a41cd\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

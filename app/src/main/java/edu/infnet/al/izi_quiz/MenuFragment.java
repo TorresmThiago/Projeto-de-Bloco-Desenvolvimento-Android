@@ -9,17 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class MenuPrincipal extends Fragment {
+public class MenuFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu_principal, container,false);
 
-        Button jogarButton = view.findViewById(R.id.menuJogarButton);
-        Button opcoesButton = view.findViewById(R.id.menuOpcoesButton);
+        Button playButton = view.findViewById(R.id.menuPlayButton);
+        Button optionsButton = view.findViewById(R.id.menuOptionsButton);
         Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
-        jogarButton.setTypeface(typeface);
-        opcoesButton.setTypeface(typeface);
+        playButton.setTypeface(typeface);
+        optionsButton.setTypeface(typeface);
 
         return view;
     }
