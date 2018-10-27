@@ -19,38 +19,54 @@ public class MatchActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
 
-        replaceFragment(powerUpFragment);
+        goToPowerUpFragment();
     }
 
     public void goToQuestionsFragment(View view) {
-        replaceFragment(questionsFragment);
+        replaceFragment(questionsFragment, "replace");
     }
 
-//    public void goToPowerUpFragment(View view) {
-//        replaceFragment(powerUpFragment);
-//    }
+    public void goToPowerUpFragment(/*View view*/) {
+        replaceFragment(powerUpFragment, "replace");
+    }
 
     public void goToResults(View view) {
         Intent intent = new Intent(this, ResultsActivity.class);
         startActivity(intent);
     }
 
+    public void remainOnCurrentMatch(View view) {
+        replaceFragment(leaveMatchConfirmation, "remove");
+    }
+
+    public void returnToMenu(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         if (!leaveMatchConfirmation.isAdded()){
-            replaceFragment(leaveMatchConfirmation);
+            replaceFragment(leaveMatchConfirmation, "add");
         }
     }
 
-    private void replaceFragment(Fragment fragment) {
+    private void replaceFragment(Fragment fragment, String action) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        if (!fragment.equals(leaveMatchConfirmation)){
-            fragmentTransaction.replace(R.id.matchFragments, fragment);
-        } else {
-            fragmentTransaction.add(R.id.matchFragments, fragment);
-        }
+        switch (action){
+            case "replace":
+                fragmentTransaction.replace(R.id.matchFragments, fragment);
+                break;
+            case "add":
+                fragmentTransaction.add(R.id.matchFragments, fragment);
+                break;
+            case "remove":
+                fragmentTransaction.remove(fragment);
+                break;
+            }
 
         fragmentTransaction.commit();
     }
