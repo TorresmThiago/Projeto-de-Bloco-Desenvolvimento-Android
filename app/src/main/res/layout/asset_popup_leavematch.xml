@@ -10,12 +10,14 @@
         style="@style/popUpContainer" />
 
     <Button
+        android:id="@+id/popUpLeaveMatchConfirmation"
         android:text="@string/popUpConfirmation"
         android:layout_alignBottom="@+id/popUpLeaveMatchContainer"
         android:layout_alignStart="@+id/popUpLeaveMatchContainer"
         style="@style/popUpConfirmationButton" />
 
     <Button
+        android:id="@+id/popUpLeaveMatchNegation"
         android:text="@string/popUpNegation"
         android:layout_alignBottom="@+id/popUpLeaveMatchContainer"
         android:layout_alignEnd="@+id/popUpLeaveMatchContainer"

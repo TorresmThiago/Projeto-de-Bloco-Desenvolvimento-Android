@@ -12,6 +12,7 @@ public class MatchActivity extends FragmentActivity {
 
     Fragment questionsFragment = new QuestionsFragment();
     Fragment powerUpFragment = new PowerUpFragment();
+    Fragment leaveMatchConfirmation = new LeaveMatchFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,22 @@ public class MatchActivity extends FragmentActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (!leaveMatchConfirmation.isAdded()){
+            replaceFragment(leaveMatchConfirmation);
+        }
+    }
+
     private void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        fragmentTransaction.replace(R.id.matchFragments, fragment);
+        if (!fragment.equals(leaveMatchConfirmation)){
+            fragmentTransaction.replace(R.id.matchFragments, fragment);
+        } else {
+            fragmentTransaction.add(R.id.matchFragments, fragment);
+        }
 
         fragmentTransaction.commit();
     }

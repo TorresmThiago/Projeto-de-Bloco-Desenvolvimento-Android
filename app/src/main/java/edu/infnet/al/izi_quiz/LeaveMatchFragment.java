@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class LeaveGameFragment extends Fragment{
+public class LeaveMatchFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.asset_popup_leavegame, container,false);
+        View view = inflater.inflate(R.layout.asset_popup_leavematch, container,false);
 
-        TextView popUpText = view.findViewById(R.id.popUpLeaveGameContainer);
-        Button confirmationButton = view.findViewById(R.id.popUpLeaveGameConfirmation);
-        Button negationButton = view.findViewById(R.id.popUpLeaveGameNegation);
+        TextView popUpText = view.findViewById(R.id.popUpLeaveMatchContainer);
+        Button confirmationButton = view.findViewById(R.id.popUpLeaveMatchConfirmation);
+        Button negationButton = view.findViewById(R.id.popUpLeaveMatchNegation);
         Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
         popUpText.setTypeface(typeface);
         confirmationButton.setTypeface(typeface);
@@ -26,5 +26,4 @@ public class LeaveGameFragment extends Fragment{
 
         return view;
     }
-
 }
