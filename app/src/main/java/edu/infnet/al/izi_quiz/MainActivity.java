@@ -3,6 +3,7 @@ package edu.infnet.al.izi_quiz;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -12,10 +13,12 @@ import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity {
 
+    static final String LOAD_SPLASH = "goToMainMenu";
     ImageView menuBackgroundImage;
     Fragment splashMenuFragment = new SplashMenuFragment();
-    Fragment optionsFragment = new OptionsFragment();
+    Fragment mainMenuFragment = new MainMenuFragment();
     Fragment leaveGameConfirmation = new LeaveGameFragment();
+    Fragment optionsFragment= new OptionsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,58 +26,66 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         menuBackgroundImage = findViewById(R.id.menuBackground);
+        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
 
         animateBackground();
-        replaceFragment(splashMenuFragment);
+
+        replaceFragment(splashMenuFragment, "replace");
+
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        replaceFragment(splashMenuFragment);
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putBoolean(LOAD_SPLASH, false);
+        super.onSaveInstanceState(outState);
     }
 
     public void goToMainMenuFragment(View view) {
-        replaceFragment(splashMenuFragment);
+        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
+        replaceFragment(mainMenuFragment, "replace");
     }
 
-    public void goToOptionsFragment(View view) {
-        replaceFragment(optionsFragment);
+    public void remainOnApplication (View view) {
+        replaceFragment(leaveGameConfirmation, "remove");
     }
 
-    public void leaveApplication(View view) {finish();}
+    public void leaveApplication(View view) {
+        finish();
+    }
 
     public void startMatch(View view) {
         Intent intent = new Intent(this, MatchActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        finishAffinity();
         startActivity(intent);
     }
 
-    private void replaceFragment(Fragment fragment) {
+    private void replaceFragment(Fragment fragment, String action) {
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-        if (fragment.equals(optionsFragment)) {
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
-        } else if(fragment.equals(splashMenuFragment)) {
-            fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
-        } else if(fragment.equals(leaveGameConfirmation)){
-            fragmentTransaction.add(R.id.menuFragmentsContainer, fragment);
+        switch (action){
+            case "replace":
+                fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
+                break;
+            case "add":
+                fragmentTransaction.add(R.id.menuFragmentsContainer, fragment);
+                break;
+            case "remove":
+                fragmentTransaction.remove(fragment);
+                break;
         }
 
         fragmentTransaction.commit();
-
     }
 
     @Override
     public void onBackPressed() {
-        if (leaveGameConfirmation.isAdded() || optionsFragment.isAdded()){
-            replaceFragment(splashMenuFragment);
+        if (!leaveGameConfirmation.isAdded()){
+            replaceFragment(leaveGameConfirmation, "add");
         } else {
-            replaceFragment(leaveGameConfirmation);
+            replaceFragment(leaveGameConfirmation, "remove");
         }
     }
 

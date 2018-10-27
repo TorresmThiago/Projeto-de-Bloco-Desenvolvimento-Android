@@ -6,4 +6,5 @@
     <string name="popUpNegation">Não!</string>
     <string name="leaveGameConfirmation">Gostaria de sair do izi quiz!?</string>
     <string name="leaveMatchConfirmation">Gostaria de sair da partida?</string>
+    <string name="MainMenuPlayButtonText">Iniciar partida!</string>
 </resources>

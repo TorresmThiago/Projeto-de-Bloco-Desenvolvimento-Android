@@ -16,7 +16,7 @@
         android:id="@+id/splashMenuPlayButton"
         android:layout_below="@+id/splashMenuLogo"
         android:text="@string/splashMenuPlayButtonText"
-        android:onClick="startMatch"
-        style="@style/splashMenuButton" />
+        android:onClick="goToMainMenuFragment"
+        style="@style/MenuButton" />
 
 </RelativeLayout>

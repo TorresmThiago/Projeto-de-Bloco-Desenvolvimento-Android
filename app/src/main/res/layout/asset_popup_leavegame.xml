@@ -22,7 +22,7 @@
         android:text="@string/popUpNegation"
         android:layout_alignBottom="@+id/popUpLeaveGameContainer"
         android:layout_alignEnd="@+id/popUpLeaveGameContainer"
-        android:onClick="goToMainMenuFragment"
+        android:onClick="remainOnApplication"
         style="@style/popUpNegationButton" />
 
 
