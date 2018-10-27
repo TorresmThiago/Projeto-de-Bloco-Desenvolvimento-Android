@@ -15,7 +15,7 @@ public class MainActivity extends FragmentActivity {
     ImageView menuBackgroundImage;
     Fragment menuFragment = new MenuFragment();
     Fragment optionsFragment = new OptionsFragment();
-    Fragment leaveGameConfirmation = new PopUpFragment();
+    Fragment leaveGameConfirmation = new LeaveGameFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,12 @@ public class MainActivity extends FragmentActivity {
         replaceFragment(menuFragment);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        replaceFragment(menuFragment);
+    }
+
     public void goToMainMenuFragment(View view) {
         replaceFragment(menuFragment);
     }
@@ -35,6 +41,8 @@ public class MainActivity extends FragmentActivity {
     public void goToOptionsFragment(View view) {
         replaceFragment(optionsFragment);
     }
+
+    public void leaveApplication(View view) {finish();}
 
     public void startMatch(View view) {
         Intent intent = new Intent(this, MatchActivity.class);
@@ -63,10 +71,10 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        if (!leaveGameConfirmation.isAdded()){
-            replaceFragment(leaveGameConfirmation);
-        } else if (optionsFragment.isAdded()) {
+        if (leaveGameConfirmation.isAdded() || optionsFragment.isAdded()){
             replaceFragment(menuFragment);
+        } else {
+            replaceFragment(leaveGameConfirmation);
         }
     }
 
