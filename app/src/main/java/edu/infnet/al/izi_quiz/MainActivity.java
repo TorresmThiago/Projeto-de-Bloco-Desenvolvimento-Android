@@ -15,6 +15,7 @@ public class MainActivity extends FragmentActivity {
     ImageView menuBackgroundImage;
     Fragment menuFragment = new MenuFragment();
     Fragment optionsFragment = new OptionsFragment();
+    Fragment leaveGameConfirmation = new PopUpFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +48,26 @@ public class MainActivity extends FragmentActivity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
         if (fragment.equals(optionsFragment)) {
-            fragmentTransaction.replace(R.id.menuFragments, fragment);
             fragmentTransaction.addToBackStack(null);
-        } else {
+            fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
+        } else if(fragment.equals(menuFragment)) {
             fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            fragmentTransaction.replace(R.id.menuFragments, fragment);
+            fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
+        } else if(fragment.equals(leaveGameConfirmation)){
+            fragmentTransaction.add(R.id.menuFragmentsContainer, fragment);
         }
 
         fragmentTransaction.commit();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (!leaveGameConfirmation.isAdded()){
+            replaceFragment(leaveGameConfirmation);
+        } else if (optionsFragment.isAdded()) {
+            replaceFragment(menuFragment);
+        }
     }
 
     public void animateBackground() {

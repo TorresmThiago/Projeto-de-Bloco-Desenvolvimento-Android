@@ -2,19 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AA000000">
+    android:background="@color/backgroundFadeGray">
 
     <TextView
-        android:id="@+id/popUpContainer"
-        android:text="@string/leaveGameConfimation"
+        android:id="@+id/popUpLeaveGameContainer"
+        android:text="@string/leaveGameConfirmation"
         style="@style/popUpContainer" />
 
     <Button
+        android:id="@+id/popUpLeaveGameConfirmation"
         android:text="@string/popUpConfirmation"
+        android:layout_alignBottom="@+id/popUpLeaveGameContainer"
+        android:layout_alignStart="@+id/popUpLeaveGameContainer"
         style="@style/popUpConfirmationButton" />
 
     <Button
+        android:id="@+id/popUpLeaveGameNegation"
         android:text="@string/popUpNegation"
+        android:layout_alignBottom="@+id/popUpLeaveGameContainer"
+        android:layout_alignEnd="@+id/popUpLeaveGameContainer"
         style="@style/popUpNegationButton" />
 
 

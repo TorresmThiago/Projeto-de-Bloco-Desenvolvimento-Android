@@ -5,16 +5,20 @@
     android:background="@color/backgroundFadeGray">
 
     <TextView
-        android:id="@+id/popUpContainer"
-        android:text="@string/leaveMatchConfimation"
+        android:id="@+id/popUpLeaveMatchContainer"
+        android:text="@string/leaveMatchConfirmation"
         style="@style/popUpContainer" />
 
     <Button
         android:text="@string/popUpConfirmation"
+        android:layout_alignBottom="@+id/popUpLeaveMatchContainer"
+        android:layout_alignStart="@+id/popUpLeaveMatchContainer"
         style="@style/popUpConfirmationButton" />
 
     <Button
         android:text="@string/popUpNegation"
+        android:layout_alignBottom="@+id/popUpLeaveMatchContainer"
+        android:layout_alignEnd="@+id/popUpLeaveMatchContainer"
         style="@style/popUpNegationButton" />
 
 </RelativeLayout>

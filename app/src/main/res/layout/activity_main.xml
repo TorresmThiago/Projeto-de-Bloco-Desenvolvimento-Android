@@ -19,7 +19,7 @@
         tools:ignore="ContentDescription" />
 
     <RelativeLayout
-        android:id="@+id/menuFragments"
+        android:id="@+id/menuFragmentsContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
