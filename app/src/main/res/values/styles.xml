@@ -12,7 +12,7 @@
         <item name="colorPrimaryDark">@color/colorYellowDark</item>
     </style>
 
-    <style name="menuButton">
+    <style name="splashMenuButton">
         <item name="android:layout_width">223dp</item>
         <item name="android:layout_height">75dp</item>
         <item name="android:layout_centerHorizontal">true</item>
@@ -20,7 +20,7 @@
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">21sp</item>
         <item name="android:textAllCaps">false</item>
-        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginTop">35dp</item>
     </style>
 
     <style name="backButton">

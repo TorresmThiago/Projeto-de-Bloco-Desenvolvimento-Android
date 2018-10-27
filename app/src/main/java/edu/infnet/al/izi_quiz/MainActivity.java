@@ -13,7 +13,7 @@ import android.widget.ImageView;
 public class MainActivity extends FragmentActivity {
 
     ImageView menuBackgroundImage;
-    Fragment menuFragment = new MenuFragment();
+    Fragment splashMenuFragment = new SplashMenuFragment();
     Fragment optionsFragment = new OptionsFragment();
     Fragment leaveGameConfirmation = new LeaveGameFragment();
 
@@ -25,17 +25,17 @@ public class MainActivity extends FragmentActivity {
         menuBackgroundImage = findViewById(R.id.menuBackground);
 
         animateBackground();
-        replaceFragment(menuFragment);
+        replaceFragment(splashMenuFragment);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        replaceFragment(menuFragment);
+        replaceFragment(splashMenuFragment);
     }
 
     public void goToMainMenuFragment(View view) {
-        replaceFragment(menuFragment);
+        replaceFragment(splashMenuFragment);
     }
 
     public void goToOptionsFragment(View view) {
@@ -58,7 +58,7 @@ public class MainActivity extends FragmentActivity {
         if (fragment.equals(optionsFragment)) {
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
-        } else if(fragment.equals(menuFragment)) {
+        } else if(fragment.equals(splashMenuFragment)) {
             fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
         } else if(fragment.equals(leaveGameConfirmation)){
@@ -72,7 +72,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onBackPressed() {
         if (leaveGameConfirmation.isAdded() || optionsFragment.isAdded()){
-            replaceFragment(menuFragment);
+            replaceFragment(splashMenuFragment);
         } else {
             replaceFragment(leaveGameConfirmation);
         }

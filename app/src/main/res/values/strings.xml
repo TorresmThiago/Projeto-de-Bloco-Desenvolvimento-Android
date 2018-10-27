@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">izi quiz!</string>
     <string name="optionsButtonText">Opções</string>
-    <string name="playButtonText">Jogar!</string>
+    <string name="splashMenuPlayButtonText">Jogar!</string>
     <string name="popUpConfirmation">Sim!</string>
     <string name="popUpNegation">Não!</string>
     <string name="leaveGameConfirmation">Gostaria de sair do izi quiz!?</string>
