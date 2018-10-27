@@ -1,162 +1,162 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\5cea5f5500c94724282915f33e1ed3c7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\be8ddf5f3fa5676d3e5a35b9c763df7c\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b1bf9a3ff44827cd78483476055cd128\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\b20ef5780e1a9f79dae9bac40e886d0a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\075e9d12da6fc82fbb945c689cc5f027\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\5ab5708cdefcd1d10beb2376826c650c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e08874b0da3ceffe6ebdee23d3235c6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e444da62832180b48230ad73a7c0f3c0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\14017027c3c94d6e389087f13ffc042d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bcbb5e9e0bf02d36b10299c9b96beb9f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fbf2853d555ff2ddf472b1bedeefe4b4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ad18381a6e23b5dfe3dd63f7f02f2473\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d0e8acd10368e5191d3779eb31b0d500\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\92e4d6f13bd3888b99fe0e6f93dbc3fa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\8ed85bce24deeab21b6509f342246d25\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\7712e2dec75a3cd2a96de820859d94dc\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\7b99cb9719cc1116be7584870d2dca6e\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\2725a7d5e481a4dbff146472bd5b1e2b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\96697e33ce7256c2b3c9bdac8aa22832\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\28e9ecc3e95bd6b199ec46b14f4aa882\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\a5f30bf579f9a9b80a2a127a746d0a8d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\ec572f214dd36b7bf5918522c63ebcd8\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\03acc202bf5c1e26c397ccdfe81e5349\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d1565f9062878e451555125a969a0097\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\e4cddc6e6c23e2bdbc3c28caaaffd5a1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\9d56b9294247d9040ebf9e4d67095399\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bc327b7eb2ebbbe11836a8d40374aa9d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\35561b903c660d80a5869e5c49aafc8b\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0274785bcc62ef08b58bac199f5b231d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6698adf58b69bdfff7e30d2f5faa50d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\aa3cd0ca12fbe57e1fd541bfb6d88641\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\b773213c3ed2a4b28b8081c1ae848f45\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5d1ff22044e2d9eeb4c5cfc83a7f2fdb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\af94a23365afc4c024ab9844a097633a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\ddabb6752242a778b5429faf3786b2f6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f1d129469f05335b5e6063a0baa4593e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a4ce3143ae40a600201dc53ac5d61682\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\c687c60889f3c140df752422514f8047\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\dae20081e09bc89be0d0f3cf72def0eb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\7569569108a92462f52bd9579832f935\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7b626157e1c1d13a2d9e931d640ae9c9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c1c4155c960b375d42df1a8aea1b46c9\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\eecac6f22875694f556927816df82228\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\39e4e8c850f47fcfa48c9a1b9bcd9df1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\04b813a91fefa139f245d4ec515b25cf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9ef47f639d43e6f74312fb4cb69131f9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31baa8fb9ff1379dfe674c4306326deb\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6e8ae45fef03e7f4b8898f09b98ff39a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\24fe48c2c21668b2bb803bd6f6f7b740\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\44ce08028e087afbf10a4de47b0e9113\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0747512e70a7e060abb4720c19635239\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a9feb251c937828e0a88a6677a3fa6bd\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:3:5-37
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:1-23:12
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:5:5-21:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\be8ddf5f3fa5676d3e5a35b9c763df7c\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\be8ddf5f3fa5676d3e5a35b9c763df7c\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\7712e2dec75a3cd2a96de820859d94dc\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\7712e2dec75a3cd2a96de820859d94dc\AndroidManifest.xml:22:5-23:19
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:5:5-21:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\35561b903c660d80a5869e5c49aafc8b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\35561b903c660d80a5869e5c49aafc8b\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c1c4155c960b375d42df1a8aea1b46c9\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c1c4155c960b375d42df1a8aea1b46c9\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:9:9-48
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:9:9-48
 	android:icon
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:11:9-40
 activity#edu.infnet.al.izi_quiz.MainActivity
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:16:27-74
 activity#edu.infnet.al.izi_quiz.MatchActivity
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:19:9-60
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:9-60
 	android:name
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:19:19-48
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:19-48
 activity#edu.infnet.al.izi_quiz.ResultsActivity
-ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:20:9-62
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:9-62
 	android:name
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml:20:19-50
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:19-50
 uses-sdk
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\5cea5f5500c94724282915f33e1ed3c7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\5cea5f5500c94724282915f33e1ed3c7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\be8ddf5f3fa5676d3e5a35b9c763df7c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\be8ddf5f3fa5676d3e5a35b9c763df7c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b1bf9a3ff44827cd78483476055cd128\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\b1bf9a3ff44827cd78483476055cd128\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\b20ef5780e1a9f79dae9bac40e886d0a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\b20ef5780e1a9f79dae9bac40e886d0a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\075e9d12da6fc82fbb945c689cc5f027\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\075e9d12da6fc82fbb945c689cc5f027\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\5ab5708cdefcd1d10beb2376826c650c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\5ab5708cdefcd1d10beb2376826c650c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e08874b0da3ceffe6ebdee23d3235c6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3e08874b0da3ceffe6ebdee23d3235c6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e444da62832180b48230ad73a7c0f3c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e444da62832180b48230ad73a7c0f3c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\14017027c3c94d6e389087f13ffc042d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\14017027c3c94d6e389087f13ffc042d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bcbb5e9e0bf02d36b10299c9b96beb9f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\bcbb5e9e0bf02d36b10299c9b96beb9f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fbf2853d555ff2ddf472b1bedeefe4b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\fbf2853d555ff2ddf472b1bedeefe4b4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ad18381a6e23b5dfe3dd63f7f02f2473\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\ad18381a6e23b5dfe3dd63f7f02f2473\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d0e8acd10368e5191d3779eb31b0d500\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d0e8acd10368e5191d3779eb31b0d500\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\92e4d6f13bd3888b99fe0e6f93dbc3fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\92e4d6f13bd3888b99fe0e6f93dbc3fa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\8ed85bce24deeab21b6509f342246d25\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\8ed85bce24deeab21b6509f342246d25\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\c607e3669f6160587a670625bfb2607c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\7712e2dec75a3cd2a96de820859d94dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\7712e2dec75a3cd2a96de820859d94dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\7b99cb9719cc1116be7584870d2dca6e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\7b99cb9719cc1116be7584870d2dca6e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\2725a7d5e481a4dbff146472bd5b1e2b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\2725a7d5e481a4dbff146472bd5b1e2b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\96697e33ce7256c2b3c9bdac8aa22832\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\96697e33ce7256c2b3c9bdac8aa22832\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\28e9ecc3e95bd6b199ec46b14f4aa882\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\28e9ecc3e95bd6b199ec46b14f4aa882\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\a5f30bf579f9a9b80a2a127a746d0a8d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\a5f30bf579f9a9b80a2a127a746d0a8d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\ec572f214dd36b7bf5918522c63ebcd8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\ec572f214dd36b7bf5918522c63ebcd8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\03acc202bf5c1e26c397ccdfe81e5349\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\03acc202bf5c1e26c397ccdfe81e5349\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d1565f9062878e451555125a969a0097\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d1565f9062878e451555125a969a0097\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\e4cddc6e6c23e2bdbc3c28caaaffd5a1\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\e4cddc6e6c23e2bdbc3c28caaaffd5a1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\9d56b9294247d9040ebf9e4d67095399\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Thiago.Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\9d56b9294247d9040ebf9e4d67095399\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bc327b7eb2ebbbe11836a8d40374aa9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\bc327b7eb2ebbbe11836a8d40374aa9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\35561b903c660d80a5869e5c49aafc8b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\35561b903c660d80a5869e5c49aafc8b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0274785bcc62ef08b58bac199f5b231d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\0274785bcc62ef08b58bac199f5b231d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6698adf58b69bdfff7e30d2f5faa50d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6698adf58b69bdfff7e30d2f5faa50d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\aa3cd0ca12fbe57e1fd541bfb6d88641\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\aa3cd0ca12fbe57e1fd541bfb6d88641\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\b773213c3ed2a4b28b8081c1ae848f45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\b773213c3ed2a4b28b8081c1ae848f45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5d1ff22044e2d9eeb4c5cfc83a7f2fdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\5d1ff22044e2d9eeb4c5cfc83a7f2fdb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\af94a23365afc4c024ab9844a097633a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\af94a23365afc4c024ab9844a097633a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\ddabb6752242a778b5429faf3786b2f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\ddabb6752242a778b5429faf3786b2f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f1d129469f05335b5e6063a0baa4593e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\f1d129469f05335b5e6063a0baa4593e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a4ce3143ae40a600201dc53ac5d61682\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a4ce3143ae40a600201dc53ac5d61682\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\c687c60889f3c140df752422514f8047\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\c687c60889f3c140df752422514f8047\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\dae20081e09bc89be0d0f3cf72def0eb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\dae20081e09bc89be0d0f3cf72def0eb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\7569569108a92462f52bd9579832f935\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\7569569108a92462f52bd9579832f935\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7b626157e1c1d13a2d9e931d640ae9c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\7b626157e1c1d13a2d9e931d640ae9c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\705017be9ba995e64f29c332752a41cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c1c4155c960b375d42df1a8aea1b46c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\c1c4155c960b375d42df1a8aea1b46c9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\eecac6f22875694f556927816df82228\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\eecac6f22875694f556927816df82228\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\39e4e8c850f47fcfa48c9a1b9bcd9df1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\39e4e8c850f47fcfa48c9a1b9bcd9df1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\04b813a91fefa139f245d4ec515b25cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\04b813a91fefa139f245d4ec515b25cf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9ef47f639d43e6f74312fb4cb69131f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9ef47f639d43e6f74312fb4cb69131f9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31baa8fb9ff1379dfe674c4306326deb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\31baa8fb9ff1379dfe674c4306326deb\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6e8ae45fef03e7f4b8898f09b98ff39a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\6e8ae45fef03e7f4b8898f09b98ff39a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\24fe48c2c21668b2bb803bd6f6f7b740\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\24fe48c2c21668b2bb803bd6f6f7b740\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\44ce08028e087afbf10a4de47b0e9113\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\44ce08028e087afbf10a4de47b0e9113\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0747512e70a7e060abb4720c19635239\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\0747512e70a7e060abb4720c19635239\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a9feb251c937828e0a88a6677a3fa6bd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Torres\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\a9feb251c937828e0a88a6677a3fa6bd\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Thiago.Torres\Documents\GitHub\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml

@@ -10,4 +10,5 @@
     <color name="colorOrange">#ED553B</color>
     <color name="colorGray">#7F8484</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="backgroundFadeGray">#AA000000</color>
 </resources>
