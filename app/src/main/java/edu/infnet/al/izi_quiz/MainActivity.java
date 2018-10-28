@@ -3,41 +3,37 @@ package edu.infnet.al.izi_quiz;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends FragmentActivity {
 
-    static final String LOAD_SPLASH = "goToMainMenu";
     ImageView menuBackgroundImage;
     Fragment splashMenuFragment = new SplashMenuFragment();
     Fragment mainMenuFragment = new MainMenuFragment();
     Fragment leaveGameConfirmation = new LeaveGameFragment();
-    Fragment optionsFragment= new OptionsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Background Related methods.
         menuBackgroundImage = findViewById(R.id.menuBackground);
         menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
-
-        animateBackground();
+        animateBackground(menuBackgroundImage);
 
         replaceFragment(splashMenuFragment, "replace");
 
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        outState.putBoolean(LOAD_SPLASH, false);
-        super.onSaveInstanceState(outState);
     }
 
     public void goToMainMenuFragment(View view) {
@@ -89,7 +85,7 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    public void animateBackground() {
+    public void animateBackground(final ImageView background) {
         ValueAnimator animator = ValueAnimator.ofFloat(-1, 1);
         animator.setDuration(10000);
         animator.setRepeatCount(-1);
@@ -101,8 +97,8 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 float value = (Float) (animation.getAnimatedValue());
-                menuBackgroundImage.setTranslationX((float)(200.0 * Math.sin(value*Math.PI)));
-                menuBackgroundImage.setTranslationY((float)(200.0 * Math.cos(value*Math.PI)));
+                background.setTranslationX((float)(200.0 * Math.sin(value*Math.PI)));
+                background.setTranslationY((float)(200.0 * Math.cos(value*Math.PI)));
             }
         });
 
