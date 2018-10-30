@@ -9,13 +9,39 @@
         android:onClick="startMatch"
         style="@style/MenuButton" />
 
+    <TextView
+        android:id="@+id/matchHistoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/MainMenuPlayButton"
+        android:fontFamily="@font/neutra_text_bold"
+        android:layout_marginTop="21dp"
+        android:text="Partidas Anteriores!"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
+
+    <ImageView
+        android:layout_width="310dp"
+        android:layout_height="420dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/matchHistoryTitle"
+        android:layout_marginTop="21dp"
+        android:src="@drawable/ic_list_background"
+        android:layout_marginBottom="15dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/matchHistoryRecycleView"
         android:layout_width="300dp"
         android:layout_height="400dp"
+        android:layout_below="@+id/matchHistoryTitle"
+        android:layout_marginTop="31dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp"/>
+        android:layout_marginBottom="25dp"/>
+
+
 
 </RelativeLayout>

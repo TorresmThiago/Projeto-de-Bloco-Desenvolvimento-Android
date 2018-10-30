@@ -76,6 +76,10 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\layout\\fragment_menu_opcoes.xml"
     },
     {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_list_background.xml.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable\\ic_list_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\bc327b7eb2ebbbe11836a8d40374aa9d\\res\\drawable\\abc_ratingbar_material.xml"
     },

@@ -1,7 +1,9 @@
 package edu.infnet.al.izi_quiz;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +29,8 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
 
         public MatchPlayedHolder(@NonNull View itemView, HistoricAdapter mAdapter) {
             super(itemView);
-            this.playerPosition = (Button) itemView.findViewById(R.id.matchPlayedPosition);
-            this.matchInfo = (Button) itemView.findViewById(R.id.matchPlayedBackground);
+            this.playerPosition = itemView.findViewById(R.id.matchPlayedPosition);
+            this.matchInfo = itemView.findViewById(R.id.matchPlayedBackground);
             this.mAdapter = mAdapter;
         }
     }

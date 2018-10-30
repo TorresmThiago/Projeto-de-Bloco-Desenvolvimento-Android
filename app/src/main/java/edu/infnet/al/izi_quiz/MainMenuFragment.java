@@ -27,7 +27,6 @@ public class MainMenuFragment extends Fragment {
         provisoryFillHistory(matchesPlayed, 10);
 
         mRecyclerView = view.findViewById(R.id.matchHistoryRecycleView);
-        Log.d("MatchList", String.valueOf(mRecyclerView));
         historicAdapter = new HistoricAdapter(this.getContext(), matchesPlayed);
         mRecyclerView.setAdapter(historicAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
