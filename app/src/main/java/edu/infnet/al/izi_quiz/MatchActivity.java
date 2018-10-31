@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MatchActivity extends FragmentActivity {
 
@@ -33,6 +34,14 @@ public class MatchActivity extends FragmentActivity {
     public void goToResults(View view) {
         Intent intent = new Intent(this, ResultsActivity.class);
         startActivity(intent);
+    }
+
+    public void selectOption (View view) {
+        for (int i = 1; i <= 4; i++) {
+            Button button = findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getPackageName()));
+            button.setBackgroundResource(R.drawable.ic_button_background);
+        }
+        view.setBackgroundResource(R.drawable.ic_button_answer_chosen);
     }
 
     public void remainOnCurrentMatch(View view) {

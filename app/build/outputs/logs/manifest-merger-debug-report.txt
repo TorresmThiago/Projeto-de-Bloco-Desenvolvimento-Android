@@ -86,11 +86,11 @@ ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Proje
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:16:27-74
 activity#edu.infnet.al.izi_quiz.MatchActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:9-60
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:9-51
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:19-48
 activity#edu.infnet.al.izi_quiz.ResultsActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:9-62
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:9-53
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:19-50
 uses-sdk

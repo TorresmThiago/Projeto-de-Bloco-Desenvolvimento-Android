@@ -29,7 +29,7 @@
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
         android:text="Em torno de 50 caracteres são permitidos por resposta"
-        android:onClick="goToResults"/>
+        android:onClick="selectOption"/>
 
     <Button
         android:id="@+id/questionOption_2"
@@ -43,7 +43,7 @@
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
         android:text="Em torno de 50 caracteres são permitidos por resposta"
-        android:onClick="goToResults"/>
+        android:onClick="selectOption"/>
 
     <Button
         android:id="@+id/questionOption_3"
@@ -57,7 +57,7 @@
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
         android:text="Em torno de 50 caracteres são permitidos por resposta"
-        android:onClick="goToResults"/>
+        android:onClick="selectOption"/>
 
     <Button
         android:id="@+id/questionOption_4"
