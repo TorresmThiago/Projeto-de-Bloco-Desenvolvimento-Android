@@ -71,6 +71,14 @@
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
         android:text="Em torno de 50 caracteres são permitidos por resposta"
-        android:onClick="goToResults"/>
+        android:onClick="selectOption"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

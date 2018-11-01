@@ -13,7 +13,7 @@ public class PowerUpFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_partida_powerup, container,false);
+        View view = inflater.inflate(R.layout.fragment_match_powerup, container,false);
 
         Button powerupQuestion = view.findViewById(R.id.powerUpBox);
         Button powerupOption_1 = view.findViewById(R.id.powerUpOption_1);
