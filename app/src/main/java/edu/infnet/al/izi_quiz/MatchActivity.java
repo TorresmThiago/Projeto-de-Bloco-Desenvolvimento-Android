@@ -31,11 +31,6 @@ public class MatchActivity extends FragmentActivity {
         replaceFragment(powerUpFragment, "replace");
     }
 
-    public void goToResults(View view) {
-        Intent intent = new Intent(this, ResultsActivity.class);
-        startActivity(intent);
-    }
-
     public void selectOption (View view) {
         for (int i = 1; i <= 4; i++) {
             Button button = findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getPackageName()));

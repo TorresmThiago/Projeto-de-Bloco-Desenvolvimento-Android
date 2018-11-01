@@ -2,6 +2,7 @@ package edu.infnet.al.izi_quiz;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -46,7 +47,7 @@ public class QuestionsFragment extends Fragment {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                //Bring the codes of changing activity to here.
+                goToResults();
             }
 
             @Override
@@ -62,6 +63,11 @@ public class QuestionsFragment extends Fragment {
 
         animation.start();
         return view;
+    }
+
+    public void goToResults() {
+        Intent intent = new Intent(this.getContext(), ResultsActivity.class);
+        startActivity(intent);
     }
 
 }
