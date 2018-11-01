@@ -1,5 +1,7 @@
 package edu.infnet.al.izi_quiz;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -8,14 +10,13 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
 public class QuestionsFragment extends Fragment {
 
     ProgressBar mProgressBar;
-    CountDownTimer mCountDownTimer;
-    int i;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,27 +34,33 @@ public class QuestionsFragment extends Fragment {
         questionOption_3.setTypeface(typeface);
         questionOption_4.setTypeface(typeface);
 
-        i = 0;
         mProgressBar = view.findViewById(R.id.progressbar);
-        mProgressBar.setProgress(i);
+        mProgressBar.setProgress(0);
 
-        mCountDownTimer = new CountDownTimer(5000,1000) {
+        ObjectAnimator animation = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 100);
+        animation.setDuration(5000);
+        animation.setInterpolator(new DecelerateInterpolator());
+        animation.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animator) { }
 
             @Override
-            public void onTick(long millisUntilFinished) {
-                i++;
-                mProgressBar.setProgress(i *100/(5000/1000));
+            public void onAnimationEnd(Animator animator) {
+                //Bring the codes of changing activity to here.
             }
 
             @Override
-            public void onFinish() {
-                i++;
-                mProgressBar.setProgress(100);
+            public void onAnimationCancel(Animator animation) {
+
             }
-        };
 
-        mCountDownTimer.start();
+            @Override
+            public void onAnimationRepeat(Animator animation) {
 
+            }
+        });
+
+        animation.start();
         return view;
     }
 
