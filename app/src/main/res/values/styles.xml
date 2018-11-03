@@ -10,6 +10,7 @@
 
     <style name="iziTheme" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="colorPrimaryDark">@color/colorYellowDark</item>
+        <item name="colorAccent">@color/colorYellow</item>
     </style>
 
     <style name="MenuButton">
