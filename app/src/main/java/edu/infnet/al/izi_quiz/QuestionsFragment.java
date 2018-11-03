@@ -18,6 +18,8 @@ public class QuestionsFragment extends Fragment {
 
     ProgressBar mProgressBar;
     Boolean gameOn;
+    int correct;
+    String idButtonSelected;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class QuestionsFragment extends Fragment {
         mProgressBar = view.findViewById(R.id.progressbar);
         mProgressBar.setProgress(0);
         gameOn = true;
+        correct =  1 + (int) (Math.random() * 4);
+
 
         //Set all buttons to selectButton function onClick
         for (int i = 1; i <= 4; i++) {
@@ -49,7 +53,7 @@ public class QuestionsFragment extends Fragment {
             public void onTick(long millisUntilFinished) {
                 if (millisUntilFinished < 3000) {
                     gameOn = false;
-                    //TODO: Implement function that makes the selected answer background green or red depending on right or wrong
+                    validateOption(view);
                 }
             }
 
@@ -85,7 +89,19 @@ public class QuestionsFragment extends Fragment {
                 Button otherButtons = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
                 otherButtons.setBackgroundResource(R.drawable.ic_button_background);
             }
+            idButtonSelected = getResources().getResourceEntryName(button.getId());
             button.setBackgroundResource(R.drawable.ic_button_answer_chosen);
+        }
+    }
+
+    public void validateOption(View view) {
+        for (int i = 1; i <= 4; i++) {
+            Button otherButtons = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
+            if (i == correct){
+                otherButtons.setBackgroundResource(R.drawable.ic_button_answer_right);
+            } else if (("questionOption_" + i).equals(idButtonSelected)){
+                otherButtons.setBackgroundResource(R.drawable.ic_button_answer_wrong);
+            }
         }
     }
 
