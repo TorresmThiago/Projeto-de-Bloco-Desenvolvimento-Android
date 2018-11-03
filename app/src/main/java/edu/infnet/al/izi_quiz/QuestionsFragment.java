@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +21,22 @@ public class QuestionsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_match_questions, container,false);
+        final View view = inflater.inflate(R.layout.fragment_match_questions, container, false);
 
         mProgressBar = view.findViewById(R.id.progressbar);
         mProgressBar.setProgress(0);
         gameOn = true;
+
+        //Set all buttons to selectButton function onClick
+        for (int i = 1; i <= 4; i++) {
+            Button button = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View button) {
+                    selectOption(button, view);
+                }
+            });
+        }
 
         //ProgressBar Animation
         ObjectAnimator animation = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 100);
@@ -34,12 +44,11 @@ public class QuestionsFragment extends Fragment {
         animation.setInterpolator(new LinearInterpolator());
 
         //Countdown to handle right or wrong answers
-        CountDownTimer mCountDownTimer = new CountDownTimer(8000,1000) {
+        CountDownTimer mCountDownTimer = new CountDownTimer(8000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if (millisUntilFinished == 3000){
+                if (millisUntilFinished < 3000) {
                     gameOn = false;
-                    //TODO: Bring onClick function to this fragment, and make its functions depend on the gameOn boolean
                     //TODO: Implement function that makes the selected answer background green or red depending on right or wrong
                 }
             }
@@ -56,12 +65,7 @@ public class QuestionsFragment extends Fragment {
         return view;
     }
 
-    public void goToResults() {
-        Intent intent = new Intent(this.getContext(), ResultsActivity.class);
-        startActivity(intent);
-    }
-
-    public void setTypeface(View view){
+    public void setTypeface(View view) {
         Button questionQuestion = view.findViewById(R.id.questionBox);
         Button questionOption_1 = view.findViewById(R.id.questionOption_1);
         Button questionOption_2 = view.findViewById(R.id.questionOption_2);
@@ -73,6 +77,21 @@ public class QuestionsFragment extends Fragment {
         questionOption_2.setTypeface(typeface);
         questionOption_3.setTypeface(typeface);
         questionOption_4.setTypeface(typeface);
+    }
+
+    public void selectOption(View button, View view) {
+        if (gameOn){
+            for (int i = 1; i <= 4; i++) {
+                Button otherButtons = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
+                otherButtons.setBackgroundResource(R.drawable.ic_button_background);
+            }
+            button.setBackgroundResource(R.drawable.ic_button_answer_chosen);
+        }
+    }
+
+    public void goToResults() {
+        Intent intent = new Intent(this.getContext(), ResultsActivity.class);
+        startActivity(intent);
     }
 
 }

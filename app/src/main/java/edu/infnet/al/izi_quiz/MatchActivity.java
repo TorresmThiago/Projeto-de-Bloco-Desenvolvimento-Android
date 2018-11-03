@@ -31,14 +31,6 @@ public class MatchActivity extends FragmentActivity {
         replaceFragment(powerUpFragment, "replace");
     }
 
-    public void selectOption (View view) {
-        for (int i = 1; i <= 4; i++) {
-            Button button = findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getPackageName()));
-            button.setBackgroundResource(R.drawable.ic_button_background);
-        }
-        view.setBackgroundResource(R.drawable.ic_button_answer_chosen);
-    }
-
     public void remainOnCurrentMatch(View view) {
         replaceFragment(leaveMatchConfirmation, "remove");
     }
