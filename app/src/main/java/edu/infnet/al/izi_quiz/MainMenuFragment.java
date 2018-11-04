@@ -38,6 +38,14 @@ public class MainMenuFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) this.getView());
+    }
+
     public void provisoryFillHistory(ArrayList<MatchPlayed> matchesPlayed, int itens){
         for (int i = 0; i < itens; i++){
             MatchPlayed newMatch = new MatchPlayed("16, fev. 2018", 1);

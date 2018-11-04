@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 public class MatchActivity extends FragmentActivity {
@@ -21,6 +22,15 @@ public class MatchActivity extends FragmentActivity {
         setContentView(R.layout.activity_match);
 
         goToPowerUpFragment();
+    }
+
+    @Override
+    public void setContentView(View view)
+    {
+        super.setContentView(view);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup)this.findViewById(android.R.id.content));
     }
 
     public void goToQuestionsFragment(View view) {

@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -35,6 +36,15 @@ public class MainActivity extends FragmentActivity {
         replaceFragment(splashMenuFragment, "replace");
 
     }
+
+    @Override
+    public void setContentView(View view)  {
+        super.setContentView(view);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup)this.findViewById(android.R.id.content));
+    }
+
 
     public void goToMainMenuFragment(View view) {
         menuBackgroundImage.setImageResource(R.drawable.ic_main_background);

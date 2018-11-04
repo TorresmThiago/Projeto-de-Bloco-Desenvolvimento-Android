@@ -41,17 +41,17 @@
 
     <Button
         android:id="@+id/questionOption_2"
-        android:layout_height="75dp"
         android:layout_width="325dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/questionOption_1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/questionOption_1"
-        android:textColor="@color/colorWhite"
-        android:textSize="21sp"
-        android:textAllCaps="false"
         android:background="@drawable/ic_button_background"
+        android:onClick="selectOption"
         android:text="Em torno de 50 caracteres são permitidos por resposta"
-        android:onClick="selectOption"/>
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21sp" />
 
     <Button
         android:id="@+id/questionOption_3"

@@ -14,12 +14,15 @@ public class SplashMenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu_splash, container,false);
-
-        Button playButton = view.findViewById(R.id.splashMenuPlayButton);
-        Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
-        playButton.setTypeface(typeface);
-
         return view;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) this.getView());
     }
 
 }

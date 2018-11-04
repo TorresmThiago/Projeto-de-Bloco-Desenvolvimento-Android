@@ -13,4 +13,12 @@ public class OptionsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu_options, container,false);
         return view;
     }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) this.getView());
+    }
 }

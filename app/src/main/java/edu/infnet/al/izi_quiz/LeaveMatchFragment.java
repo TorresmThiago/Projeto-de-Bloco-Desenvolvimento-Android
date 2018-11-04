@@ -15,15 +15,14 @@ public class LeaveMatchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.asset_popup_leavematch, container,false);
-
-        TextView popUpText = view.findViewById(R.id.popUpLeaveMatchContainer);
-        Button confirmationButton = view.findViewById(R.id.popUpLeaveMatchConfirmation);
-        Button negationButton = view.findViewById(R.id.popUpLeaveMatchNegation);
-        Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
-        popUpText.setTypeface(typeface);
-        confirmationButton.setTypeface(typeface);
-        negationButton.setTypeface(typeface);
-
         return view;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) this.getView());
     }
 }
