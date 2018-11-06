@@ -48,6 +48,7 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     }
 
 
+
     @Override
     public int getItemCount() {
         return matchesPlayed.size();

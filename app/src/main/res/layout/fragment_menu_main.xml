@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/mainMenuHeader"
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </View>
+
+    <ImageView
+        android:id="@+id/mainMenuBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_button_back" />
+
+
+
+    <ImageView
+        android:id="@+id/mainMenuOptionsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_button_options" />
+
     <Button
-        android:id="@+id/MainMenuPlayButton"
+        android:id="@+id/mainMenuPlayButton"
         android:text="@string/MainMenuPlayButtonText"
         android:onClick="startMatch"
+        android:layout_below="@+id/mainMenuHeader"
+        android:layout_marginTop="0dp"
         style="@style/MenuButton" />
 
     <TextView
@@ -14,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/MainMenuPlayButton"
+        android:layout_below="@+id/mainMenuPlayButton"
         android:fontFamily="@font/neutra_text_bold"
         android:layout_marginTop="21dp"
         android:text="Partidas Anteriores!"
@@ -23,21 +52,22 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
 
     <ImageView
+        android:id="@+id/matchHistoryBackground"
         android:layout_width="310dp"
-        android:layout_height="420dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/matchHistoryTitle"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_list_background"
         android:layout_marginBottom="15dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/matchHistoryRecycleView"
         android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/matchHistoryTitle"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"/>

@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +30,7 @@ public class MainMenuFragment extends Fragment {
         mRecyclerView.setAdapter(historicAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-        Button playButton = view.findViewById(R.id.MainMenuPlayButton);
+        Button playButton = view.findViewById(R.id.mainMenuPlayButton);
         Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
         playButton.setTypeface(typeface);
 

@@ -5,7 +5,7 @@
 
     <ImageButton
         android:id="@+id/optionsBackMenu"
-        android:src="@drawable/ic_back_button"
+        android:src="@drawable/ic_button_back"
         android:onClick="goToMainMenuFragment"
         style="@style/backButton" />
 
