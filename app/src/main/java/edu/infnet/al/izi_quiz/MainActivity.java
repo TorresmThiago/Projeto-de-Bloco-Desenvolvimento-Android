@@ -1,7 +1,10 @@
 package edu.infnet.al.izi_quiz;
 
 import android.animation.ValueAnimator;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -21,12 +24,15 @@ public class MainActivity extends FragmentActivity {
     ImageView menuBackgroundImage;
     Fragment splashMenuFragment = new SplashMenuFragment();
     Fragment mainMenuFragment = new MainMenuFragment();
-    Fragment leaveGameConfirmation = new LeaveGameFragment();
+    Dialog leaveGame;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        leaveGame = new Dialog(this);
 
         //Background Related methods.
         menuBackgroundImage = findViewById(R.id.menuBackground);
@@ -45,25 +51,37 @@ public class MainActivity extends FragmentActivity {
         fontChanger.replaceFonts((ViewGroup)this.findViewById(android.R.id.content));
     }
 
-
-    public void goToMainMenuFragment(View view) {
-        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
-        replaceFragment(mainMenuFragment, "replace");
+    @Override
+    public void onBackPressed() {
+        leaveGameConfirmation();
     }
 
-    public void remainOnApplication (View view) {
-        replaceFragment(leaveGameConfirmation, "remove");
+    public void leaveGameConfirmation(){
+        if (!leaveGame.isShowing()){
+            leaveGame.setContentView(R.layout.asset_popup_leavegame);
+            leaveGame.show();
+        } else {
+            leaveGame.dismiss();
+        }
+    }
+
+    public void leaveGameConfirmation(View button){
+        if (!leaveGame.isShowing()){
+            leaveGame.setContentView(R.layout.asset_popup_leavegame);
+            leaveGame.show();
+            leaveGame.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        } else {
+            leaveGame.dismiss();
+        }
     }
 
     public void leaveApplication(View view) {
         finish();
     }
 
-    public void startMatch(View view) {
-        Intent intent = new Intent(this, MatchActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        finishAffinity();
-        startActivity(intent);
+    public void goToMainMenuFragment(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
+        replaceFragment(mainMenuFragment, "replace");
     }
 
     private void replaceFragment(Fragment fragment, String action) {
@@ -86,13 +104,11 @@ public class MainActivity extends FragmentActivity {
         fragmentTransaction.commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        if (!leaveGameConfirmation.isAdded()){
-            replaceFragment(leaveGameConfirmation, "add");
-        } else {
-            replaceFragment(leaveGameConfirmation, "remove");
-        }
+    public void startMatch(View view) {
+        Intent intent = new Intent(this, MatchActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        finishAffinity();
+        startActivity(intent);
     }
 
     public void animateBackground(final ImageView background) {
