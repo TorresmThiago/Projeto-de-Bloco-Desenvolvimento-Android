@@ -1,5 +1,6 @@
 package edu.infnet.al.izi_quiz;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,14 +15,39 @@ public class MatchActivity extends FragmentActivity {
 
     Fragment questionsFragment = new QuestionsFragment();
     Fragment powerUpFragment = new PowerUpFragment();
-    Fragment leaveMatchConfirmation = new LeaveMatchFragment();
+    Dialog leaveMatch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
 
+        leaveMatch = new Dialog(this);
+
         goToPowerUpFragment();
+    }
+
+    @Override
+    public void onBackPressed() {
+        leaveMatchConfirmation();
+    }
+
+    public void leaveMatchConfirmation(){
+        if (!leaveMatch.isShowing()){
+            leaveMatch.setContentView(R.layout.asset_popup_leavematch);
+            leaveMatch.show();
+        } else {
+            leaveMatch.dismiss();
+        }
+    }
+
+    public void leaveMatchConfirmation(View view){
+        if (!leaveMatch.isShowing()){
+            leaveMatch.setContentView(R.layout.asset_popup_leavematch);
+            leaveMatch.show();
+        } else {
+            leaveMatch.dismiss();
+        }
     }
 
     @Override
@@ -41,21 +67,10 @@ public class MatchActivity extends FragmentActivity {
         replaceFragment(powerUpFragment, "replace");
     }
 
-    public void remainOnCurrentMatch(View view) {
-        replaceFragment(leaveMatchConfirmation, "remove");
-    }
-
     public void returnToMenu(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (!leaveMatchConfirmation.isAdded()){
-            replaceFragment(leaveMatchConfirmation, "add");
-        }
     }
 
     private void replaceFragment(Fragment fragment, String action) {
