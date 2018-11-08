@@ -1,6 +1,7 @@
 package edu.infnet.al.izi_quiz;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.content.res.ResourcesCompat;
@@ -45,9 +46,19 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     @Override
     public void onBindViewHolder(@NonNull HistoricAdapter.MatchPlayedHolder matchPlayedHolder, int i) {
         matchPlayedHolder.matchInfo.setText("16, fev. 2018 " + i);
+        matchPlayedHolder.matchInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View button) {
+                System.out.println("Called button");
+            }
+        });
     }
 
-
+//    TODO: Add function that leads to history result
+//    public void goToResults() {
+//        Intent intent = new Intent(this, ResultsActivity.class);
+//        startActivity(intent);
+//    }
 
     @Override
     public int getItemCount() {
