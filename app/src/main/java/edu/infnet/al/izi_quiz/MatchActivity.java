@@ -2,6 +2,8 @@ package edu.infnet.al.izi_quiz;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -35,6 +37,11 @@ public class MatchActivity extends FragmentActivity {
     public void leaveMatchConfirmation(){
         if (!leaveMatch.isShowing()){
             leaveMatch.setContentView(R.layout.asset_popup_leavematch);
+            leaveMatch.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
+            fontChanger.replaceFonts((ViewGroup)leaveMatch.getWindow().findViewById(R.id.popUpLeaveMatch));
+
             leaveMatch.show();
         } else {
             leaveMatch.dismiss();
@@ -42,10 +49,7 @@ public class MatchActivity extends FragmentActivity {
     }
 
     public void leaveMatchConfirmation(View view){
-        if (!leaveMatch.isShowing()){
-            leaveMatch.setContentView(R.layout.asset_popup_leavematch);
-            leaveMatch.show();
-        } else {
+        if (leaveMatch.isShowing()) {
             leaveMatch.dismiss();
         }
     }

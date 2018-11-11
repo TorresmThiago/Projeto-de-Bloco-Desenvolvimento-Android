@@ -4,6 +4,7 @@ import android.animation.ValueAnimator;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -59,6 +61,11 @@ public class MainActivity extends FragmentActivity {
     public void leaveGameConfirmation(){
         if (!leaveGame.isShowing()){
             leaveGame.setContentView(R.layout.asset_popup_leavegame);
+            leaveGame.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+            FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
+            fontChanger.replaceFonts((ViewGroup)leaveGame.getWindow().findViewById(R.id.popUpLeaveGame));
+
             leaveGame.show();
         } else {
             leaveGame.dismiss();
@@ -66,11 +73,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void leaveGameConfirmation(View button){
-        if (!leaveGame.isShowing()){
-            leaveGame.setContentView(R.layout.asset_popup_leavegame);
-            leaveGame.show();
-            leaveGame.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        } else {
+        if (leaveGame.isShowing()){
             leaveGame.dismiss();
         }
     }
