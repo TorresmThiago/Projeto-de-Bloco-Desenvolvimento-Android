@@ -30,10 +30,6 @@ public class MainMenuFragment extends Fragment {
         mRecyclerView.setAdapter(historicAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-        Button playButton = view.findViewById(R.id.mainMenuPlayButton);
-        Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.neutra_text_bold);
-        playButton.setTypeface(typeface);
-
         return view;
     }
 

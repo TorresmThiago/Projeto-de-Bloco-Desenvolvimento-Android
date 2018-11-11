@@ -40,6 +40,10 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     @Override
     public HistoricAdapter.MatchPlayedHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View mItemView = mInflater.inflate(R.layout.asset_historic_matchplayed, viewGroup, false);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(mItemView.getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) mItemView);
+
         return new MatchPlayedHolder(mItemView, this);
     }
 
