@@ -8,10 +8,19 @@ import android.view.ViewGroup;
 
 public class ResultsActivity extends AppCompatActivity {
 
+    private static final String MATCH_DATE = "matchDate";
+    private static final String MATCH_POSITION = "matchPosition";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+
+        String date = getIntent().getStringExtra(MATCH_DATE);
+        int position = getIntent().getIntExtra(MATCH_POSITION, 0);
+
+        System.out.println(date);
+        System.out.println(position);
     }
 
     @Override

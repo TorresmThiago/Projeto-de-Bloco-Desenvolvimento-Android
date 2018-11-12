@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,22 +19,18 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     private final ArrayList<MatchPlayed> matchesPlayed;
     private LayoutInflater mInflater;
 
+    private static final String MATCH_DATE = "matchDate";
+    private static final String MATCH_POSITION = "matchPosition";
+
+    Context context;
+    Intent intent;
+
+
+
     public HistoricAdapter(Context context, ArrayList<MatchPlayed> matchesPlayed) {
         mInflater = LayoutInflater.from(context);
         this.matchesPlayed = matchesPlayed;
-    }
-
-    class MatchPlayedHolder extends RecyclerView.ViewHolder {
-        public final Button playerPosition;
-        public final Button matchInfo;
-        final HistoricAdapter mAdapter;
-
-        public MatchPlayedHolder(@NonNull View itemView, HistoricAdapter mAdapter) {
-            super(itemView);
-            this.playerPosition = itemView.findViewById(R.id.matchPlayedPosition);
-            this.matchInfo = itemView.findViewById(R.id.matchPlayedBackground);
-            this.mAdapter = mAdapter;
-        }
+        this.context = context;
     }
 
     @NonNull
@@ -41,10 +38,10 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     public HistoricAdapter.MatchPlayedHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View mItemView = mInflater.inflate(R.layout.asset_historic_matchplayed, viewGroup, false);
 
-        FontChangeCrawler fontChanger = new FontChangeCrawler(mItemView.getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        FontChangeCrawler fontChanger = new FontChangeCrawler(context.getAssets(), "fonts/neutra_text_bold.OTF");
         fontChanger.replaceFonts((ViewGroup) mItemView);
 
-        return new MatchPlayedHolder(mItemView, this);
+        return new MatchPlayedHolder(mItemView);
     }
 
     @Override
@@ -54,18 +51,35 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
             @Override
             public void onClick(View button) {
                 System.out.println("Called button");
+
             }
         });
     }
 
-//    TODO: Add function that leads to history result
-//    public void goToResults() {
-//        Intent intent = new Intent(this, ResultsActivity.class);
-//        startActivity(intent);
-//    }
-
     @Override
     public int getItemCount() {
         return matchesPlayed.size();
+    }
+
+    class MatchPlayedHolder extends RecyclerView.ViewHolder {
+        public final Button playerPosition;
+        public final Button matchInfo;
+
+        public MatchPlayedHolder(@NonNull View itemView) {
+            super(itemView);
+
+            this.playerPosition = itemView.findViewById(R.id.matchPlayedPosition);
+            this.matchInfo = itemView.findViewById(R.id.matchPlayedBackground);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view){
+                    intent = new Intent(context, ResultsActivity.class);
+                    intent.putExtra(MATCH_DATE, matchesPlayed.get(getLayoutPosition()).getMatchDate());
+                    intent.putExtra(MATCH_POSITION, matchesPlayed.get(getLayoutPosition()).getMatchPosition());
+                    context.startActivity(intent);
+                }
+            });
+        }
     }
 }
