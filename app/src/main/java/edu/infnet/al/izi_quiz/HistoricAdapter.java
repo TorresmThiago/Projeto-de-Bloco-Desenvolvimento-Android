@@ -14,7 +14,7 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchPlayedHolder> {
+public class HistoricAdapter extends RecyclerView.Adapter {
 
     private final ArrayList<MatchPlayed> matchesPlayed;
     private LayoutInflater mInflater;
@@ -45,13 +45,18 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HistoricAdapter.MatchPlayedHolder matchPlayedHolder, int i) {
-        matchPlayedHolder.matchInfo.setText("16, fev. 2018 " + i);
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+        MatchPlayedHolder matchPlayedHolder = (MatchPlayedHolder) holder;
+
+        matchPlayedHolder.matchInfo.setText("16, fev. 2018 " + position);
         matchPlayedHolder.matchInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View button) {
                 System.out.println("Called button");
-
+                intent = new Intent(context, ResultsActivity.class);
+                intent.putExtra(MATCH_DATE, matchesPlayed.get(position).getMatchDate());
+                intent.putExtra(MATCH_POSITION, matchesPlayed.get(position).getMatchPosition());
+                context.startActivity(intent);
             }
         });
     }
@@ -62,8 +67,8 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     }
 
     class MatchPlayedHolder extends RecyclerView.ViewHolder {
-        public final Button playerPosition;
-        public final Button matchInfo;
+        Button playerPosition;
+        Button matchInfo;
 
         public MatchPlayedHolder(@NonNull View itemView) {
             super(itemView);
@@ -71,15 +76,15 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
             this.playerPosition = itemView.findViewById(R.id.matchPlayedPosition);
             this.matchInfo = itemView.findViewById(R.id.matchPlayedBackground);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view){
-                    intent = new Intent(context, ResultsActivity.class);
-                    intent.putExtra(MATCH_DATE, matchesPlayed.get(getLayoutPosition()).getMatchDate());
-                    intent.putExtra(MATCH_POSITION, matchesPlayed.get(getLayoutPosition()).getMatchPosition());
-                    context.startActivity(intent);
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view){
+//                    intent = new Intent(context, ResultsActivity.class);
+//                    intent.putExtra(MATCH_DATE, matchesPlayed.get(getLayoutPosition()).getMatchDate());
+//                    intent.putExtra(MATCH_POSITION, matchesPlayed.get(getLayoutPosition()).getMatchPosition());
+//                    context.startActivity(intent);
+//                }
+//            });
         }
     }
 }

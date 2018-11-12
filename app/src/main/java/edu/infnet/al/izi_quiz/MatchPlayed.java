@@ -8,8 +8,17 @@ public class MatchPlayed {
         return matchDate;
     }
 
+    public void setMatchDate(String matchDate) {
+        this.matchDate = matchDate;
+    }
+
+    public void setMatchPosition(int matchPosition) {
+        this.matchPosition = matchPosition;
+    }
+
     public int getMatchPosition() {
         return matchPosition;
+
     }
 
     private int matchPosition;
