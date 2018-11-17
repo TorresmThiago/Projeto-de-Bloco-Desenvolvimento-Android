@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="325dp"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:id="@+id/popUpLeaveGame">
+
+    <TextView
+        android:id="@+id/gameOptionsContainer"
+        style="@style/popUpContainer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/closeGameOptions"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/gameOptionsContainer"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_button_leave"/>
+
+    <TextView
+        android:id="@+id/gameOptionsMusicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/gameOptionsContainer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/neutra_text_bold"
+        android:text="Música"
+        android:textColor="@color/colorWhite"
+        android:textSize="28dp" />
+
+    <Button
+        android:id="@+id/gameOptionsMusicButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/gameOptionsMusicTitle"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/ic_button_music_on" />
+
+    <TextView
+        android:id="@+id/gameOptionsSoundTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/gameOptionsContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="91dp"
+        android:fontFamily="@font/neutra_text_bold"
+        android:text="Áudio"
+        android:textColor="@color/colorWhite"
+        android:textSize="28dp" />
+
+    <Button
+        android:id="@+id/gameOptionsSoundButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignStart="@+id/gameOptionsSoundTitle"
+        android:layout_below="@+id/gameOptionsMusicTitle"
+        android:background="@drawable/ic_button_sound_on" />
+
+
+
+</RelativeLayout>

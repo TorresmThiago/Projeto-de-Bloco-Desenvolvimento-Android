@@ -6,23 +6,23 @@
     android:id="@+id/popUpLeaveGame">
 
     <TextView
-        android:id="@+id/popUpLeaveGameContainer"
+        android:id="@+id/gameOptionsContainer"
         android:text="@string/leaveGameConfirmation"
         style="@style/popUpContainer" />
 
     <Button
         android:id="@+id/popUpLeaveGameConfirmation"
         android:text="@string/popUpConfirmation"
-        android:layout_alignBottom="@+id/popUpLeaveGameContainer"
-        android:layout_alignStart="@+id/popUpLeaveGameContainer"
+        android:layout_alignBottom="@+id/gameOptionsContainer"
+        android:layout_alignStart="@+id/gameOptionsContainer"
         android:onClick="leaveApplication"
         style="@style/popUpConfirmationButton" />
 
     <Button
         android:id="@+id/popUpLeaveGameNegation"
         android:text="@string/popUpNegation"
-        android:layout_alignBottom="@+id/popUpLeaveGameContainer"
-        android:layout_alignEnd="@+id/popUpLeaveGameContainer"
+        android:layout_alignBottom="@+id/gameOptionsContainer"
+        android:layout_alignEnd="@+id/gameOptionsContainer"
         android:onClick="leaveGameConfirmation"
         style="@style/popUpNegationButton" />
 

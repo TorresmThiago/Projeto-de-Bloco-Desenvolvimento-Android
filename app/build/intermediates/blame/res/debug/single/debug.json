@@ -104,6 +104,14 @@
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_button_sound_on.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable\\ic_button_sound_on.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_button_music_on.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable\\ic_button_music_on.png"
+    },
+    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
@@ -250,6 +258,10 @@
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_button_leave.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable\\ic_button_leave.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -566,6 +578,10 @@
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_asset_modal_options.xml.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\layout\\asset_modal_options.xml"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1498,10 +1514,6 @@
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_options.xml.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\layout\\fragment_menu_options.xml"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",

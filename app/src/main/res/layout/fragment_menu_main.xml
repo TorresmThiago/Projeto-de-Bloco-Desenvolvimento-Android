@@ -4,12 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/mainMenuHeader"
-        android:layout_width="match_parent"
-        android:layout_height="25dp">
-    </View>
-
     <ImageView
         android:id="@+id/mainMenuBackButton"
         android:layout_width="50dp"
@@ -17,6 +11,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:padding="5dp"
+        android:onClick="goToSplashMenu"
         android:src="@drawable/ic_button_back" />
 
 
@@ -28,14 +23,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:padding="5dp"
+        android:onClick="openOptionsModal"
         android:src="@drawable/ic_button_options" />
 
     <Button
         android:id="@+id/mainMenuPlayButton"
         android:text="@string/MainMenuPlayButtonText"
         android:onClick="startMatch"
-        android:layout_below="@+id/mainMenuHeader"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="25dp"
         style="@style/MenuButton" />
 
     <TextView

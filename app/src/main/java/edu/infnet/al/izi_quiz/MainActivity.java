@@ -27,6 +27,7 @@ public class MainActivity extends FragmentActivity {
     Fragment splashMenuFragment = new SplashMenuFragment();
     Fragment mainMenuFragment = new MainMenuFragment();
     Dialog leaveGame;
+    Dialog optionsModal;
 
 
     @Override
@@ -35,6 +36,7 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         leaveGame = new Dialog(this);
+        optionsModal = new Dialog(this);
 
         //Background Related methods.
         menuBackgroundImage = findViewById(R.id.menuBackground);
@@ -78,6 +80,16 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
+    public void openOptionsModal (View view) {
+        optionsModal.setContentView(R.layout.asset_modal_options);
+        optionsModal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup)optionsModal.getWindow().findViewById(R.id.popUpLeaveGame));
+
+        optionsModal.show();
+    }
+
     public void leaveApplication(View view) {
         finish();
     }
@@ -85,6 +97,11 @@ public class MainActivity extends FragmentActivity {
     public void goToMainMenuFragment(View view) {
         menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
         replaceFragment(mainMenuFragment, "replace");
+    }
+
+    public void goToSplashMenu(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
+        replaceFragment(splashMenuFragment, "replace");
     }
 
     private void replaceFragment(Fragment fragment, String action) {
