@@ -220,38 +220,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-in_values-in.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.0.aar\\09cb95d2c2ecc6de3b048e1011d8bf49\\res\\values-in\\values-in.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "1948",
-                        "endColumns": "100",
-                        "endOffsets": "2044"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\values-in\\values-in.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,317,422,509,613,729,811,890,976,1079,1188,1289,1393,1501,1609,1765,1864",
-                        "endColumns": "109,101,104,86,103,115,81,78,85,102,108,100,103,107,107,155,98,83",
-                        "endOffsets": "210,312,417,504,608,724,806,885,971,1074,1183,1284,1388,1496,1604,1760,1859,1943"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-iw_values-iw.arsc.flat",
             "map": [
                 {
@@ -279,6 +247,38 @@
                         "startOffsets": "105,209,308,416,500,600,714,792,870,951,1053,1157,1255,1358,1459,1559,1711,1807",
                         "endColumns": "103,98,107,83,99,113,77,77,80,101,103,97,102,100,99,151,95,80",
                         "endOffsets": "204,303,411,495,595,709,787,865,946,1048,1152,1250,1353,1454,1554,1706,1802,1883"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-in_values-in.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.0.aar\\09cb95d2c2ecc6de3b048e1011d8bf49\\res\\values-in\\values-in.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1948",
+                        "endColumns": "100",
+                        "endOffsets": "2044"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\values-in\\values-in.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,215,317,422,509,613,729,811,890,976,1079,1188,1289,1393,1501,1609,1765,1864",
+                        "endColumns": "109,101,104,86,103,115,81,78,85,102,108,100,103,107,107,155,98,83",
+                        "endOffsets": "210,312,417,504,608,724,806,885,971,1074,1183,1284,1388,1496,1604,1760,1859,1943"
                     }
                 }
             ]
@@ -1109,21 +1109,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4_values-xlarge-v4.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,126,197,267,337,405",
-                        "endColumns": "70,70,69,69,67,67",
-                        "endOffsets": "121,192,262,332,400,468"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-zh-rHK_values-zh-rHK.arsc.flat",
             "map": [
                 {
@@ -1151,6 +1136,21 @@
                         "startOffsets": "1810",
                         "endColumns": "101",
                         "endOffsets": "1907"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\values-xlarge-v4_values-xlarge-v4.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
                     }
                 }
             ]

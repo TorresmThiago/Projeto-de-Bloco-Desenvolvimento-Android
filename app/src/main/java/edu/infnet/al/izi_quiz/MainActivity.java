@@ -57,7 +57,13 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        leaveGameConfirmation();
+        if (leaveGame.isShowing()){
+            leaveGame.dismiss();
+        }
+
+        if (optionsModal.isShowing()){
+            optionsModal.dismiss();
+        }
     }
 
     public void leaveGameConfirmation(){
@@ -80,6 +86,12 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
+    public void CloseOptions(View button){
+        if (optionsModal.isShowing()){
+            optionsModal.dismiss();
+        }
+    }
+
     public void openOptionsModal (View view) {
         optionsModal.setContentView(R.layout.asset_modal_options);
         optionsModal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -88,6 +100,23 @@ public class MainActivity extends FragmentActivity {
         fontChanger.replaceFonts((ViewGroup)optionsModal.getWindow().findViewById(R.id.popUpLeaveGame));
 
         optionsModal.show();
+    }
+
+    public void ToggleSound(View soundButton) {
+        if (soundButton.getBackground().getConstantState() == getResources().getDrawable(R.drawable.ic_button_sound_on).getConstantState()){
+            soundButton.setBackgroundResource(R.drawable.ic_button_sound_off);
+        } else {
+            soundButton.setBackgroundResource(R.drawable.ic_button_sound_on);
+        }
+    }
+
+
+    public void ToggleMusic(View musicButton) {
+        if (musicButton.getBackground().getConstantState() == getResources().getDrawable(R.drawable.ic_button_music_on).getConstantState()){
+            musicButton.setBackgroundResource(R.drawable.ic_button_music_off);
+        } else {
+            musicButton.setBackgroundResource(R.drawable.ic_button_music_on);
+        }
     }
 
     public void leaveApplication(View view) {
