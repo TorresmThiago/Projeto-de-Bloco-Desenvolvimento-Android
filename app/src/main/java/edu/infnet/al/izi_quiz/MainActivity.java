@@ -16,13 +16,11 @@ import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity {
 
-
     ImageView menuBackgroundImage;
     Fragment splashMenuFragment = new SplashMenuFragment();
     Fragment mainMenuFragment = new MainMenuFragment();
     Dialog leaveGame;
     Dialog optionsModal;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,7 +172,4 @@ public class MainActivity extends FragmentActivity {
 
         animator.start();
     }
-
-
-
 }

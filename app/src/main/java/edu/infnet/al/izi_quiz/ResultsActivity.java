@@ -6,10 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class ResultsActivity extends AppCompatActivity {
 
     private static final String MATCH_DATE = "matchDate";
     private static final String MATCH_POSITION = "matchPosition";
+
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +25,12 @@ public class ResultsActivity extends AppCompatActivity {
         String date = getIntent().getStringExtra(MATCH_DATE);
         int position = getIntent().getIntExtra(MATCH_POSITION, 0);
 
-        System.out.println(date);
-        System.out.println(position);
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
     }
 
     @Override
