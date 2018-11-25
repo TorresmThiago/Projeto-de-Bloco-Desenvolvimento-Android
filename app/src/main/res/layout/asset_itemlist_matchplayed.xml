@@ -12,7 +12,7 @@
         android:paddingStart="55dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="16, fev. 2018"
+        android:text="Data da partida"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"

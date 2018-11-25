@@ -50,13 +50,13 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onBackPressed() {
-        if (leaveGame.isShowing()){
-            leaveGame.dismiss();
-        } else if (optionsModal.isShowing()){
-            optionsModal.dismiss();
-        } else {
+//        if (leaveGame.isShowing()){
+//            leaveGame.dismiss();
+//        } else if (optionsModal.isShowing()){
+//            optionsModal.dismiss();
+//        } else {
             leaveGameConfirmation();
-        }
+//        }
     }
 
     public void leaveGameConfirmation(){
