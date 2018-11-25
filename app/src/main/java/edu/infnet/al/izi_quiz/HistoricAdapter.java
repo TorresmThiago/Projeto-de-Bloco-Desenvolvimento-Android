@@ -1,11 +1,7 @@
 package edu.infnet.al.izi_quiz;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,51 +10,35 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-public class HistoricAdapter extends RecyclerView.Adapter {
+public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchPlayedHolder> {
 
+    public static MatchPlayedItemClick matchPlayedItemClick;
     private final ArrayList<MatchPlayed> matchesPlayed;
-    private LayoutInflater mInflater;
-
-    private static final String MATCH_DATE = "matchDate";
-    private static final String MATCH_POSITION = "matchPosition";
-
     Context context;
-    Intent intent;
 
-
-
-    public HistoricAdapter(Context context, ArrayList<MatchPlayed> matchesPlayed) {
-        mInflater = LayoutInflater.from(context);
+    public HistoricAdapter(Context context, ArrayList<MatchPlayed> matchesPlayed, MatchPlayedItemClick matchPlayedItemClick) {
+        this.matchPlayedItemClick = matchPlayedItemClick;
         this.matchesPlayed = matchesPlayed;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public HistoricAdapter.MatchPlayedHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View mItemView = mInflater.inflate(R.layout.asset_historic_matchplayed, viewGroup, false);
+    public MatchPlayedHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.asset_itemlist_matchplayed, parent, false);
 
         FontChangeCrawler fontChanger = new FontChangeCrawler(context.getAssets(), "fonts/neutra_text_bold.OTF");
-        fontChanger.replaceFonts((ViewGroup) mItemView);
+        fontChanger.replaceFonts((ViewGroup) itemView);
 
-        return new MatchPlayedHolder(mItemView);
+        return new MatchPlayedHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        MatchPlayedHolder matchPlayedHolder = (MatchPlayedHolder) holder;
+    public void onBindViewHolder(MatchPlayedHolder holder, final int position) {
+        MatchPlayedHolder matchPlayedHolder = holder;
 
-        matchPlayedHolder.matchInfo.setText("16, fev. 2018 " + position);
-        matchPlayedHolder.matchInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View button) {
-                System.out.println("Called button");
-                intent = new Intent(context, ResultsActivity.class);
-                intent.putExtra(MATCH_DATE, matchesPlayed.get(position).getMatchDate());
-                intent.putExtra(MATCH_POSITION, matchesPlayed.get(position).getMatchPosition());
-                context.startActivity(intent);
-            }
-        });
+        matchPlayedHolder.matchInfo.setText(position + ", fev. 2018 ");
+
     }
 
     @Override
@@ -67,24 +47,19 @@ public class HistoricAdapter extends RecyclerView.Adapter {
     }
 
     class MatchPlayedHolder extends RecyclerView.ViewHolder {
-        Button playerPosition;
         Button matchInfo;
 
         public MatchPlayedHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.playerPosition = itemView.findViewById(R.id.matchPlayedPosition);
-            this.matchInfo = itemView.findViewById(R.id.matchPlayedBackground);
+            this.matchInfo = itemView.findViewById(R.id.matchPlayedItemListBackground);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view){
-//                    intent = new Intent(context, ResultsActivity.class);
-//                    intent.putExtra(MATCH_DATE, matchesPlayed.get(getLayoutPosition()).getMatchDate());
-//                    intent.putExtra(MATCH_POSITION, matchesPlayed.get(getLayoutPosition()).getMatchPosition());
-//                    context.startActivity(intent);
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view){
+                    matchPlayedItemClick.onMatchClick(matchesPlayed.get(getLayoutPosition()));
+                }
+            });
         }
     }
 }

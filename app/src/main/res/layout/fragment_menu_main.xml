@@ -54,7 +54,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/matchHistoryTitle"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_list_background"
+        android:src="@drawable/ic_history_background"
         android:layout_marginBottom="15dp"/>
 
     <android.support.v7.widget.RecyclerView

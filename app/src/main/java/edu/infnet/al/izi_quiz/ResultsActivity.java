@@ -12,18 +12,12 @@ import com.google.android.gms.ads.MobileAds;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    private static final String MATCH_DATE = "matchDate";
-    private static final String MATCH_POSITION = "matchPosition";
-
     private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
-
-        String date = getIntent().getStringExtra(MATCH_DATE);
-        int position = getIntent().getIntExtra(MATCH_POSITION, 0);
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 

@@ -18,7 +18,6 @@ public class MatchPlayed {
 
     public int getMatchPosition() {
         return matchPosition;
-
     }
 
     private int matchPosition;

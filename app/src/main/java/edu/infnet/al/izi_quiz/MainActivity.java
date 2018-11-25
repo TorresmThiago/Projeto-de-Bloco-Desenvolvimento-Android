@@ -52,10 +52,10 @@ public class MainActivity extends FragmentActivity {
     public void onBackPressed() {
         if (leaveGame.isShowing()){
             leaveGame.dismiss();
-        }
-
-        if (optionsModal.isShowing()){
+        } else if (optionsModal.isShowing()){
             optionsModal.dismiss();
+        } else {
+            leaveGameConfirmation();
         }
     }
 
@@ -90,7 +90,7 @@ public class MainActivity extends FragmentActivity {
         optionsModal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
-        fontChanger.replaceFonts((ViewGroup)optionsModal.getWindow().findViewById(R.id.popUpLeaveGame));
+        fontChanger.replaceFonts((ViewGroup)optionsModal.getWindow().findViewById(R.id.popUpGameOptions));
 
         optionsModal.show();
     }
@@ -102,7 +102,6 @@ public class MainActivity extends FragmentActivity {
             soundButton.setBackgroundResource(R.drawable.ic_button_sound_on);
         }
     }
-
 
     public void ToggleMusic(View musicButton) {
         if (musicButton.getBackground().getConstantState() == getResources().getDrawable(R.drawable.ic_button_music_on).getConstantState()){

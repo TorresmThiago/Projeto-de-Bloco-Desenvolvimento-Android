@@ -78,7 +78,7 @@ public class QuestionsFragment extends Fragment {
         if (gameOn){
             for (int i = 1; i <= 4; i++) {
                 Button otherButtons = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
-                otherButtons.setBackgroundResource(R.drawable.ic_button_background);
+                otherButtons.setBackgroundResource(R.drawable.ic_button_background_striped);
             }
             idButtonSelected = getResources().getResourceEntryName(button.getId());
             button.setBackgroundResource(R.drawable.ic_button_answer_chosen);

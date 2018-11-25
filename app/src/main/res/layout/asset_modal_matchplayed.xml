@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#0000"
+    android:id="@+id/matchPlayedModal">
+
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="475dp"
+        android:src="@drawable/ic_results_background"/>
+
+    <TextView
+        android:id="@+id/matchPlayedModalPlayerPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="203dp"
+        style="@style/iziThemeModalSubTitle"/>
+
+    <TextView
+        android:id="@+id/matchPlayedModalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/matchPlayedModalPlayerPosition"
+        android:layout_centerHorizontal="true"
+        style="@style/iziThemeModalSubTitle"/>
+
+</RelativeLayout>
