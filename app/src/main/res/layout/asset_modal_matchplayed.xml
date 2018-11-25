@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="203dp"
-        style="@style/iziThemeModalSubTitle"/>
+        style="@style/iziThemeSubTitle"/>
 
     <TextView
         android:id="@+id/matchPlayedModalDate"
@@ -25,6 +25,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/matchPlayedModalPlayerPosition"
         android:layout_centerHorizontal="true"
-        style="@style/iziThemeModalSubTitle"/>
+        style="@style/iziThemeSubTitle"/>
 
 </RelativeLayout>

@@ -29,7 +29,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:text="Menu de opções"
-        style="@style/iziThemeModalTitle" />
+        style="@style/iziThemeTitle" />
 
     <TextView
         android:id="@+id/gameOptionsMusicTitle"
@@ -39,7 +39,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
         android:text="Música"
-        style="@style/iziThemeModalSubTitle" />
+        style="@style/iziThemeSubTitle" />
 
     <Button
         android:id="@+id/gameOptionsMusicButton"
@@ -59,7 +59,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="190dp"
         android:text="Áudio"
-        style="@style/iziThemeModalSubTitle"/>
+        style="@style/iziThemeSubTitle"/>
 
     <Button
         android:id="@+id/gameOptionsSoundButton"

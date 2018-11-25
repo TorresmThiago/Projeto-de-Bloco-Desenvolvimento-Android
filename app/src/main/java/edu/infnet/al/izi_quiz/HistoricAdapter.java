@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -37,7 +39,7 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     public void onBindViewHolder(MatchPlayedHolder holder, final int position) {
         MatchPlayedHolder matchPlayedHolder = holder;
 
-        matchPlayedHolder.matchInfo.setText(position + ", fev. 2018 ");
+        matchPlayedHolder.matchDate.setText(position + ", fev. 2018 ");
 
     }
 
@@ -47,12 +49,14 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     }
 
     class MatchPlayedHolder extends RecyclerView.ViewHolder {
-        Button matchInfo;
+        ImageView matchBackground;
+        TextView matchDate;
 
         public MatchPlayedHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.matchInfo = itemView.findViewById(R.id.matchPlayedItemListBackground);
+            this.matchBackground = itemView.findViewById(R.id.matchPlayedItemListBackground);
+            this.matchDate = itemView.findViewById(R.id.matchPlayedItemListDate);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

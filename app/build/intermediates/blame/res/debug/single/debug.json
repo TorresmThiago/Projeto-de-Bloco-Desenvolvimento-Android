@@ -8,16 +8,16 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_main_logo.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_button_share.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-mdpi\\ic_button_share.png"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_sound_off.png.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_sound_off.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_button_share.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-mdpi\\ic_button_share.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_button_theme_animal_selected.png.flat",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_button_theme_tv_selected.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_splash_background.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xxhdpi\\ic_splash_background.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_results.xml.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\layout\\activity_results.xml"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_splash_background.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xxhdpi\\ic_splash_background.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
@@ -44,24 +44,24 @@
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_box_question.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_box_question.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_results_player.png.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_results_player.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_box_question.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_box_question.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_theme_world.png.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_theme_world.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_button_leave.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xxhdpi\\ic_button_leave.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_history_background.xml.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable\\ic_history_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_button_leave.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xxhdpi\\ic_button_leave.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-xhdpi\\ic_button_powerup_player.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -152,16 +152,16 @@
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-hdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -172,12 +172,12 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-mdpi\\ic_button_music_on.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_box_question.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_box_question.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_tick_mark_material.xml.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_box_question.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_box_question.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_button_sound_on.png.flat",
@@ -192,12 +192,12 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-mdpi\\ic_button_sound_on.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_splash_background.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_splash_background.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_splash_background.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_splash_background.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
@@ -212,28 +212,28 @@
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_theme_tv.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_theme_tv.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_button_theme_world_selected.png.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_button_theme_world_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_theme_tv.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_theme_tv.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_theme_animal_selected.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_theme_animal_selected.png"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu_main.xml.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\layout\\fragment_menu_main.xml"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_button_theme_animal_selected.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-ldpi\\ic_button_theme_animal_selected.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -280,24 +280,24 @@
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\bb8aed8cb97758e148f5845da5ca3a4b\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_button_powerup_scramble_selected.png.flat",
-        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_button_powerup_scramble_selected.png"
-    },
-    {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_button_theme_world.png.flat",
         "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-mdpi\\ic_button_theme_world.png"
+    },
+    {
+        "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_button_powerup_scramble_selected.png.flat",
+        "source": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\src\\main\\res\\drawable-hdpi\\ic_button_powerup_scramble_selected.png"
     },
     {
         "merged": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",

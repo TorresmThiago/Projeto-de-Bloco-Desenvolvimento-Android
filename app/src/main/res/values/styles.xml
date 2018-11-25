@@ -67,16 +67,22 @@
         <item name="android:gravity">center_horizontal</item>
     </style>
 
-    <style name="iziThemeModalTitle">
+    <style name="iziThemeTitle">
         <item name="android:fontFamily">@font/neutra_text_bold</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">32dp</item>
     </style>
 
-    <style name="iziThemeModalSubTitle">
+    <style name="iziThemeSubTitle">
         <item name="android:fontFamily">@font/neutra_text_bold</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">28dp</item>
+    </style>
+
+    <style name="iziThemeText">
+        <item name="android:fontFamily">@font/neutra_text_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">21dp</item>
     </style>
 
 </resources>
