@@ -51,6 +51,9 @@ public class MainMenuFragment extends Fragment implements MatchPlayedItemClick {
 
     public void provisoryFillHistory(ArrayList<MatchPlayed> matchesPlayed, int itens){
         for (int i = 0; i < itens; i++){
+
+            //Need to receive: Date of the match, Name of the players in match, Position of each player in the match
+
             MatchPlayed newMatch = new MatchPlayed(i + ", fev. 2018",  1 + (int) (Math.random() * 4));
             matchesPlayed.add(newMatch);
         }
