@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Assets;
 
 import android.content.res.AssetManager;
 import android.graphics.Typeface;

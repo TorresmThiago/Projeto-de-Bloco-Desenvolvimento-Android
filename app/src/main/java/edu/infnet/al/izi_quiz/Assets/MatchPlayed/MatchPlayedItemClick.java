@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Assets.MatchPlayed;
 
 public interface MatchPlayedItemClick {
 

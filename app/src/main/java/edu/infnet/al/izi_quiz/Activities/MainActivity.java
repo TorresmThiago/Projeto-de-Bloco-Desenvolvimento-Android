@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Activities;
 
 import android.animation.ValueAnimator;
 import android.app.Dialog;
@@ -13,6 +13,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Fragments.MainMenuFragment;
+import edu.infnet.al.izi_quiz.R;
+import edu.infnet.al.izi_quiz.Fragments.SplashMenuFragment;
 
 public class MainActivity extends FragmentActivity {
 

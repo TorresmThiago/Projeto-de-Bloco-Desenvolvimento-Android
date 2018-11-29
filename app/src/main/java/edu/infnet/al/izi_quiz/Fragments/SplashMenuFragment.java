@@ -1,17 +1,17 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Fragments;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.R;
 
 public class SplashMenuFragment extends Fragment {
 

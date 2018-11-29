@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Fragments;
 
 import android.app.Dialog;
 import android.graphics.Color;
@@ -13,6 +13,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Assets.MatchPlayed.HistoricAdapter;
+import edu.infnet.al.izi_quiz.Assets.MatchPlayed.MatchPlayed;
+import edu.infnet.al.izi_quiz.Assets.MatchPlayed.MatchPlayedItemClick;
+import edu.infnet.al.izi_quiz.R;
 
 public class MainMenuFragment extends Fragment implements MatchPlayedItemClick {
 

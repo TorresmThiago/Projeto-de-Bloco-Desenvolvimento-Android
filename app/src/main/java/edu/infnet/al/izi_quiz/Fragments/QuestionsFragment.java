@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Fragments;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
+
+import edu.infnet.al.izi_quiz.Activities.ResultsActivity;
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.R;
 
 public class QuestionsFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package edu.infnet.al.izi_quiz;
+package edu.infnet.al.izi_quiz.Activities;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -11,7 +11,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Fragments.PowerUpFragment;
+import edu.infnet.al.izi_quiz.Fragments.QuestionsFragment;
+import edu.infnet.al.izi_quiz.R;
 
 public class MatchActivity extends FragmentActivity {
 
