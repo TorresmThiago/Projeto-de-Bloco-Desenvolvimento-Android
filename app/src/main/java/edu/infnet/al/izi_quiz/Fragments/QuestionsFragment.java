@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +17,14 @@ import android.widget.TextView;
 
 import edu.infnet.al.izi_quiz.Activities.ResultsActivity;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Assets.PowerUps.FadeIn;
 import edu.infnet.al.izi_quiz.Assets.PowerUps.Shuffle;
 import edu.infnet.al.izi_quiz.R;
 
-import static android.content.ContentValues.TAG;
-
 public class QuestionsFragment extends Fragment {
 
-    Shuffle shufflePowerUP = new Shuffle();
+    Shuffle shufflePowerUp = new Shuffle();
+    FadeIn fadeInPowerUp = new FadeIn();
     TextView question;
 
     ProgressBar mProgressBar;
@@ -46,7 +45,8 @@ public class QuestionsFragment extends Fragment {
         correct =  1 + (int) (Math.random() * 4);
 
         question = view.findViewById(R.id.questionBox);
-        shufflePowerUP.shuffleTextView(question);
+        shufflePowerUp.shuffleTextView(question);
+        fadeInPowerUp.fadeInTextView(question);
 
         //Set all buttons to selectButton function onClick
         for (int i = 1; i <= 4; i++) {
