@@ -2,36 +2,51 @@ package edu.infnet.al.izi_quiz.Fragments;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import edu.infnet.al.izi_quiz.Activities.ResultsActivity;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Assets.PowerUps.Shuffle;
 import edu.infnet.al.izi_quiz.R;
 
+import static android.content.ContentValues.TAG;
+
 public class QuestionsFragment extends Fragment {
+
+    Shuffle shufflePowerUP = new Shuffle();
+    TextView question;
 
     ProgressBar mProgressBar;
     Boolean gameOn;
     int correct;
     String idButtonSelected;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_match_questions, container, false);
+
 
         mProgressBar = view.findViewById(R.id.progressbar);
         mProgressBar.setProgress(0);
         gameOn = true;
         correct =  1 + (int) (Math.random() * 4);
 
+        question = view.findViewById(R.id.questionBox);
+        shufflePowerUP.shuffleTextView(question);
 
         //Set all buttons to selectButton function onClick
         for (int i = 1; i <= 4; i++) {

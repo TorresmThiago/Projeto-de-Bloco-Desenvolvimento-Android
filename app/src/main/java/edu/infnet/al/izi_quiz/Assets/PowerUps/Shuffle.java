@@ -1,10 +1,26 @@
 package edu.infnet.al.izi_quiz.Assets.PowerUps;
 
+import android.text.TextUtils;
+import android.widget.TextView;
+
 import java.util.Random;
 
 public class Shuffle {
 
-    static String shuffleArray(String word) {
+    public void shuffleTextView (TextView textView) {
+
+        String text = textView.getText().toString();
+        String[] words = text.split(" ");
+
+        for (int i = 0; i < words.length; i++) {
+            words[i] = shuffleWord(words[i]);
+        }
+
+        text =  TextUtils.join(" ", words);
+        textView.setText(text);
+    }
+
+    private String shuffleWord(String word) {
         Random rnd = new Random();
         char[] letters = word.toCharArray();
 

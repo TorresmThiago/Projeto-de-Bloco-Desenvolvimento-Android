@@ -28,15 +28,15 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
-        <activity android:name="edu.infnet.al.izi_quiz.MainActivity" >
+        <activity android:name="edu.infnet.al.izi_quiz.Activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="edu.infnet.al.izi_quiz.MatchActivity" />
-        <activity android:name="edu.infnet.al.izi_quiz.ResultsActivity" />
+        <activity android:name="edu.infnet.al.izi_quiz.Activities.MatchActivity" />
+        <activity android:name="edu.infnet.al.izi_quiz.Activities.ResultsActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
