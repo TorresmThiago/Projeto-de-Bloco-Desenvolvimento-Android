@@ -24,8 +24,9 @@ public class Shuffle {
         Random rnd = new Random();
         char[] letters = word.toCharArray();
 
-        for (int i = letters.length - 1; i > 0; i--) {
-            int index = rnd.nextInt(i + 1);
+        for (int i = letters.length - 2; i > 0; i--) {
+
+            int index = 1 + rnd.nextInt(i);
 
             char selectedLetter = letters[index];
             letters[index] = letters[i];
