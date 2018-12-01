@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -32,36 +33,22 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Pop-up and Modal Custom Dialog setters
         leaveGame = new Dialog(this);
         optionsModal = new Dialog(this);
 
-        //Background Related methods.
-        menuBackgroundImage = findViewById(R.id.menuBackground);
-        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
         animateBackground(menuBackgroundImage);
-
-        replaceFragment(splashMenuFragment, "replace");
-
-    }
-
-    @Override
-    public void setContentView(View view)  {
-        super.setContentView(view);
-
-        FontChangeCrawler fontChanger = new FontChangeCrawler(getAssets(), "fonts/neutra_text_bold.OTF");
-        fontChanger.replaceFonts((ViewGroup)this.findViewById(android.R.id.content));
+        replaceFragment(splashMenuFragment);
     }
 
     @Override
     public void onBackPressed() {
-//        if (leaveGame.isShowing()){
-//            leaveGame.dismiss();
-//        } else if (optionsModal.isShowing()){
-//            optionsModal.dismiss();
-//        } else {
-            leaveGameConfirmation();
-//        }
+        leaveGameConfirmation();
+    }
+
+    public void leaveGameConfirmation(View button){
+        if (leaveGame.isShowing()){
+            leaveGame.dismiss();
+        }
     }
 
     public void leaveGameConfirmation(){
@@ -78,18 +65,6 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    public void leaveGameConfirmation(View button){
-        if (leaveGame.isShowing()){
-            leaveGame.dismiss();
-        }
-    }
-
-    public void CloseOptions(View button){
-        if (optionsModal.isShowing()){
-            optionsModal.dismiss();
-        }
-    }
-
     public void openOptionsModal (View view) {
         optionsModal.setContentView(R.layout.asset_modal_options);
         optionsModal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -98,6 +73,12 @@ public class MainActivity extends FragmentActivity {
         fontChanger.replaceFonts((ViewGroup)optionsModal.getWindow().findViewById(R.id.popUpGameOptions));
 
         optionsModal.show();
+    }
+
+    public void CloseOptions(View button){
+        if (optionsModal.isShowing()){
+            optionsModal.dismiss();
+        }
     }
 
     public void ToggleSound(View soundButton) {
@@ -122,30 +103,18 @@ public class MainActivity extends FragmentActivity {
 
     public void goToMainMenuFragment(View view) {
         menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
-        replaceFragment(mainMenuFragment, "replace");
+        replaceFragment(mainMenuFragment);
     }
 
     public void goToSplashMenu(View view) {
         menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
-        replaceFragment(splashMenuFragment, "replace");
+        replaceFragment(splashMenuFragment);
     }
 
-    private void replaceFragment(Fragment fragment, String action) {
-
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-
-        switch (action){
-            case "replace":
-                fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
-                break;
-            case "add":
-                fragmentTransaction.add(R.id.menuFragmentsContainer, fragment);
-                break;
-            case "remove":
-                fragmentTransaction.remove(fragment);
-                break;
-        }
+        fragmentTransaction.replace(R.id.menuFragmentsContainer, fragment);
 
         fragmentTransaction.commit();
     }
@@ -159,6 +128,10 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void animateBackground(final ImageView background) {
+
+        menuBackgroundImage = findViewById(R.id.menuBackground);
+        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
+
         ValueAnimator animator = ValueAnimator.ofFloat(-1, 1);
         animator.setDuration(10000);
         animator.setRepeatCount(-1);

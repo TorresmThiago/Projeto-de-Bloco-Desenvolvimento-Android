@@ -25,7 +25,6 @@ public class CreateMatchActivity extends FragmentActivity {
     }
 
     public void createNewRoom(View view) {
-
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
 

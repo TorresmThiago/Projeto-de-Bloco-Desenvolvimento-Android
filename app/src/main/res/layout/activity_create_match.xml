@@ -31,7 +31,7 @@
         android:layout_marginTop="175dp"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:text="Escolha como você quer participar do izi quiz!"
+        android:text="Escolha como você quer iniciar uma partida no izi quiz!"
         style="@style/iziThemeText"/>
 
     <Button
