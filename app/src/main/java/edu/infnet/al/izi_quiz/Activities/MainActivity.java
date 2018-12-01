@@ -10,12 +10,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Fragments.CreateRoomFragment;
+import edu.infnet.al.izi_quiz.Fragments.JoinRoomFragment;
+import edu.infnet.al.izi_quiz.Fragments.StartMatchFragment;
 import edu.infnet.al.izi_quiz.Fragments.MainMenuFragment;
 import edu.infnet.al.izi_quiz.R;
 import edu.infnet.al.izi_quiz.Fragments.SplashMenuFragment;
@@ -23,8 +25,14 @@ import edu.infnet.al.izi_quiz.Fragments.SplashMenuFragment;
 public class MainActivity extends FragmentActivity {
 
     ImageView menuBackgroundImage;
-    Fragment splashMenuFragment = new SplashMenuFragment();
-    Fragment mainMenuFragment = new MainMenuFragment();
+
+    private Fragment splashMenuFragment = new SplashMenuFragment();
+    private Fragment mainMenuFragment = new MainMenuFragment();
+    private Fragment startMatchFragment = new StartMatchFragment();
+    private Fragment createRoomFragment = new CreateRoomFragment();
+    private Fragment joinRoomFragment = new JoinRoomFragment();
+
+
     Dialog leaveGame;
     Dialog optionsModal;
 
@@ -35,6 +43,9 @@ public class MainActivity extends FragmentActivity {
 
         leaveGame = new Dialog(this);
         optionsModal = new Dialog(this);
+
+        menuBackgroundImage = findViewById(R.id.menuBackground);
+        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
 
         animateBackground(menuBackgroundImage);
         replaceFragment(splashMenuFragment);
@@ -101,14 +112,29 @@ public class MainActivity extends FragmentActivity {
         finish();
     }
 
+    public void goToSplashMenu(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
+        replaceFragment(splashMenuFragment);
+    }
+
     public void goToMainMenuFragment(View view) {
         menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
         replaceFragment(mainMenuFragment);
     }
 
-    public void goToSplashMenu(View view) {
-        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
-        replaceFragment(splashMenuFragment);
+    public void goToStartMatchFragment(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
+        replaceFragment(startMatchFragment);
+    }
+
+    public void goToCreateRoomFragment(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
+        replaceFragment(createRoomFragment);
+    }
+
+    public void goToJoinRoomFragment(View view) {
+        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
+        replaceFragment(joinRoomFragment);
     }
 
     private void replaceFragment(Fragment fragment) {
@@ -120,17 +146,13 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void startMatch(View view) {
-        //Intent intent = new Intent(this, MatchActivity.class);
-        Intent intent = new Intent(this, CreateMatchActivity.class);
+        Intent intent = new Intent(this, MatchActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         finishAffinity();
         startActivity(intent);
     }
 
     public void animateBackground(final ImageView background) {
-
-        menuBackgroundImage = findViewById(R.id.menuBackground);
-        menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
 
         ValueAnimator animator = ValueAnimator.ofFloat(-1, 1);
         animator.setDuration(10000);

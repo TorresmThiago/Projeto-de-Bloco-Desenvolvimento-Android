@@ -29,8 +29,8 @@
     <Button
         android:id="@+id/mainMenuPlayButton"
         android:text="@string/MainMenuPlayButtonText"
-        android:onClick="startMatch"
         android:layout_marginTop="25dp"
+        android:onClick="goToStartMatchFragment"
         style="@style/MenuButton" />
 
     <TextView

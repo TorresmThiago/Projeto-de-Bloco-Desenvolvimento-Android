@@ -146,10 +146,10 @@ activity#edu.infnet.al.izi_quiz.Activities.ResultsActivity
 ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:9-64
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:19-61
-activity#edu.infnet.al.izi_quiz.Activities.CreateMatchActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:9-77
+activity#edu.infnet.al.izi_quiz.Fragments.StartMatchFragment
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:9-75
 	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:19-65
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:19-63
 uses-sdk
 INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml

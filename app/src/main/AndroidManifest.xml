@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".Activities.MatchActivity" />
         <activity android:name=".Activities.ResultsActivity" />
-        <activity android:name=".Activities.CreateMatchActivity"></activity>
+        <activity android:name=".Fragments.StartMatchFragment"></activity>
     </application>
 
 </manifest>

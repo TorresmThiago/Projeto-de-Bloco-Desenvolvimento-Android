@@ -1697,7 +1697,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -3174,61 +3174,60 @@ public final class R {
     public static final int right=0x7f08008c;
     public static final int right_icon=0x7f08008d;
     public static final int right_side=0x7f08008e;
-    public static final int roomContainer=0x7f08008f;
-    public static final int screen=0x7f080090;
-    public static final int scrollIndicatorDown=0x7f080091;
-    public static final int scrollIndicatorUp=0x7f080092;
-    public static final int scrollView=0x7f080093;
-    public static final int search_badge=0x7f080094;
-    public static final int search_bar=0x7f080095;
-    public static final int search_button=0x7f080096;
-    public static final int search_close_btn=0x7f080097;
-    public static final int search_edit_frame=0x7f080098;
-    public static final int search_go_btn=0x7f080099;
-    public static final int search_mag_icon=0x7f08009a;
-    public static final int search_plate=0x7f08009b;
-    public static final int search_src_text=0x7f08009c;
-    public static final int search_voice_btn=0x7f08009d;
-    public static final int select_dialog_listview=0x7f08009e;
-    public static final int shareGameResultsButton=0x7f08009f;
-    public static final int shortcut=0x7f0800a0;
-    public static final int showCustom=0x7f0800a1;
-    public static final int showHome=0x7f0800a2;
-    public static final int showTitle=0x7f0800a3;
-    public static final int spacer=0x7f0800a4;
-    public static final int splashMenuLogo=0x7f0800a5;
-    public static final int splashMenuPlayButton=0x7f0800a6;
-    public static final int split_action_bar=0x7f0800a7;
-    public static final int spread=0x7f0800a8;
-    public static final int spread_inside=0x7f0800a9;
-    public static final int src_atop=0x7f0800aa;
-    public static final int src_in=0x7f0800ab;
-    public static final int src_over=0x7f0800ac;
-    public static final int standard=0x7f0800ad;
-    public static final int start=0x7f0800ae;
-    public static final int status_bar_latest_event_content=0x7f0800af;
-    public static final int submenuarrow=0x7f0800b0;
-    public static final int submit_area=0x7f0800b1;
-    public static final int tabMode=0x7f0800b2;
-    public static final int tag_transition_group=0x7f0800b3;
-    public static final int text=0x7f0800b4;
-    public static final int text2=0x7f0800b5;
-    public static final int textSpacerNoButtons=0x7f0800b6;
-    public static final int textSpacerNoTitle=0x7f0800b7;
-    public static final int textView=0x7f0800b8;
-    public static final int time=0x7f0800b9;
-    public static final int title=0x7f0800ba;
-    public static final int titleDividerNoCustom=0x7f0800bb;
-    public static final int title_template=0x7f0800bc;
-    public static final int top=0x7f0800bd;
-    public static final int topPanel=0x7f0800be;
-    public static final int uniform=0x7f0800bf;
-    public static final int up=0x7f0800c0;
-    public static final int useLogo=0x7f0800c1;
-    public static final int wide=0x7f0800c2;
-    public static final int withText=0x7f0800c3;
-    public static final int wrap=0x7f0800c4;
-    public static final int wrap_content=0x7f0800c5;
+    public static final int screen=0x7f08008f;
+    public static final int scrollIndicatorDown=0x7f080090;
+    public static final int scrollIndicatorUp=0x7f080091;
+    public static final int scrollView=0x7f080092;
+    public static final int search_badge=0x7f080093;
+    public static final int search_bar=0x7f080094;
+    public static final int search_button=0x7f080095;
+    public static final int search_close_btn=0x7f080096;
+    public static final int search_edit_frame=0x7f080097;
+    public static final int search_go_btn=0x7f080098;
+    public static final int search_mag_icon=0x7f080099;
+    public static final int search_plate=0x7f08009a;
+    public static final int search_src_text=0x7f08009b;
+    public static final int search_voice_btn=0x7f08009c;
+    public static final int select_dialog_listview=0x7f08009d;
+    public static final int shareGameResultsButton=0x7f08009e;
+    public static final int shortcut=0x7f08009f;
+    public static final int showCustom=0x7f0800a0;
+    public static final int showHome=0x7f0800a1;
+    public static final int showTitle=0x7f0800a2;
+    public static final int spacer=0x7f0800a3;
+    public static final int splashMenuLogo=0x7f0800a4;
+    public static final int splashMenuPlayButton=0x7f0800a5;
+    public static final int split_action_bar=0x7f0800a6;
+    public static final int spread=0x7f0800a7;
+    public static final int spread_inside=0x7f0800a8;
+    public static final int src_atop=0x7f0800a9;
+    public static final int src_in=0x7f0800aa;
+    public static final int src_over=0x7f0800ab;
+    public static final int standard=0x7f0800ac;
+    public static final int start=0x7f0800ad;
+    public static final int status_bar_latest_event_content=0x7f0800ae;
+    public static final int submenuarrow=0x7f0800af;
+    public static final int submit_area=0x7f0800b0;
+    public static final int tabMode=0x7f0800b1;
+    public static final int tag_transition_group=0x7f0800b2;
+    public static final int text=0x7f0800b3;
+    public static final int text2=0x7f0800b4;
+    public static final int textSpacerNoButtons=0x7f0800b5;
+    public static final int textSpacerNoTitle=0x7f0800b6;
+    public static final int textView=0x7f0800b7;
+    public static final int time=0x7f0800b8;
+    public static final int title=0x7f0800b9;
+    public static final int titleDividerNoCustom=0x7f0800ba;
+    public static final int title_template=0x7f0800bb;
+    public static final int top=0x7f0800bc;
+    public static final int topPanel=0x7f0800bd;
+    public static final int uniform=0x7f0800be;
+    public static final int up=0x7f0800bf;
+    public static final int useLogo=0x7f0800c0;
+    public static final int wide=0x7f0800c1;
+    public static final int withText=0x7f0800c2;
+    public static final int wrap=0x7f0800c3;
+    public static final int wrap_content=0x7f0800c4;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;
@@ -3265,21 +3264,21 @@ public final class R {
     public static final int abc_search_dropdown_item_icons_2line=0x7f0a0017;
     public static final int abc_search_view=0x7f0a0018;
     public static final int abc_select_dialog_material=0x7f0a0019;
-    public static final int activity_create_match=0x7f0a001a;
-    public static final int activity_main=0x7f0a001b;
-    public static final int activity_match=0x7f0a001c;
-    public static final int activity_results=0x7f0a001d;
-    public static final int asset_itemlist_matchplayed=0x7f0a001e;
-    public static final int asset_modal_matchplayed=0x7f0a001f;
-    public static final int asset_modal_options=0x7f0a0020;
-    public static final int asset_popup_leavegame=0x7f0a0021;
-    public static final int asset_popup_leavematch=0x7f0a0022;
-    public static final int fragment_create_room=0x7f0a0023;
-    public static final int fragment_join_room=0x7f0a0024;
-    public static final int fragment_match_powerup=0x7f0a0025;
-    public static final int fragment_match_questions=0x7f0a0026;
-    public static final int fragment_menu_main=0x7f0a0027;
-    public static final int fragment_menu_splash=0x7f0a0028;
+    public static final int activity_main=0x7f0a001a;
+    public static final int activity_match=0x7f0a001b;
+    public static final int activity_results=0x7f0a001c;
+    public static final int asset_itemlist_matchplayed=0x7f0a001d;
+    public static final int asset_modal_matchplayed=0x7f0a001e;
+    public static final int asset_modal_options=0x7f0a001f;
+    public static final int asset_popup_leavegame=0x7f0a0020;
+    public static final int asset_popup_leavematch=0x7f0a0021;
+    public static final int fragment_create_room=0x7f0a0022;
+    public static final int fragment_join_room=0x7f0a0023;
+    public static final int fragment_match_powerup=0x7f0a0024;
+    public static final int fragment_match_questions=0x7f0a0025;
+    public static final int fragment_menu_main=0x7f0a0026;
+    public static final int fragment_menu_splash=0x7f0a0027;
+    public static final int fragment_start_match=0x7f0a0028;
     public static final int notification_action=0x7f0a0029;
     public static final int notification_action_tombstone=0x7f0a002a;
     public static final int notification_media_action=0x7f0a002b;
@@ -7875,7 +7874,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
