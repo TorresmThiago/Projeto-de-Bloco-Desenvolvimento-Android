@@ -8,9 +8,9 @@
         android:id="@+id/mainMenuBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:padding="5dp"
         android:onClick="goToSplashMenu"
         android:src="@drawable/ic_button_back" />
 
@@ -20,9 +20,9 @@
         android:id="@+id/mainMenuOptionsButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_margin="10dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:padding="5dp"
         android:onClick="openOptionsModal"
         android:src="@drawable/ic_button_options" />
 
@@ -40,7 +40,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/mainMenuPlayButton"
         android:fontFamily="@font/neutra_text_bold"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:text="Partidas Anteriores!"
         android:textColor="@color/colorWhite"
         android:textAlignment="center"

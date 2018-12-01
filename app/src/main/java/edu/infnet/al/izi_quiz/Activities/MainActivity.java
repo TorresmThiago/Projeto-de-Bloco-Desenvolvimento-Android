@@ -151,7 +151,8 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void startMatch(View view) {
-        Intent intent = new Intent(this, MatchActivity.class);
+        //Intent intent = new Intent(this, MatchActivity.class);
+        Intent intent = new Intent(this, CreateMatchActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         finishAffinity();
         startActivity(intent);
