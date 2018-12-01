@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/ic_main_background">
+    android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/startMatchBackButton"
+        android:id="@+id/joinRoomBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -15,7 +14,7 @@
         android:onClick="goToStartMatchFragment"/>
 
     <ImageButton
-        android:id="@+id/startMatchOptionsButton"
+        android:id="@+id/joinRoomOptionsButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -25,10 +24,49 @@
         android:onClick="openOptionsModal"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/joinRoomInstructions"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Você para fazer parte de uma sala!"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="175dp"
+        android:text="@string/joinRoomInstructionsText"
+        style="@style/iziThemeText"/>
+
+    <ImageView
+        android:id="@+id/joinRoomCodeInputBackground"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/joinRoomInstructions"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_history_background"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/joinRoomCodeInput"
+        style="@style/iziThemeText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/joinRoomCodeInputBackground"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="@string/joinRoomCodeInputHintText"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorWhite"
+        android:textColorLink="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/joinRoomJoinButton"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/joinRoomCodeInputBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_button_background_striped"
+        android:textAllCaps="false"
+        android:text="@string/joinRoomJoinButtonText"
         style="@style/iziThemeText"/>
 
 </RelativeLayout>
