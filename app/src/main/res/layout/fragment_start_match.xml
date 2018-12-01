@@ -4,7 +4,7 @@
         android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/startMatchBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -14,7 +14,7 @@
         android:onClick="goToMainMenuFragment"/>
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/startMatchOptionsButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -24,38 +24,38 @@
         android:onClick="openOptionsModal"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/startMatchTitleText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="175dp"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:text="Escolha como você quer iniciar uma partida no izi quiz!"
+        android:text="@string/startMatchTitleText"
         style="@style/iziThemeText"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startMatchCreateRoomButton"
         android:layout_width="200dp"
         android:layout_height="75dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/textView"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/startMatchTitleText"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_button_background_striped"
         android:textAllCaps="false"
-        android:text="Criar nova sala"
+        android:text="@string/CreateRoomButtonText"
         android:onClick="goToCreateRoomFragment"
         style="@style/iziThemeText" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/startMatchJoinRoomButton"
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/button"
+        android:layout_below="@id/startMatchCreateRoomButton"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_button_background_striped"
         android:textAllCaps="false"
-        android:text="Entrar em sala"
+        android:text="@string/JoinRoomButtonText"
         android:onClick="goToJoinRoomFragment"
         style="@style/iziThemeText"/>
 

@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/ic_main_background">
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/ic_main_background">
+
+    <ImageButton
+        android:id="@+id/createRoomBackButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_button_back"
+        android:onClick="goToStartMatchFragment"/>
+
+    <ImageButton
+        android:id="@+id/createRoomOptionsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_button_options"
+        android:onClick="openOptionsModal"/>
 
     <TextView
+        android:id="@+id/createRoomInstructions"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createRoomBackButton"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/createRoomInstructionsText"
+        style="@style/iziThemeText"/>
+
+    <TextView
+        android:id="@+id/createRoomCode"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createRoomInstructions"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:text="A1B2C3D4"
+        style="@style/iziThemeTitle" />
+
+    <ImageView
+        android:id="@+id/createRoomPlayersContainer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/createRoomCode"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_history_background" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/createRoomPlayers"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_alignTop="@+id/createRoomPlayersContainer"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/firebaseTeste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Você para criar uma sala!"
-        style="@style/iziThemeText"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="84dp"
+        android:text="TextView para teste Firebase"
+        style="@style/iziThemeText" />
+
+
+
 
 </RelativeLayout>

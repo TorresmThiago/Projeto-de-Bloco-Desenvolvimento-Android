@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.R;
 
 public class CreateRoomFragment extends Fragment {
@@ -24,6 +25,15 @@ public class CreateRoomFragment extends Fragment {
         mDatabase.child("Matches").child("Room").setValue("ABC123");
 
         return inflater.inflate(R.layout.fragment_create_room, container,false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
+        fontChanger.replaceFonts((ViewGroup) this.getView());
+
     }
 
 }

@@ -7,4 +7,8 @@
     <string name="leaveGameConfirmation">Gostaria de sair do izi quiz!?</string>
     <string name="leaveMatchConfirmation">Gostaria de sair da partida?</string>
     <string name="MainMenuPlayButtonText">Iniciar partida!</string>
+    <string name="JoinRoomButtonText">Entrar em sala</string>
+    <string name="CreateRoomButtonText">Criar nova sala</string>
+    <string name="startMatchTitleText">Escolha como você quer iniciar uma partida no izi quiz!</string>
+    <string name="createRoomInstructionsText">Para seus amigos entrarem nessa sala, peça para que coloquem o mesmo código abaixo!</string>
 </resources>
