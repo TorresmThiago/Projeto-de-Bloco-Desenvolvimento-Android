@@ -29,7 +29,7 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
     @NonNull
     @Override
     public MatchPlayedHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.asset_itemlist_matchplayed, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.asset_itemlist, parent, false);
 
         FontChangeCrawler fontChanger = new FontChangeCrawler(context.getAssets(), "fonts/neutra_text_bold.OTF");
         fontChanger.replaceFonts((ViewGroup) itemView);
@@ -39,10 +39,7 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
 
     @Override
     public void onBindViewHolder(MatchPlayedHolder holder, final int position) {
-        MatchPlayedHolder matchPlayedHolder = holder;
-
-        matchPlayedHolder.matchDate.setText(position + ", fev. 2018 ");
-
+        holder.matchDate.setText(position + ", fev. 2018 ");
     }
 
     @Override
@@ -57,8 +54,8 @@ public class HistoricAdapter extends RecyclerView.Adapter<HistoricAdapter.MatchP
         public MatchPlayedHolder(@NonNull View itemView) {
             super(itemView);
 
-            this.matchBackground = itemView.findViewById(R.id.matchPlayedItemListBackground);
-            this.matchDate = itemView.findViewById(R.id.matchPlayedItemListDate);
+            this.matchBackground = itemView.findViewById(R.id.ItemListBackground);
+            this.matchDate = itemView.findViewById(R.id.ItemListName);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

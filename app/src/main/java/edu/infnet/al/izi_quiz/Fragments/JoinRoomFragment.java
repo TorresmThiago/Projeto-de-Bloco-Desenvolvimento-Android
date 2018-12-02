@@ -16,15 +16,13 @@ import edu.infnet.al.izi_quiz.R;
 
 public class JoinRoomFragment extends Fragment {
 
-    private static final String TAG = "FIREBASE SHIT";
     private DatabaseReference mDatabase;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        Log.d(TAG, "onCreateView: " + mDatabase.child("Matches").child("Room").setValue("ABC123").toString());
+        mDatabase.child("Matches").child("Room").setValue("ABC123");
 
         return inflater.inflate(R.layout.fragment_join_room, container,false);
     }

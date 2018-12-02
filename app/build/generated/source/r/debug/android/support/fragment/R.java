@@ -64,21 +64,21 @@ public final class R {
         public static final int notify_panel_notification_icon_bg = 0x7f060093;
     }
     public static final class id {
-        public static final int action_container = 0x7f08000e;
-        public static final int action_divider = 0x7f080010;
-        public static final int action_image = 0x7f080011;
-        public static final int action_text = 0x7f080017;
-        public static final int actions = 0x7f080018;
-        public static final int async = 0x7f080020;
-        public static final int blocking = 0x7f080025;
-        public static final int chronometer = 0x7f08002b;
-        public static final int forever = 0x7f080043;
-        public static final int icon = 0x7f08004e;
-        public static final int icon_group = 0x7f08004f;
-        public static final int info = 0x7f080053;
-        public static final int italic = 0x7f080055;
-        public static final int line1 = 0x7f08005f;
-        public static final int line3 = 0x7f080060;
+        public static final int action_container = 0x7f080010;
+        public static final int action_divider = 0x7f080012;
+        public static final int action_image = 0x7f080013;
+        public static final int action_text = 0x7f080019;
+        public static final int actions = 0x7f08001a;
+        public static final int async = 0x7f080022;
+        public static final int blocking = 0x7f080027;
+        public static final int chronometer = 0x7f08002d;
+        public static final int forever = 0x7f080045;
+        public static final int icon = 0x7f080050;
+        public static final int icon_group = 0x7f080051;
+        public static final int info = 0x7f080055;
+        public static final int italic = 0x7f080057;
+        public static final int line1 = 0x7f080061;
+        public static final int line3 = 0x7f080062;
         public static final int normal = 0x7f080077;
         public static final int notification_background = 0x7f080078;
         public static final int notification_main_column = 0x7f080079;
