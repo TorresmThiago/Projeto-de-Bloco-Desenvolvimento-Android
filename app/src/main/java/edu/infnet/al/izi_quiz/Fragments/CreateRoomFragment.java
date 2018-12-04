@@ -23,9 +23,12 @@ import edu.infnet.al.izi_quiz.R;
 
 public class CreateRoomFragment extends Fragment {
 
+    private String PLAYERS_ROOT_KEY = "players";
+
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference mRootReference;
     private DatabaseReference matches;
+
 
     private ArrayList<Player> playerList = new ArrayList<>();
     private PlayerListAdapter playerListAdapter;
@@ -75,8 +78,13 @@ public class CreateRoomFragment extends Fragment {
             compressedKey.append(letters[i]);
         }
 
+        Player player = new Player("Thiago", 0,0 ,0);
+        playerList.add(player);
+
         String key = compressedKey.toString();
         key = shuffle.shuffleWord(key);
+
+        mDatabase.child(key).child(PLAYERS_ROOT_KEY).child("Thiago").setValue(player);
         roomKey.setText(key);
     }
 
