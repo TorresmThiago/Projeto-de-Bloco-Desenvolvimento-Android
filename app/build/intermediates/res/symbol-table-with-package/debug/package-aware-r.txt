@@ -770,8 +770,8 @@ int id closeGameOptions 0x7f08002e
 int id collapseActionView 0x7f08002f
 int id contentPanel 0x7f080030
 int id createRoomBackButton 0x7f080031
-int id createRoomCode 0x7f080032
-int id createRoomInstructions 0x7f080033
+int id createRoomInstructions 0x7f080032
+int id createRoomKey 0x7f080033
 int id createRoomOptionsButton 0x7f080034
 int id createRoomPlayers 0x7f080035
 int id createRoomPlayersContainer 0x7f080036

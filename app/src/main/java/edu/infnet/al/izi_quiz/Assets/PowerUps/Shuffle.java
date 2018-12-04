@@ -20,7 +20,7 @@ public class Shuffle {
         textView.setText(text);
     }
 
-    private String shuffleWord(String word) {
+    public String shuffleWord(String word) {
         Random rnd = new Random();
         char[] letters = word.toCharArray();
 

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -17,14 +18,15 @@ import edu.infnet.al.izi_quiz.R;
 public class JoinRoomFragment extends Fragment {
 
     private DatabaseReference mDatabase;
+    int i;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        View view = inflater.inflate(R.layout.fragment_join_room, container,false);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabase.child("Matches").child("Room").setValue("ABC123");
-
-        return inflater.inflate(R.layout.fragment_join_room, container,false);
+        joinRoom(view);
+        i  = 0;
+        return view;
     }
 
     @Override
@@ -34,6 +36,17 @@ public class JoinRoomFragment extends Fragment {
         FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
         fontChanger.replaceFonts((ViewGroup) this.getView());
 
+    }
+
+    private void joinRoom(View view) {
+        Button button = view.findViewById(R.id.joinRoomJoinButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View button) {
+                i++;
+                mDatabase.child("Matches").child("Room").setValue(i);
+            }
+        });
     }
 
 }

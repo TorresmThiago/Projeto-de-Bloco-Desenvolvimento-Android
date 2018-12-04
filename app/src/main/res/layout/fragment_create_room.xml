@@ -35,7 +35,7 @@ android:layout_height="match_parent">
         style="@style/iziThemeText"/>
 
     <TextView
-        android:id="@+id/createRoomCode"
+        android:id="@+id/createRoomKey"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/createRoomInstructions"
@@ -49,7 +49,7 @@ android:layout_height="match_parent">
         android:id="@+id/createRoomPlayersContainer"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_below="@+id/createRoomCode"
+        android:layout_below="@+id/createRoomKey"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_history_background" />

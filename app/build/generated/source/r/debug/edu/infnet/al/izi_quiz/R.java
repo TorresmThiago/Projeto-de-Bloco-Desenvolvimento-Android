@@ -3081,8 +3081,8 @@ public final class R {
     public static final int collapseActionView=0x7f08002f;
     public static final int contentPanel=0x7f080030;
     public static final int createRoomBackButton=0x7f080031;
-    public static final int createRoomCode=0x7f080032;
-    public static final int createRoomInstructions=0x7f080033;
+    public static final int createRoomInstructions=0x7f080032;
+    public static final int createRoomKey=0x7f080033;
     public static final int createRoomOptionsButton=0x7f080034;
     public static final int createRoomPlayers=0x7f080035;
     public static final int createRoomPlayersContainer=0x7f080036;
