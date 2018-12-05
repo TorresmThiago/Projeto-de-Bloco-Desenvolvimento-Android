@@ -25,6 +25,7 @@ public class CreateRoomFragment extends Fragment {
 
     private String PLAYERS_ROOT_KEY = "players";
     private String PLAYER_KEY;
+    private String ROOM_KEY;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference mRootReference;
@@ -35,8 +36,7 @@ public class CreateRoomFragment extends Fragment {
     private PlayerListAdapter playerListAdapter;
     private RecyclerView mRecyclerView;
 
-    private Shuffle shuffle = new Shuffle();
-    private TextView roomKey;
+    private TextView roomKeyTextView;
 
     private String joinedRoomKey;
 
@@ -45,7 +45,7 @@ public class CreateRoomFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_create_room, container,false);
 
-        roomKey = view.findViewById(R.id.createRoomKey);
+        roomKeyTextView = view.findViewById(R.id.createRoomKey);
 
         if (getArguments() != null) {
             joinedRoomKey = getArguments().getString("key");
@@ -62,13 +62,11 @@ public class CreateRoomFragment extends Fragment {
         mRecyclerView.setAdapter(playerListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-
         if (joinedRoomKey == null) {
             createRoom(matches);
         } else {
             joinRoom(joinedRoomKey);
         }
-
 
         return view;
     }
@@ -88,9 +86,11 @@ public class CreateRoomFragment extends Fragment {
 
         if (joinedRoomKey != null) {
             matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(null);
+        } else {
+            matches.child(ROOM_KEY).setValue(null); //LTGZr2t
         }
 
-    } //LZFbOgP
+    }
 
     private void joinRoom(String joinedRoomKey){
         Player player = new Player("Saulo", 0  ,0 ,0);
@@ -99,7 +99,7 @@ public class CreateRoomFragment extends Fragment {
         PLAYER_KEY = mRootReference.push().getKey();
 
         matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
-        roomKey.setText(joinedRoomKey);
+        roomKeyTextView.setText(joinedRoomKey);
     }
 
     private void createRoom(DatabaseReference mDatabase) {
@@ -115,11 +115,10 @@ public class CreateRoomFragment extends Fragment {
         playerList.add(player);
         PLAYER_KEY = mRootReference.push().getKey();
 
-        String key = compressedKey.toString();
-        key = shuffle.shuffleWord(key);
+        ROOM_KEY = compressedKey.toString();
 
-        mDatabase.child(key).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
-        roomKey.setText(key);
+        mDatabase.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
+        roomKeyTextView.setText(ROOM_KEY);
     }
 
 }
