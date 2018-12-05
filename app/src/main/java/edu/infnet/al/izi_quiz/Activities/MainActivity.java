@@ -128,10 +128,12 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void goToCreateRoomFragment(View view) {
+        createRoomFragment = new CreateRoomFragment();
         replaceFragment(createRoomFragment);
     }
 
     public void goToJoinRoomFragment(View view) {
+        joinRoomFragment = new JoinRoomFragment();
         replaceFragment(joinRoomFragment);
     }
 
@@ -142,6 +144,7 @@ public class MainActivity extends FragmentActivity {
         Bundle bundle = new Bundle();
         bundle.putString("key", key);
 
+        createRoomFragment = new CreateRoomFragment();
         createRoomFragment.setArguments(bundle);
 
         replaceFragment(createRoomFragment);

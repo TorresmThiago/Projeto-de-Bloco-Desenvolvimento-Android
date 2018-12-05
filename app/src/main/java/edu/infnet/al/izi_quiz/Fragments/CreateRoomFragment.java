@@ -24,6 +24,7 @@ import edu.infnet.al.izi_quiz.R;
 public class CreateRoomFragment extends Fragment {
 
     private String PLAYERS_ROOT_KEY = "players";
+    private String PLAYER_KEY;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference mRootReference;
@@ -81,11 +82,23 @@ public class CreateRoomFragment extends Fragment {
 
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        if (joinedRoomKey != null) {
+            matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(null);
+        }
+
+    } //LZFbOgP
+
     private void joinRoom(String joinedRoomKey){
         Player player = new Player("Saulo", 0  ,0 ,0);
         playerList.add(player);
 
-        matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child("Saulo").setValue(player);
+        PLAYER_KEY = mRootReference.push().getKey();
+
+        matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
         roomKey.setText(joinedRoomKey);
     }
 
@@ -100,11 +113,12 @@ public class CreateRoomFragment extends Fragment {
 
         Player player = new Player("Thiago", 0  ,0 ,0);
         playerList.add(player);
+        PLAYER_KEY = mRootReference.push().getKey();
 
         String key = compressedKey.toString();
         key = shuffle.shuffleWord(key);
 
-        mDatabase.child(key).child(PLAYERS_ROOT_KEY).child("Thiago").setValue(player);
+        mDatabase.child(key).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
         roomKey.setText(key);
     }
 
