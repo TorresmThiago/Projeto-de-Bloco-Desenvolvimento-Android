@@ -3123,7 +3123,7 @@ public final class R {
     public static final int joinRoomCodeInput=0x7f080059;
     public static final int joinRoomCodeInputBackground=0x7f08005a;
     public static final int joinRoomInstructions=0x7f08005b;
-    public static final int joinRoomJoinButton=0x7f08005c;
+    public static final int joinRoomJoinMatchButton=0x7f08005c;
     public static final int joinRoomOptionsButton=0x7f08005d;
     public static final int left=0x7f08005e;
     public static final int light=0x7f08005f;

@@ -811,7 +811,7 @@ int id joinRoomBackButton 0x7f080058
 int id joinRoomCodeInput 0x7f080059
 int id joinRoomCodeInputBackground 0x7f08005a
 int id joinRoomInstructions 0x7f08005b
-int id joinRoomJoinButton 0x7f08005c
+int id joinRoomJoinMatchButton 0x7f08005c
 int id joinRoomOptionsButton 0x7f08005d
 int id left 0x7f08005e
 int id light 0x7f08005f

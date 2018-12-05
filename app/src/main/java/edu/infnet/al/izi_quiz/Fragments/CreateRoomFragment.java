@@ -37,6 +37,8 @@ public class CreateRoomFragment extends Fragment {
     private Shuffle shuffle = new Shuffle();
     private TextView roomKey;
 
+    private String joinedRoomKey;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -44,17 +46,27 @@ public class CreateRoomFragment extends Fragment {
 
         roomKey = view.findViewById(R.id.createRoomKey);
 
+        if (getArguments() != null) {
+            joinedRoomKey = getArguments().getString("key");
+        }
+
         //Firebase
         firebaseDatabase = FirebaseDatabase.getInstance();
         mRootReference = firebaseDatabase.getReference();
         matches = mRootReference.child("Matches");
-        createRoom(matches);
 
         //RecycleView
         mRecyclerView = view.findViewById(R.id.createRoomPlayers);
         playerListAdapter = new PlayerListAdapter(this.getContext(), playerList);
         mRecyclerView.setAdapter(playerListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+
+
+        if (joinedRoomKey == null) {
+            createRoom(matches);
+        } else {
+            joinRoom(joinedRoomKey);
+        }
 
 
         return view;
@@ -69,7 +81,15 @@ public class CreateRoomFragment extends Fragment {
 
     }
 
-    public void createRoom(DatabaseReference mDatabase) {
+    private void joinRoom(String joinedRoomKey){
+        Player player = new Player("Saulo", 0  ,0 ,0);
+        playerList.add(player);
+
+        matches.child(joinedRoomKey).child(PLAYERS_ROOT_KEY).child("Saulo").setValue(player);
+        roomKey.setText(joinedRoomKey);
+    }
+
+    private void createRoom(DatabaseReference mDatabase) {
         String databaseKey = mDatabase.push().getKey();
         char[] letters = databaseKey.toCharArray();
         StringBuilder compressedKey = new StringBuilder();
@@ -78,7 +98,7 @@ public class CreateRoomFragment extends Fragment {
             compressedKey.append(letters[i]);
         }
 
-        Player player = new Player("Thiago", 0,0 ,0);
+        Player player = new Player("Thiago", 0  ,0 ,0);
         playerList.add(player);
 
         String key = compressedKey.toString();

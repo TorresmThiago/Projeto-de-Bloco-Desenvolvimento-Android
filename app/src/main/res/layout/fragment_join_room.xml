@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -44,7 +45,6 @@
 
     <EditText
         android:id="@+id/joinRoomCodeInput"
-        style="@style/iziThemeText"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/joinRoomCodeInputBackground"
@@ -55,18 +55,19 @@
         android:singleLine="true"
         android:textAlignment="center"
         android:textColorHint="@color/colorWhite"
-        android:textColorLink="@android:color/transparent" />
+        android:textColorLink="@android:color/transparent"
+        style="@style/iziThemeText" />
 
     <Button
-        android:id="@+id/joinRoomJoinButton"
+        android:id="@+id/joinRoomJoinMatchButton"
         android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_below="@+id/joinRoomCodeInputBackground"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/ic_button_background_striped"
-        android:textAllCaps="false"
+        android:layout_below="@+id/joinRoomCodeInputBackground"
         android:text="@string/joinRoomJoinButtonText"
-        style="@style/iziThemeText"/>
+        android:onClick="joinRoom"
+        style="@style/MenuButton" />
+
+
 
 </RelativeLayout>

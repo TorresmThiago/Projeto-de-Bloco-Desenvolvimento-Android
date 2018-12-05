@@ -12,15 +12,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Fragments.CreateRoomFragment;
 import edu.infnet.al.izi_quiz.Fragments.JoinRoomFragment;
-import edu.infnet.al.izi_quiz.Fragments.StartMatchFragment;
 import edu.infnet.al.izi_quiz.Fragments.MainMenuFragment;
-import edu.infnet.al.izi_quiz.R;
 import edu.infnet.al.izi_quiz.Fragments.SplashMenuFragment;
+import edu.infnet.al.izi_quiz.Fragments.StartMatchFragment;
+import edu.infnet.al.izi_quiz.R;
 
 public class MainActivity extends FragmentActivity {
 
@@ -31,7 +32,6 @@ public class MainActivity extends FragmentActivity {
     private Fragment startMatchFragment = new StartMatchFragment();
     private Fragment createRoomFragment = new CreateRoomFragment();
     private Fragment joinRoomFragment = new JoinRoomFragment();
-
 
     Dialog leaveGame;
     Dialog optionsModal;
@@ -128,13 +128,23 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void goToCreateRoomFragment(View view) {
-        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
         replaceFragment(createRoomFragment);
     }
 
     public void goToJoinRoomFragment(View view) {
-        menuBackgroundImage.setImageResource(R.drawable.ic_main_background);
         replaceFragment(joinRoomFragment);
+    }
+
+    public void joinRoom (View view) {
+        EditText keyInput = findViewById(R.id.joinRoomCodeInput);
+        String key = keyInput.getText().toString();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("key", key);
+
+        createRoomFragment.setArguments(bundle);
+
+        replaceFragment(createRoomFragment);
     }
 
     private void replaceFragment(Fragment fragment) {
