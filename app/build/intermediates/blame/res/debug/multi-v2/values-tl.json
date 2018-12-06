@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Thiago\\Documents\\GitHub\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
+            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\7858ef90aa9d285cf4425f4c828f3118\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\b7f946572ecbc4479be56680512bb5a1\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.0.aar\\a3d079e43d36e9392f8a26379be7bb50\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.0.aar\\c803bbe43fb60306661377cd91186fd5\\res\\values-tl\\values-tl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\7deea363c9e0d9eb8cbb3ec5faea4b46\\res\\values-tl\\values-tl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,224,332,449,537,643,764,843,921,1005,1114,1225,1326,1436,1553,1661,1824,1926",
-                        "endColumns": "118,107,116,87,105,120,78,77,83,108,110,100,109,116,107,162,101,83",
-                        "endOffsets": "219,327,444,532,638,759,838,916,1000,1109,1220,1321,1431,1548,1656,1819,1921,2005"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,44",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,224,332,449,537,643,764,843,921,1005,1114,1225,1326,1436,1553,1661,1824,5407",
-                        "endColumns": "118,107,116,87,105,120,78,77,83,108,110,100,109,116,107,162,101,83",
-                        "endOffsets": "219,327,444,532,638,759,838,916,1000,1109,1220,1321,1431,1548,1656,1819,1921,5486"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\437bd4fc560d8606f1c11fa21072c480\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\fb07c8ac2afd754ad48454169d745909\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.1.1.aar\\49ffcbf27e9b2690a83c711236bd45ee\\res\\values-tl\\values.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-ads-17.1.1.aar\\46a1604c07f738dc574de96b554eb8fe\\res\\values-tl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10",
                         "startColumns": "0,0,0,0,0,0,0",
@@ -86,6 +69,23 @@
                         "startOffsets": "4778,4857,4983,5054,5125,5216,5331",
                         "endColumns": "78,125,70,70,90,114,75",
                         "endOffsets": "4852,4978,5049,5120,5211,5326,5402"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\d14140cbe254f5112432cdf647fb56e8\\res\\values-tl\\values-tl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,224,332,449,537,643,764,843,921,1005,1114,1225,1326,1436,1553,1661,1824,1926",
+                        "endColumns": "118,107,116,87,105,120,78,77,83,108,110,100,109,116,107,162,101,83",
+                        "endOffsets": "219,327,444,532,638,759,838,916,1000,1109,1220,1321,1431,1548,1656,1819,1921,2005"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,44",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,224,332,449,537,643,764,843,921,1005,1114,1225,1326,1436,1553,1661,1824,5407",
+                        "endColumns": "118,107,116,87,105,120,78,77,83,108,110,100,109,116,107,162,101,83",
+                        "endOffsets": "219,327,444,532,638,759,838,916,1000,1109,1220,1321,1431,1548,1656,1819,1921,5486"
                     }
                 }
             ]

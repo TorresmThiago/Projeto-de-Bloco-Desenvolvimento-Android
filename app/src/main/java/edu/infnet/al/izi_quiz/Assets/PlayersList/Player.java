@@ -3,12 +3,12 @@ package edu.infnet.al.izi_quiz.Assets.PlayersList;
 public class Player {
 
     String name;
-    int points;
-    int pwrUpShuffle;
-    int pwrUpFadeIn;
+    long points;
+    long pwrUpShuffle;
+    long pwrUpFadeIn;
 
 
-    public int getPoints() {
+    public long getPoints() {
         return points;
     }
 
@@ -16,7 +16,7 @@ public class Player {
         this.points = points;
     }
 
-    public int getPwrUpShuffle() {
+    public long getPwrUpShuffle() {
         return pwrUpShuffle;
     }
 
@@ -24,16 +24,12 @@ public class Player {
         this.pwrUpShuffle = pwrUpShuffle;
     }
 
-    public int getPwrUpFadeIn() {
+    public long getPwrUpFadeIn() {
         return pwrUpFadeIn;
     }
 
     public void setPwrUpFadeIn(int pwrUpFadeIn) {
         this.pwrUpFadeIn = pwrUpFadeIn;
-    }
-
-    public Player(String name) {
-        this.name = name;
     }
 
     public String getName() {
@@ -44,7 +40,7 @@ public class Player {
         this.name = name;
     }
 
-    public Player(String name, int points, int pwrUpShuffle, int pwrUpFadeIn) {
+    public Player(String name, long points, long pwrUpShuffle, long pwrUpFadeIn) {
         this.name = name;
         this.points = points;
         this.pwrUpShuffle = pwrUpShuffle;

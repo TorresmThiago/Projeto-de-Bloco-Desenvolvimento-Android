@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Thiago\\Documents\\GitHub\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "C:\\Users\\Torres\\Documents\\Infnet\\Blocos\\Desenvolvimento Android\\Projeto de Bloco\\izi-quiz\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\7deea363c9e0d9eb8cbb3ec5faea4b46\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.0.aar\\d14140cbe254f5112432cdf647fb56e8\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Thiago\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\e8e9581cc478aac3b5e6986cf354a2eb\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Torres\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\e603017bcd13eacfa1304b441d4b07c7\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
