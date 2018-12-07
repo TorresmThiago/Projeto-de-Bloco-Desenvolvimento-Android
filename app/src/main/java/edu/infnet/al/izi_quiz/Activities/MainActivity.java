@@ -6,15 +6,23 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Fragments.CreateRoomFragment;
@@ -28,6 +36,7 @@ public class MainActivity extends FragmentActivity {
 
     private String PLAYER_NAME;
 
+    private DatabaseReference mDatabase;
     ImageView menuBackgroundImage;
 
     private Fragment splashMenuFragment = new SplashMenuFragment();
@@ -49,6 +58,8 @@ public class MainActivity extends FragmentActivity {
 
         menuBackgroundImage = findViewById(R.id.menuBackground);
         menuBackgroundImage.setImageResource(R.drawable.ic_splash_background);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         animateBackground(menuBackgroundImage);
         replaceFragment(splashMenuFragment);
@@ -167,17 +178,35 @@ public class MainActivity extends FragmentActivity {
     public void joinRoom (View view) {
 
         EditText keyInput = findViewById(R.id.joinRoomCodeInput);
-        String key = keyInput.getText().toString();
+        final String key = keyInput.getText().toString();
 
-        Bundle bundle = new Bundle();
-        bundle.putBoolean("guest", true);
-        bundle.putString("name", PLAYER_NAME);
-        bundle.putString("key", key);
+        DatabaseReference matchesRoot = mDatabase.getRoot().child("Matches");
+        matchesRoot.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getValue() != null && !key.equals("") && dataSnapshot.hasChild(key)) {
+                    Bundle bundle = new Bundle();
+                    bundle.putBoolean("guest", true);
+                    bundle.putString("name", PLAYER_NAME);
+                    bundle.putString("key", key);
 
-        createRoomFragment = new CreateRoomFragment();
-        createRoomFragment.setArguments(bundle);
+                    createRoomFragment = new CreateRoomFragment();
+                    createRoomFragment.setArguments(bundle);
 
-        replaceFragment(createRoomFragment);
+                    replaceFragment(createRoomFragment);
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Sala cheia ou inexistente! Favor verificar código de acesso.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast toast = Toast.makeText(getApplicationContext(), "Ocorreu um erro ao acessar a sala!", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
     }
 
     private void replaceFragment(Fragment fragment) {
