@@ -26,6 +26,8 @@ import edu.infnet.al.izi_quiz.R;
 
 public class MainActivity extends FragmentActivity {
 
+    private String PLAYER_NAME;
+
     ImageView menuBackgroundImage;
 
     private Fragment splashMenuFragment = new SplashMenuFragment();
@@ -129,16 +131,19 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void goToCreateRoomFragment(View view) {
-        EditText nameInput = findViewById(R.id.startMatchNameInput);
-        String name = nameInput.getText().toString();
-        boolean isNameValid = validateNameInput(name);
+        boolean isNameValid = validateNameInput();
 
         if (isNameValid){
+
             Bundle bundle = new Bundle();
-            bundle.putString("name", name);
+            bundle.putBoolean("guest", false);
+            bundle.putString("name", PLAYER_NAME);
 
             createRoomFragment = new CreateRoomFragment();
+            createRoomFragment.setArguments(bundle);
+
             replaceFragment(createRoomFragment);
+
         } else {
             Toast toast = Toast.makeText(this, "Nome inválido para participar do izi quiz!", Toast.LENGTH_SHORT);
             toast.show();
@@ -146,16 +151,13 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void goToJoinRoomFragment(View view) {
-        EditText nameInput = findViewById(R.id.startMatchNameInput);
-        String name = nameInput.getText().toString();
-        boolean isNameValid = validateNameInput(name);
+        boolean isNameValid = validateNameInput();
 
         if (isNameValid){
-            Bundle bundle = new Bundle();
-            bundle.putString("name", name);
 
             joinRoomFragment = new JoinRoomFragment();
             replaceFragment(joinRoomFragment);
+
         } else {
             Toast toast = Toast.makeText(this, "Nome inválido para participar do izi quiz!", Toast.LENGTH_SHORT);
             toast.show();
@@ -168,6 +170,8 @@ public class MainActivity extends FragmentActivity {
         String key = keyInput.getText().toString();
 
         Bundle bundle = new Bundle();
+        bundle.putBoolean("guest", true);
+        bundle.putString("name", PLAYER_NAME);
         bundle.putString("key", key);
 
         createRoomFragment = new CreateRoomFragment();
@@ -191,8 +195,11 @@ public class MainActivity extends FragmentActivity {
         startActivity(intent);
     }
 
-    public boolean validateNameInput(String name) {
-        if (name.length() <= 2) {
+    public boolean validateNameInput() {
+        EditText nameInput = findViewById(R.id.startMatchNameInput);
+        PLAYER_NAME = nameInput.getText().toString();
+
+        if (PLAYER_NAME.length() <= 2) {
             return false;
         }
         return true;

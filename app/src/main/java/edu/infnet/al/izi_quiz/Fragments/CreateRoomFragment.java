@@ -31,6 +31,8 @@ public class CreateRoomFragment extends Fragment {
     private String MATCHES_ROOT_KEY = "Matches";
     private String PLAYER_KEY;
     private String ROOM_KEY;
+    private String PLAYER_NAME;
+    private boolean PLAYER_GUEST;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference mRootReference;
@@ -57,10 +59,11 @@ public class CreateRoomFragment extends Fragment {
 
         if (getArguments() != null) {
             ROOM_KEY = getArguments().getString("key");
-            joinRoom();
-        } else {
-            createRoom();
+            PLAYER_NAME = getArguments().getString("name");
+            PLAYER_GUEST = getArguments().getBoolean("guest");
         }
+
+        createRoom(PLAYER_GUEST);
 
         playersRootReference = matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY);
         playersRootReference.addValueEventListener(new ValueEventListener() {
@@ -96,7 +99,7 @@ public class CreateRoomFragment extends Fragment {
     public void onPause() {
         super.onPause();
 
-        if (getArguments() != null) {
+        if (PLAYER_GUEST) {
             matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(null);
         } else {
             matchesRootReference.child(ROOM_KEY).setValue(null);
@@ -104,30 +107,22 @@ public class CreateRoomFragment extends Fragment {
 
     }
 
-    private void joinRoom(){
-        Player player = new Player("Saulo", 0  ,3 ,3);
-        playerList.add(player);
+    private void createRoom(boolean playerGuest) {
+        if (!playerGuest) {
+            String databaseKey = matchesRootReference.push().getKey();
+            char[] letters = databaseKey.toCharArray();
+            StringBuilder compressedKey = new StringBuilder();
 
-        PLAYER_KEY = mRootReference.push().getKey();
+            for (int i = 1; i < letters.length; i += 3){
+                compressedKey.append(letters[i]);
+            }
 
-        matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
-        roomKeyTextView.setText(ROOM_KEY);
-    }
-
-    private void createRoom() {
-        String databaseKey = matchesRootReference.push().getKey();
-        char[] letters = databaseKey.toCharArray();
-        StringBuilder compressedKey = new StringBuilder();
-
-        for (int i = 1; i < letters.length; i += 3){
-            compressedKey.append(letters[i]);
+            ROOM_KEY = compressedKey.toString();
         }
 
-        Player player = new Player("Thiago", 0  ,3 ,3);
+        Player player = new Player(PLAYER_NAME, 0  ,3 ,3);
         playerList.add(player);
         PLAYER_KEY = mRootReference.push().getKey();
-
-        ROOM_KEY = compressedKey.toString();
 
         matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
         roomKeyTextView.setText(ROOM_KEY);
