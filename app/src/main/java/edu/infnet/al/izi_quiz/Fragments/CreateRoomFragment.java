@@ -66,7 +66,9 @@ public class CreateRoomFragment extends Fragment {
         playersRootReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
+                if (dataSnapshot.getValue() != null){
+                    updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
+                }
             }
 
             @Override

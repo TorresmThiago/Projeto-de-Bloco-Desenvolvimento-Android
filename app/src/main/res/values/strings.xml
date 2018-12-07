@@ -9,9 +9,11 @@
     <string name="MainMenuPlayButtonText">Iniciar partida!</string>
     <string name="JoinRoomButtonText">Entrar em sala</string>
     <string name="CreateRoomButtonText">Criar nova sala</string>
-    <string name="startMatchTitleText">Escolha como você quer iniciar uma partida no izi quiz!</string>
+    <string name="startMatchTitleText">Agora, escolha como você quer iniciar uma partida no izi quiz!</string>
     <string name="createRoomInstructionsText">Para seus amigos entrarem nessa sala, peça para que coloquem o mesmo código abaixo!</string>
     <string name="joinRoomInstructionsText">Para entrar na sala de seus amigos, coloque o mesmo código escrito na sala deles abaixo!</string>
     <string name="joinRoomCodeInputHintText">Código</string>
     <string name="joinRoomJoinButtonText">Entrar</string>
+    <string name="NameInputHintText">Nome</string>
+    <string name="startMatchInsertNameInstructionText">Escreva como quer ser reconhecido nas partidas!</string>
 </resources>

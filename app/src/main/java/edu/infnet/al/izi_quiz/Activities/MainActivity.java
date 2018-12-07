@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Fragments.CreateRoomFragment;
@@ -128,16 +129,41 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void goToCreateRoomFragment(View view) {
-        createRoomFragment = new CreateRoomFragment();
-        replaceFragment(createRoomFragment);
+        EditText nameInput = findViewById(R.id.startMatchNameInput);
+        String name = nameInput.getText().toString();
+        boolean isNameValid = validateNameInput(name);
+
+        if (isNameValid){
+            Bundle bundle = new Bundle();
+            bundle.putString("name", name);
+
+            createRoomFragment = new CreateRoomFragment();
+            replaceFragment(createRoomFragment);
+        } else {
+            Toast toast = Toast.makeText(this, "Nome inválido para participar do izi quiz!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     public void goToJoinRoomFragment(View view) {
-        joinRoomFragment = new JoinRoomFragment();
-        replaceFragment(joinRoomFragment);
+        EditText nameInput = findViewById(R.id.startMatchNameInput);
+        String name = nameInput.getText().toString();
+        boolean isNameValid = validateNameInput(name);
+
+        if (isNameValid){
+            Bundle bundle = new Bundle();
+            bundle.putString("name", name);
+
+            joinRoomFragment = new JoinRoomFragment();
+            replaceFragment(joinRoomFragment);
+        } else {
+            Toast toast = Toast.makeText(this, "Nome inválido para participar do izi quiz!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     public void joinRoom (View view) {
+
         EditText keyInput = findViewById(R.id.joinRoomCodeInput);
         String key = keyInput.getText().toString();
 
@@ -163,6 +189,13 @@ public class MainActivity extends FragmentActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         finishAffinity();
         startActivity(intent);
+    }
+
+    public boolean validateNameInput(String name) {
+        if (name.length() <= 2) {
+            return false;
+        }
+        return true;
     }
 
     public void animateBackground(final ImageView background) {

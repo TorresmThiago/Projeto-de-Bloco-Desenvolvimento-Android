@@ -24,21 +24,58 @@
         android:onClick="openOptionsModal"/>
 
     <TextView
-        android:id="@+id/startMatchTitleText"
+        android:id="@+id/startMatchInsertNameInstruction"
+        style="@style/iziThemeText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/startMatchNameInputBackground"
         android:layout_centerHorizontal="true"
+        android:text="@string/startMatchInsertNameInstructionText"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/startMatchNameInputBackground"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/startMatchStartInstruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-200dp"
+        android:background="@drawable/ic_history_background" />
+
+    <EditText
+        android:id="@+id/startMatchNameInput"
+        style="@style/iziThemeText"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/startMatchNameInputBackground"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/transparent"
+        android:hint="@string/NameInputHintText"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
         android:textAlignment="center"
+        android:textColorHint="#7fffffff"
+        android:textColorLink="@android:color/transparent"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/startMatchStartInstruction"
+        style="@style/iziThemeText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
         android:text="@string/startMatchTitleText"
-        style="@style/iziThemeText"/>
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/startMatchCreateRoomButton"
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/startMatchTitleText"
+        android:layout_below="@+id/startMatchStartInstruction"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_button_background_striped"
         android:textAllCaps="false"
