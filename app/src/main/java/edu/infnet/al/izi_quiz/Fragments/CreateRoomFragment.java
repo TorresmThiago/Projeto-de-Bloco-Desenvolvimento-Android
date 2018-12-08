@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -45,6 +46,7 @@ public class CreateRoomFragment extends Fragment {
     private RecyclerView mRecyclerView;
 
     private TextView roomKeyTextView;
+    private Button startMatchButton;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class CreateRoomFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_create_room, container,false);
 
         roomKeyTextView = view.findViewById(R.id.createRoomKey);
+        startMatchButton = view.findViewById(R.id.createRoomStartMatch);
 
         //Firebase
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -148,6 +151,12 @@ public class CreateRoomFragment extends Fragment {
         playerListAdapter = new PlayerListAdapter(this.getContext(), playerList);
         mRecyclerView.setAdapter(playerListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+
+        if (!PLAYER_GUEST && playerList.size() >= 2){
+            startMatchButton.setVisibility(View.VISIBLE);
+        } else {
+            startMatchButton.setVisibility(View.INVISIBLE);
+        }
     }
 
 }
