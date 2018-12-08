@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -49,6 +50,7 @@ public class CreateRoomFragment extends Fragment {
 
     private TextView roomKeyTextView;
     private Button startMatchButton;
+    private ImageButton backToMenuButton;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -68,13 +70,21 @@ public class CreateRoomFragment extends Fragment {
             PLAYER_GUEST = getArguments().getBoolean("guest");
         }
 
-        joinRoom(PLAYER_GUEST);
+        joinRoom();
 
         startMatchButton = view.findViewById(R.id.createRoomStartMatch);
         startMatchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 matchesRootReference.child(ROOM_KEY).child(ROOM_STATE).setValue("Playing");
+            }
+        });
+
+        backToMenuButton = view.findViewById(R.id.createRoomBackButton);
+        backToMenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View button) {
+                leaveRoom(view);
             }
         });
 
@@ -123,20 +133,8 @@ public class CreateRoomFragment extends Fragment {
 
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        if (PLAYER_GUEST) {
-            matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(null);
-        } else {
-            matchesRootReference.child(ROOM_KEY).setValue(null);
-        }
-
-    }
-
-    private void joinRoom(boolean playerGuest) {
-        if (!playerGuest) {
+    private void joinRoom() {
+        if (!PLAYER_GUEST) {
             String databaseKey = matchesRootReference.push().getKey();
             char[] letters = databaseKey.toCharArray();
             StringBuilder compressedKey = new StringBuilder();
@@ -155,6 +153,16 @@ public class CreateRoomFragment extends Fragment {
 
         matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
         roomKeyTextView.setText(ROOM_KEY);
+    }
+
+    private void leaveRoom(View view) {
+        if (PLAYER_GUEST) {
+            matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(null);
+        } else {
+            matchesRootReference.child(ROOM_KEY).setValue(null);
+        }
+
+        ((MainActivity)getActivity()).goToStartMatchFragment(view);
     }
 
     private void updatePlayerList(Map<String,Object> users) {
