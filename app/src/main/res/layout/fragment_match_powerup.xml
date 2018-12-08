@@ -1,74 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue">
 
-    <Button
-        android:id="@+id/powerUpBox"
+    <ProgressBar
+        android:id="@+id/questionsProgressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_marginTop="10dp"
+        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal" />
+
+    <ImageView
+        android:id="@+id/questionThemeContainer"
         android:layout_width="325dp"
-        android:layout_height="200dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/questionsProgressbar"
+        android:background="@drawable/ic_button_background_flat" />
+
+    <TextView
+        android:id="@+id/questionThemeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/questionThemeContainer"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/ic_box_question"
-        android:clickable="false"
-        android:text="Qual 'power-up' para atrapalhar seus oponentes você quer usar aqui?"
-        android:textAllCaps="false"
-        android:textColor="@color/colorWhite"
-        android:textSize="21sp" />
+        android:text="Vote no tema da Pergunta!"
+        style="@style/iziThemeText" />
 
-    <Button
-        android:id="@+id/powerUpOption_1"
-        android:layout_height="75dp"
-        android:layout_width="325dp"
+    <ImageView
+        android:id="@+id/questionThemeWorldIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/questionThemeTitle"
+        android:layout_alignStart="@+id/questionThemeTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_button_theme_world"/>
+
+    <ImageView
+        android:id="@+id/questionThemeTvIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/questionThemeTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerUpBox"
-        android:textColor="@color/colorWhite"
-        android:textSize="21sp"
-        android:textAllCaps="false"
-        android:background="@drawable/ic_button_answer_chosen"
-        android:text="Power_1                x3" />
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_button_theme_tv"/>
 
-    <Button
-        android:id="@+id/powerUpOption_2"
-        android:layout_height="75dp"
+    <ImageView
+        android:id="@+id/questionThemeAnimalIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/questionThemeTitle"
+        android:layout_alignEnd="@+id/questionThemeTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_button_theme_animal"/>
+
+    <ImageView
+        android:id="@+id/powerUpChoiceContainer"
         android:layout_width="325dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/questionThemeContainer"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerUpOption_1"
-        android:textColor="@color/colorWhite"
-        android:textSize="21sp"
-        android:textAllCaps="false"
-        android:background="@drawable/ic_button_answer_right"
-        android:text="Power_2                x3" />
-
-    <Button
-        android:id="@+id/powerUpOption_3"
-        android:layout_height="75dp"
-        android:layout_width="325dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/powerUpOption_2"
-        android:textColor="@color/colorWhite"
-        android:textSize="21sp"
-        android:textAllCaps="false"
-        android:background="@drawable/ic_button_answer_wrong"
-        android:text="Power_3                x3" />
-
-    <Button
-        android:id="@+id/powerUpChoiceButton"
-        android:layout_height="75dp"
-        android:layout_width="225dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/colorWhite"
-        android:layout_alignParentBottom="true"
-        android:textSize="21sp"
-        android:textAllCaps="false"
-        android:background="@drawable/ic_button_background_striped"
-        android:onClick="goToQuestionsFragment"
-        android:text="Escolher" />
+        android:background="@drawable/ic_button_background_flat" />
 
+    <TextView
+        android:id="@+id/powerUpChoiceThemeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha o power up!"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/powerUpChoiceContainer"
+        android:layout_marginTop="20dp"
+        style="@style/iziThemeText"/>
+
+    <ImageView
+        android:id="@+id/powerUpChoiceScrambleIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/powerUpChoiceThemeTitle"
+        android:layout_alignStart="@+id/powerUpChoiceThemeTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_button_powerup_scramble"/>
+
+    <TextView
+        android:id="@+id/powerUpChoiceScrambleCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/powerUpChoiceScrambleIcon"
+        android:layout_alignStart="@id/powerUpChoiceScrambleIcon"
+        android:layout_marginStart="15dp"
+        android:text="x0"
+        android:textSize="14dp"
+        style="@style/iziThemeText"/>
+
+    <ImageView
+        android:id="@+id/powerUpChoiceFadeInIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/powerUpChoiceThemeTitle"
+        android:layout_alignEnd="@+id/powerUpChoiceThemeTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_button_powerup_fadein"/>
+
+    <TextView
+        android:id="@+id/powerUpChoiceFadeInCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/powerUpChoiceFadeInIcon"
+        android:layout_alignStart="@id/powerUpChoiceFadeInIcon"
+        android:layout_marginStart="15dp"
+        android:text="x0"
+        android:textSize="14dp"
+        style="@style/iziThemeText"/>
+
+    <TextView
+        android:id="@+id/powerUpPlayerChoiceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/powerUpChoiceFadeInIcon"
+        android:text="Agora, em quem usar?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        style="@style/iziThemeText"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/powerUpPlayerChoiceRecycleView"
+        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/powerUpPlayerChoiceTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
 
 </RelativeLayout>

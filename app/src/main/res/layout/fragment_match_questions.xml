@@ -4,19 +4,20 @@
     android:layout_height="match_parent">
 
     <ProgressBar
-        android:id="@+id/progressbar"
+        android:id="@+id/questionsProgressbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
         android:progress="0"
+        android:layout_marginTop="10dp"
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal" />
 
     <TextView
         android:id="@+id/questionBox"
         android:layout_width="325dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/progressbar"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/questionsProgressbar"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_button_background_flat"
         android:text="Mais de 50 caracteres são permitidos por pergunta, mas       não vamos exagerar também."
@@ -26,8 +27,8 @@
 
     <Button
         android:id="@+id/questionOption_1"
-        android:layout_height="75dp"
         android:layout_width="325dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/questionBox"
@@ -54,8 +55,8 @@
 
     <Button
         android:id="@+id/questionOption_3"
-        android:layout_height="75dp"
         android:layout_width="325dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/questionOption_2"
@@ -68,8 +69,8 @@
 
     <Button
         android:id="@+id/questionOption_4"
-        android:layout_height="75dp"
         android:layout_width="325dp"
+        android:layout_height="75dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/questionOption_3"

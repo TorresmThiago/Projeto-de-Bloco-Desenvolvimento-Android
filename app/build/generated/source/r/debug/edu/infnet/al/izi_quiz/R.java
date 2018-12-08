@@ -1697,7 +1697,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -2980,31 +2980,31 @@ public final class R {
     public static final int common_google_signin_btn_text_light_normal_background=0x7f060065;
     public static final int googleg_disabled_color_18=0x7f060066;
     public static final int googleg_standard_color_18=0x7f060067;
-    public static final int ic_box_question=0x7f060068;
-    public static final int ic_button_answer_chosen=0x7f060069;
-    public static final int ic_button_answer_right=0x7f06006a;
-    public static final int ic_button_answer_wrong=0x7f06006b;
-    public static final int ic_button_back=0x7f06006c;
-    public static final int ic_button_background_flat=0x7f06006d;
-    public static final int ic_button_background_striped=0x7f06006e;
-    public static final int ic_button_leave=0x7f06006f;
-    public static final int ic_button_music_off=0x7f060070;
-    public static final int ic_button_music_on=0x7f060071;
-    public static final int ic_button_options=0x7f060072;
-    public static final int ic_button_powerup_fadein=0x7f060073;
-    public static final int ic_button_powerup_fadein_selected=0x7f060074;
-    public static final int ic_button_powerup_player=0x7f060075;
-    public static final int ic_button_powerup_scramble=0x7f060076;
-    public static final int ic_button_powerup_scramble_selected=0x7f060077;
-    public static final int ic_button_share=0x7f060078;
-    public static final int ic_button_sound_off=0x7f060079;
-    public static final int ic_button_sound_on=0x7f06007a;
-    public static final int ic_button_theme_animal=0x7f06007b;
-    public static final int ic_button_theme_animal_selected=0x7f06007c;
-    public static final int ic_button_theme_tv=0x7f06007d;
-    public static final int ic_button_theme_tv_selected=0x7f06007e;
-    public static final int ic_button_theme_world=0x7f06007f;
-    public static final int ic_button_theme_world_selected=0x7f060080;
+    public static final int ic_button_answer_chosen=0x7f060068;
+    public static final int ic_button_answer_right=0x7f060069;
+    public static final int ic_button_answer_wrong=0x7f06006a;
+    public static final int ic_button_back=0x7f06006b;
+    public static final int ic_button_background_flat=0x7f06006c;
+    public static final int ic_button_background_striped=0x7f06006d;
+    public static final int ic_button_leave=0x7f06006e;
+    public static final int ic_button_music_off=0x7f06006f;
+    public static final int ic_button_music_on=0x7f060070;
+    public static final int ic_button_options=0x7f060071;
+    public static final int ic_button_powerup_fadein=0x7f060072;
+    public static final int ic_button_powerup_fadein_selected=0x7f060073;
+    public static final int ic_button_powerup_player=0x7f060074;
+    public static final int ic_button_powerup_scramble=0x7f060075;
+    public static final int ic_button_powerup_scramble_selected=0x7f060076;
+    public static final int ic_button_share=0x7f060077;
+    public static final int ic_button_sound_off=0x7f060078;
+    public static final int ic_button_sound_on=0x7f060079;
+    public static final int ic_button_theme_animal=0x7f06007a;
+    public static final int ic_button_theme_animal_selected=0x7f06007b;
+    public static final int ic_button_theme_tv=0x7f06007c;
+    public static final int ic_button_theme_tv_selected=0x7f06007d;
+    public static final int ic_button_theme_world=0x7f06007e;
+    public static final int ic_button_theme_world_selected=0x7f06007f;
+    public static final int ic_button_background_striped =0x7f060080;
     public static final int ic_history_background=0x7f060081;
     public static final int ic_itemlist_history_background=0x7f060082;
     public static final int ic_main_background=0x7f060083;
@@ -3167,14 +3167,14 @@ public final class R {
     public static final int popUpLeaveMatchConfirmation=0x7f080085;
     public static final int popUpLeaveMatchContainer=0x7f080086;
     public static final int popUpLeaveMatchNegation=0x7f080087;
-    public static final int powerUpBox=0x7f080088;
+    public static final int questionThemeContainer =0x7f080088;
     public static final int powerUpChoiceButton=0x7f080089;
     public static final int powerUpOption_1=0x7f08008a;
     public static final int powerUpOption_2=0x7f08008b;
     public static final int powerUpOption_3=0x7f08008c;
     public static final int progress_circular=0x7f08008d;
     public static final int progress_horizontal=0x7f08008e;
-    public static final int progressbar=0x7f08008f;
+    public static final int questionsProgressbar =0x7f08008f;
     public static final int questionBox=0x7f080090;
     public static final int questionOption_1=0x7f080091;
     public static final int questionOption_2=0x7f080092;
@@ -3315,7 +3315,8 @@ public final class R {
     public static final int select_dialog_multichoice_material=0x7f0a0039;
     public static final int select_dialog_singlechoice_material=0x7f0a003a;
     public static final int support_simple_spinner_dropdown_item=0x7f0a003b;
-    public static final int tooltip=0x7f0a003c;
+    public static final int teste=0x7f0a003c;
+    public static final int tooltip=0x7f0a003d;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0b0000;
@@ -7901,7 +7902,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

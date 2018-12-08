@@ -170,7 +170,7 @@ public class CreateRoomFragment extends Fragment {
 
         for(Map.Entry<String, Object> entry : users.entrySet()) {
             Map singleUser = (Map) entry.getValue();
-            Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpShuffle"),(long) singleUser.get("pwrUpFadeIn"));
+            Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"));
             playerList.add(newPlayer);
         }
 

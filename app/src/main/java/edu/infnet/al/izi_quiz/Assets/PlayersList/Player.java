@@ -4,7 +4,7 @@ public class Player {
 
     String name;
     long points;
-    long pwrUpShuffle;
+    long pwrUpScramble;
     long pwrUpFadeIn;
 
 
@@ -17,11 +17,11 @@ public class Player {
     }
 
     public long getPwrUpShuffle() {
-        return pwrUpShuffle;
+        return pwrUpScramble;
     }
 
     public void setPwrUpShuffle(int pwrUpShuffle) {
-        this.pwrUpShuffle = pwrUpShuffle;
+        this.pwrUpScramble = pwrUpShuffle;
     }
 
     public long getPwrUpFadeIn() {
@@ -40,10 +40,10 @@ public class Player {
         this.name = name;
     }
 
-    public Player(String name, long points, long pwrUpShuffle, long pwrUpFadeIn) {
+    public Player(String name, long points, long pwrUpScramble, long pwrUpFadeIn) {
         this.name = name;
         this.points = points;
-        this.pwrUpShuffle = pwrUpShuffle;
+        this.pwrUpScramble = pwrUpScramble;
         this.pwrUpFadeIn = pwrUpFadeIn;
     }
 }

@@ -39,7 +39,7 @@ public class QuestionsFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_match_questions, container, false);
 
 
-        mProgressBar = view.findViewById(R.id.progressbar);
+        mProgressBar = view.findViewById(R.id.questionsProgressbar);
         mProgressBar.setProgress(0);
         gameOn = true;
         correct =  1 + (int) (Math.random() * 4);
