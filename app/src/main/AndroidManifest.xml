@@ -15,7 +15,8 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".Activities.MainActivity"
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +25,6 @@
         </activity>
         <activity android:name=".Activities.MatchActivity" />
         <activity android:name=".Activities.ResultsActivity" />
-        <activity android:name=".Fragments.StartMatchFragment"></activity>
     </application>
 
 </manifest>

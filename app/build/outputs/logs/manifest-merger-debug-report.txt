@@ -125,31 +125,29 @@ ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Proje
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:15:13-69
 activity#edu.infnet.al.izi_quiz.Activities.MainActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:18:9-25:20
+	android:windowSoftInputMode
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:13-56
 	android:name
 		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:18:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:23:27-74
 activity#edu.infnet.al.izi_quiz.Activities.MatchActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:25:9-62
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:9-62
 	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:25:19-59
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:19-59
 activity#edu.infnet.al.izi_quiz.Activities.ResultsActivity
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:9-64
+ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:9-64
 	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:26:19-61
-activity#edu.infnet.al.izi_quiz.Fragments.StartMatchFragment
-ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:9-75
-	android:name
-		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:19-63
+		ADDED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml:27:19-61
 uses-sdk
 INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Torres\Documents\Infnet\Blocos\Desenvolvimento Android\Projeto de Bloco\izi-quiz\app\src\main\AndroidManifest.xml

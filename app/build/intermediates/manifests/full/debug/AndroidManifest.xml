@@ -29,7 +29,9 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
-        <activity android:name="edu.infnet.al.izi_quiz.Activities.MainActivity" >
+        <activity
+            android:name="edu.infnet.al.izi_quiz.Activities.MainActivity"
+            android:windowSoftInputMode="adjustNothing" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +40,6 @@
         </activity>
         <activity android:name="edu.infnet.al.izi_quiz.Activities.MatchActivity" />
         <activity android:name="edu.infnet.al.izi_quiz.Activities.ResultsActivity" />
-        <activity android:name="edu.infnet.al.izi_quiz.Fragments.StartMatchFragment" />
 
         <meta-data
             android:name="android.support.VERSION"
