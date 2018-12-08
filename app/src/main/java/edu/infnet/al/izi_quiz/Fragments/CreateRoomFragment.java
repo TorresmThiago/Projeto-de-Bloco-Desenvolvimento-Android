@@ -54,7 +54,6 @@ public class CreateRoomFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_create_room, container,false);
 
         roomKeyTextView = view.findViewById(R.id.createRoomKey);
-        startMatchButton = view.findViewById(R.id.createRoomStartMatch);
 
         //Firebase
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -68,6 +67,14 @@ public class CreateRoomFragment extends Fragment {
         }
 
         joinRoom(PLAYER_GUEST);
+
+        startMatchButton = view.findViewById(R.id.createRoomStartMatch);
+        startMatchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                matchesRootReference.child(ROOM_KEY).child(ROOM_STATE).setValue("Playing");
+            }
+        });
 
         playersRootReference = matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY);
         playersRootReference.addValueEventListener(new ValueEventListener() {
@@ -130,7 +137,6 @@ public class CreateRoomFragment extends Fragment {
         PLAYER_KEY = mRootReference.push().getKey();
 
         matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
-        matchesRootReference.child(ROOM_KEY).child("NumberOfPlayers").setValue(playerList.size() + 1);
         roomKeyTextView.setText(ROOM_KEY);
     }
 
