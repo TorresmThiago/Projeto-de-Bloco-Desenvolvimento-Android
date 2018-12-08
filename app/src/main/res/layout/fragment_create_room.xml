@@ -42,7 +42,6 @@ android:layout_height="match_parent">
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         android:layout_marginTop="20dp"
-        android:text="A1B2C3D4"
         style="@style/iziThemeTitle" />
 
     <ImageView
@@ -50,6 +49,8 @@ android:layout_height="match_parent">
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_below="@+id/createRoomKey"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_history_background" />
@@ -59,12 +60,24 @@ android:layout_height="match_parent">
         android:layout_width="280dp"
         android:layout_height="280dp"
         android:layout_alignTop="@+id/createRoomPlayersContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true" />
 
-
-
-
-
+    <Button
+        android:id="@+id/createRoomStartMatch"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/createRoomStartMatchText"
+        android:textSize="18dp"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:background="@drawable/ic_button_background_striped"
+        android:onClick="startMatch"/>
 
 </RelativeLayout>

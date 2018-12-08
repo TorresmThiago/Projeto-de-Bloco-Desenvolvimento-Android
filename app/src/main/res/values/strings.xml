@@ -16,4 +16,5 @@
     <string name="joinRoomJoinButtonText">Entrar</string>
     <string name="NameInputHintText">Nome</string>
     <string name="startMatchInsertNameInstructionText">Escreva como quer ser reconhecido nas partidas!</string>
+    <string name="createRoomStartMatchText">Começar!</string>
 </resources>

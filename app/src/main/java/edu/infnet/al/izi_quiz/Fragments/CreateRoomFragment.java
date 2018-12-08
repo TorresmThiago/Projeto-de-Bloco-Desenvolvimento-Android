@@ -29,6 +29,7 @@ public class CreateRoomFragment extends Fragment {
 
     private String PLAYERS_ROOT_KEY = "players";
     private String MATCHES_ROOT_KEY = "Matches";
+    private String ROOM_STATE = "RoomState";
     private String PLAYER_KEY;
     private String ROOM_KEY;
     private String PLAYER_NAME;
@@ -63,7 +64,7 @@ public class CreateRoomFragment extends Fragment {
             PLAYER_GUEST = getArguments().getBoolean("guest");
         }
 
-        createRoom(PLAYER_GUEST);
+        joinRoom(PLAYER_GUEST);
 
         playersRootReference = matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY);
         playersRootReference.addValueEventListener(new ValueEventListener() {
@@ -107,7 +108,7 @@ public class CreateRoomFragment extends Fragment {
 
     }
 
-    private void createRoom(boolean playerGuest) {
+    private void joinRoom(boolean playerGuest) {
         if (!playerGuest) {
             String databaseKey = matchesRootReference.push().getKey();
             char[] letters = databaseKey.toCharArray();
@@ -118,6 +119,7 @@ public class CreateRoomFragment extends Fragment {
             }
 
             ROOM_KEY = compressedKey.toString();
+            matchesRootReference.child(ROOM_KEY).child(ROOM_STATE).setValue("Open");
         }
 
         Player player = new Player(PLAYER_NAME, 0  ,3 ,3);
@@ -125,6 +127,7 @@ public class CreateRoomFragment extends Fragment {
         PLAYER_KEY = mRootReference.push().getKey();
 
         matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
+        matchesRootReference.child(ROOM_KEY).child("NumberOfPlayers").setValue(playerList.size() + 1);
         roomKeyTextView.setText(ROOM_KEY);
     }
 
