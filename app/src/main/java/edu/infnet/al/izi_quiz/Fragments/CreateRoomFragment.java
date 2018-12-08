@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Map;
 
+import edu.infnet.al.izi_quiz.Activities.MainActivity;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.Player;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListAdapter;
@@ -40,6 +41,7 @@ public class CreateRoomFragment extends Fragment {
     private DatabaseReference mRootReference;
     private DatabaseReference matchesRootReference;
     private DatabaseReference playersRootReference;
+    private DatabaseReference roomStateReference;
 
     private ArrayList<Player> playerList = new ArrayList<>();
     private PlayerListAdapter playerListAdapter;
@@ -51,7 +53,7 @@ public class CreateRoomFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_create_room, container,false);
+        final View view = inflater.inflate(R.layout.fragment_create_room, container,false);
 
         roomKeyTextView = view.findViewById(R.id.createRoomKey);
 
@@ -88,6 +90,21 @@ public class CreateRoomFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.d(ROOM_KEY, "Erro ao atualizar a lista de jogadores");
+            }
+        });
+
+        roomStateReference = matchesRootReference.child(ROOM_KEY).child(ROOM_STATE);
+        roomStateReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getValue() != null && dataSnapshot.getValue().toString().equals("Playing")){
+                    ((MainActivity)getActivity()).startMatch(view);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d(ROOM_KEY, "Erro ao atualizar o estado da sala");
             }
         });
 
