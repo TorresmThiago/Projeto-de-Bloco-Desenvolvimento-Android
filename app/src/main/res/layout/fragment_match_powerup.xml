@@ -81,8 +81,8 @@
         android:layout_marginTop="20dp"
         style="@style/iziThemeText"/>
 
-    <ImageView
-        android:id="@+id/powerUpChoiceScrambleIcon"
+    <ImageButton
+        android:id="@+id/powerUpChoicescrambleIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/powerUpChoiceThemeTitle"
@@ -95,15 +95,15 @@
         android:id="@+id/powerUpChoiceScrambleCharges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/powerUpChoiceScrambleIcon"
-        android:layout_alignStart="@id/powerUpChoiceScrambleIcon"
+        android:layout_below="@+id/powerUpChoicescrambleIcon"
+        android:layout_alignStart="@id/powerUpChoicescrambleIcon"
         android:layout_marginStart="15dp"
         android:text="x0"
         android:textSize="14dp"
         style="@style/iziThemeText"/>
 
-    <ImageView
-        android:id="@+id/powerUpChoiceFadeInIcon"
+    <ImageButton
+        android:id="@+id/powerUpChoicefadeinIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/powerUpChoiceThemeTitle"
@@ -116,8 +116,8 @@
         android:id="@+id/powerUpChoiceFadeInCharges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/powerUpChoiceFadeInIcon"
-        android:layout_alignStart="@id/powerUpChoiceFadeInIcon"
+        android:layout_below="@+id/powerUpChoicefadeinIcon"
+        android:layout_alignStart="@id/powerUpChoicefadeinIcon"
         android:layout_marginStart="15dp"
         android:text="x0"
         android:textSize="14dp"
@@ -127,7 +127,7 @@
         android:id="@+id/powerUpPlayerChoiceTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/powerUpChoiceFadeInIcon"
+        android:layout_below="@+id/powerUpChoicefadeinIcon"
         android:text="@string/powerUpPlayerChoiceText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"

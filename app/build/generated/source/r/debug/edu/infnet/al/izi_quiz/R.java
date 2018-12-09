@@ -3168,10 +3168,10 @@ public final class R {
     public static final int popUpLeaveMatchNegation=0x7f080087;
     public static final int powerUpChoiceContainer=0x7f080088;
     public static final int powerUpChoiceFadeInCharges=0x7f080089;
-    public static final int powerUpChoiceFadeInIcon=0x7f08008a;
-    public static final int powerUpChoiceScrambleCharges=0x7f08008b;
-    public static final int powerUpChoiceScrambleIcon=0x7f08008c;
-    public static final int powerUpChoiceThemeTitle=0x7f08008d;
+    public static final int powerUpChoiceScrambleCharges=0x7f08008a;
+    public static final int powerUpChoiceThemeTitle=0x7f08008b;
+    public static final int powerUpChoicefadeinIcon=0x7f08008c;
+    public static final int powerUpChoicescrambleIcon=0x7f08008d;
     public static final int powerUpPlayerChoiceRecycleView=0x7f08008e;
     public static final int powerUpPlayerChoiceTitle=0x7f08008f;
     public static final int progress_circular=0x7f080090;

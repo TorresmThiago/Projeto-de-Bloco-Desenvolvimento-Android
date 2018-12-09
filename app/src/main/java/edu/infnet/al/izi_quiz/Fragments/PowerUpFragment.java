@@ -9,13 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import java.util.Objects;
 
-import edu.infnet.al.izi_quiz.Activities.MainActivity;
 import edu.infnet.al.izi_quiz.Activities.MatchActivity;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.R;
@@ -24,6 +22,7 @@ public class PowerUpFragment extends Fragment{
 
     ProgressBar mProgressBar;
     String[] questionThemes = {"world", "tv", "animal"};
+    String[] powerUps = {"scramble", "fadein"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,7 +37,17 @@ public class PowerUpFragment extends Fragment{
             themeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View button) {
-                    selectOption(button, view);
+                    selectTheme(button, view);
+                }
+            });
+        }
+
+        for (int i = 0; i < powerUps.length; i++) {
+            ImageButton themeButton = view.findViewById(getResources().getIdentifier("powerUpChoice" + powerUps[i] + "Icon", "id", this.getContext().getPackageName()));
+            themeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View button) {
+                    selectPowerUp(button, view);
                 }
             });
         }
@@ -75,17 +84,29 @@ public class PowerUpFragment extends Fragment{
         fontChanger.replaceFonts((ViewGroup) this.getView());
     }
 
-    public void selectOption(View button, View view) {
+    public void selectTheme(View button, View view) {
         for (int i = 0; i < questionThemes.length; i++) {
             ImageButton themeButton = view.findViewById(getResources().getIdentifier("questionTheme" + questionThemes[i] + "Icon", "id", this.getContext().getPackageName()));
             Drawable drawable;
             if (themeButton.equals(button)){
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_theme_" + questionThemes[i] + "_selected", "drawable", this.getContext().getPackageName()));
-                themeButton.setBackground(drawable);
             } else {
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_theme_" + questionThemes[i], "drawable", this.getContext().getPackageName()));
-                themeButton.setBackground(drawable);
             }
+            themeButton.setBackground(drawable);
+        }
+    }
+
+    public void selectPowerUp(View button, View view) {
+        for (int i = 0; i < powerUps.length; i++) {
+            ImageButton powerUpButton = view.findViewById(getResources().getIdentifier("powerUpChoice" + powerUps[i] + "Icon", "id", this.getContext().getPackageName()));
+            Drawable drawable;
+            if (powerUpButton.equals(button)){
+                drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_powerup_" + powerUps[i] + "_selected", "drawable", this.getContext().getPackageName()));
+            } else {
+                drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_powerup_" + powerUps[i], "drawable", this.getContext().getPackageName()));
+            }
+            powerUpButton.setBackground(drawable);
         }
     }
 
