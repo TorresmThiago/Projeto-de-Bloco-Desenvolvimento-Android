@@ -67,12 +67,12 @@ public class MatchActivity extends FragmentActivity {
         fontChanger.replaceFonts((ViewGroup)this.findViewById(android.R.id.content));
     }
 
-    public void goToQuestionsFragment(View view) {
-        replaceFragment(questionsFragment, "replace");
+    public void goToQuestionsFragment() {
+        replaceFragment(questionsFragment);
     }
 
-    public void goToPowerUpFragment(/*View view*/) {
-        replaceFragment(powerUpFragment, "replace");
+    public void goToPowerUpFragment() {
+        replaceFragment(powerUpFragment);
     }
 
     public void returnToMenu(View view) {
@@ -81,22 +81,10 @@ public class MatchActivity extends FragmentActivity {
         startActivity(intent);
     }
 
-    private void replaceFragment(Fragment fragment, String action) {
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-
-        switch (action){
-            case "replace":
-                fragmentTransaction.replace(R.id.matchFragments, fragment);
-                break;
-            case "add":
-                fragmentTransaction.add(R.id.matchFragments, fragment);
-                break;
-            case "remove":
-                fragmentTransaction.remove(fragment);
-                break;
-            }
-
+        fragmentTransaction.replace(R.id.matchFragments, fragment);
         fragmentTransaction.commit();
     }
 }

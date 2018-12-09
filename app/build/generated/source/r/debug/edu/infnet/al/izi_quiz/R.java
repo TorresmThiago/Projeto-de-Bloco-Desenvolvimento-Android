@@ -1697,7 +1697,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -3004,28 +3004,27 @@ public final class R {
     public static final int ic_button_theme_tv_selected=0x7f06007d;
     public static final int ic_button_theme_world=0x7f06007e;
     public static final int ic_button_theme_world_selected=0x7f06007f;
-    public static final int ic_button_background_striped =0x7f060080;
-    public static final int ic_history_background=0x7f060081;
-    public static final int ic_itemlist_history_background=0x7f060082;
-    public static final int ic_main_background=0x7f060083;
-    public static final int ic_main_logo=0x7f060084;
-    public static final int ic_results_background=0x7f060085;
-    public static final int ic_results_player=0x7f060086;
-    public static final int ic_splash_background=0x7f060087;
-    public static final int notification_action_background=0x7f060088;
-    public static final int notification_bg=0x7f060089;
-    public static final int notification_bg_low=0x7f06008a;
-    public static final int notification_bg_low_normal=0x7f06008b;
-    public static final int notification_bg_low_pressed=0x7f06008c;
-    public static final int notification_bg_normal=0x7f06008d;
-    public static final int notification_bg_normal_pressed=0x7f06008e;
-    public static final int notification_icon_background=0x7f06008f;
-    public static final int notification_template_icon_bg=0x7f060090;
-    public static final int notification_template_icon_low_bg=0x7f060091;
-    public static final int notification_tile_bg=0x7f060092;
-    public static final int notify_panel_notification_icon_bg=0x7f060093;
-    public static final int tooltip_frame_dark=0x7f060094;
-    public static final int tooltip_frame_light=0x7f060095;
+    public static final int ic_history_background=0x7f060080;
+    public static final int ic_itemlist_history_background=0x7f060081;
+    public static final int ic_main_background=0x7f060082;
+    public static final int ic_main_logo=0x7f060083;
+    public static final int ic_results_background=0x7f060084;
+    public static final int ic_results_player=0x7f060085;
+    public static final int ic_splash_background=0x7f060086;
+    public static final int notification_action_background=0x7f060087;
+    public static final int notification_bg=0x7f060088;
+    public static final int notification_bg_low=0x7f060089;
+    public static final int notification_bg_low_normal=0x7f06008a;
+    public static final int notification_bg_low_pressed=0x7f06008b;
+    public static final int notification_bg_normal=0x7f06008c;
+    public static final int notification_bg_normal_pressed=0x7f06008d;
+    public static final int notification_icon_background=0x7f06008e;
+    public static final int notification_template_icon_bg=0x7f06008f;
+    public static final int notification_template_icon_low_bg=0x7f060090;
+    public static final int notification_tile_bg=0x7f060091;
+    public static final int notify_panel_notification_icon_bg=0x7f060092;
+    public static final int tooltip_frame_dark=0x7f060093;
+    public static final int tooltip_frame_light=0x7f060094;
   }
   public static final class font {
     public static final int neutra_text_bold=0x7f070000;
@@ -3167,84 +3166,92 @@ public final class R {
     public static final int popUpLeaveMatchConfirmation=0x7f080085;
     public static final int popUpLeaveMatchContainer=0x7f080086;
     public static final int popUpLeaveMatchNegation=0x7f080087;
-    public static final int questionThemeContainer =0x7f080088;
-    public static final int powerUpChoiceButton=0x7f080089;
-    public static final int powerUpOption_1=0x7f08008a;
-    public static final int powerUpOption_2=0x7f08008b;
-    public static final int powerUpOption_3=0x7f08008c;
-    public static final int progress_circular=0x7f08008d;
-    public static final int progress_horizontal=0x7f08008e;
-    public static final int questionsProgressbar =0x7f08008f;
-    public static final int questionBox=0x7f080090;
-    public static final int questionOption_1=0x7f080091;
-    public static final int questionOption_2=0x7f080092;
-    public static final int questionOption_3=0x7f080093;
-    public static final int questionOption_4=0x7f080094;
-    public static final int radio=0x7f080095;
-    public static final int right=0x7f080096;
-    public static final int right_icon=0x7f080097;
-    public static final int right_side=0x7f080098;
-    public static final int screen=0x7f080099;
-    public static final int scrollIndicatorDown=0x7f08009a;
-    public static final int scrollIndicatorUp=0x7f08009b;
-    public static final int scrollView=0x7f08009c;
-    public static final int search_badge=0x7f08009d;
-    public static final int search_bar=0x7f08009e;
-    public static final int search_button=0x7f08009f;
-    public static final int search_close_btn=0x7f0800a0;
-    public static final int search_edit_frame=0x7f0800a1;
-    public static final int search_go_btn=0x7f0800a2;
-    public static final int search_mag_icon=0x7f0800a3;
-    public static final int search_plate=0x7f0800a4;
-    public static final int search_src_text=0x7f0800a5;
-    public static final int search_voice_btn=0x7f0800a6;
-    public static final int select_dialog_listview=0x7f0800a7;
-    public static final int shareGameResultsButton=0x7f0800a8;
-    public static final int shortcut=0x7f0800a9;
-    public static final int showCustom=0x7f0800aa;
-    public static final int showHome=0x7f0800ab;
-    public static final int showTitle=0x7f0800ac;
-    public static final int spacer=0x7f0800ad;
-    public static final int splashMenuLogo=0x7f0800ae;
-    public static final int splashMenuPlayButton=0x7f0800af;
-    public static final int split_action_bar=0x7f0800b0;
-    public static final int spread=0x7f0800b1;
-    public static final int spread_inside=0x7f0800b2;
-    public static final int src_atop=0x7f0800b3;
-    public static final int src_in=0x7f0800b4;
-    public static final int src_over=0x7f0800b5;
-    public static final int standard=0x7f0800b6;
-    public static final int start=0x7f0800b7;
-    public static final int startMatchBackButton=0x7f0800b8;
-    public static final int startMatchCreateRoomButton=0x7f0800b9;
-    public static final int startMatchInsertNameInstruction=0x7f0800ba;
-    public static final int startMatchJoinRoomButton=0x7f0800bb;
-    public static final int startMatchNameInput=0x7f0800bc;
-    public static final int startMatchNameInputBackground=0x7f0800bd;
-    public static final int startMatchOptionsButton=0x7f0800be;
-    public static final int startMatchStartInstruction=0x7f0800bf;
-    public static final int status_bar_latest_event_content=0x7f0800c0;
-    public static final int submenuarrow=0x7f0800c1;
-    public static final int submit_area=0x7f0800c2;
-    public static final int tabMode=0x7f0800c3;
-    public static final int tag_transition_group=0x7f0800c4;
-    public static final int text=0x7f0800c5;
-    public static final int text2=0x7f0800c6;
-    public static final int textSpacerNoButtons=0x7f0800c7;
-    public static final int textSpacerNoTitle=0x7f0800c8;
-    public static final int time=0x7f0800c9;
-    public static final int title=0x7f0800ca;
-    public static final int titleDividerNoCustom=0x7f0800cb;
-    public static final int title_template=0x7f0800cc;
-    public static final int top=0x7f0800cd;
-    public static final int topPanel=0x7f0800ce;
-    public static final int uniform=0x7f0800cf;
-    public static final int up=0x7f0800d0;
-    public static final int useLogo=0x7f0800d1;
-    public static final int wide=0x7f0800d2;
-    public static final int withText=0x7f0800d3;
-    public static final int wrap=0x7f0800d4;
-    public static final int wrap_content=0x7f0800d5;
+    public static final int powerUpChoiceContainer=0x7f080088;
+    public static final int powerUpChoiceFadeInCharges=0x7f080089;
+    public static final int powerUpChoiceFadeInIcon=0x7f08008a;
+    public static final int powerUpChoiceScrambleCharges=0x7f08008b;
+    public static final int powerUpChoiceScrambleIcon=0x7f08008c;
+    public static final int powerUpChoiceThemeTitle=0x7f08008d;
+    public static final int powerUpPlayerChoiceRecycleView=0x7f08008e;
+    public static final int powerUpPlayerChoiceTitle=0x7f08008f;
+    public static final int progress_circular=0x7f080090;
+    public static final int progress_horizontal=0x7f080091;
+    public static final int questionBox=0x7f080092;
+    public static final int questionOption_1=0x7f080093;
+    public static final int questionOption_2=0x7f080094;
+    public static final int questionOption_3=0x7f080095;
+    public static final int questionOption_4=0x7f080096;
+    public static final int questionThemeContainer=0x7f080097;
+    public static final int questionThemeTitle=0x7f080098;
+    public static final int questionThemeanimalIcon=0x7f080099;
+    public static final int questionThemetvIcon=0x7f08009a;
+    public static final int questionThemeworldIcon=0x7f08009b;
+    public static final int questionsProgressbar=0x7f08009c;
+    public static final int radio=0x7f08009d;
+    public static final int right=0x7f08009e;
+    public static final int right_icon=0x7f08009f;
+    public static final int right_side=0x7f0800a0;
+    public static final int screen=0x7f0800a1;
+    public static final int scrollIndicatorDown=0x7f0800a2;
+    public static final int scrollIndicatorUp=0x7f0800a3;
+    public static final int scrollView=0x7f0800a4;
+    public static final int search_badge=0x7f0800a5;
+    public static final int search_bar=0x7f0800a6;
+    public static final int search_button=0x7f0800a7;
+    public static final int search_close_btn=0x7f0800a8;
+    public static final int search_edit_frame=0x7f0800a9;
+    public static final int search_go_btn=0x7f0800aa;
+    public static final int search_mag_icon=0x7f0800ab;
+    public static final int search_plate=0x7f0800ac;
+    public static final int search_src_text=0x7f0800ad;
+    public static final int search_voice_btn=0x7f0800ae;
+    public static final int select_dialog_listview=0x7f0800af;
+    public static final int shareGameResultsButton=0x7f0800b0;
+    public static final int shortcut=0x7f0800b1;
+    public static final int showCustom=0x7f0800b2;
+    public static final int showHome=0x7f0800b3;
+    public static final int showTitle=0x7f0800b4;
+    public static final int spacer=0x7f0800b5;
+    public static final int splashMenuLogo=0x7f0800b6;
+    public static final int splashMenuPlayButton=0x7f0800b7;
+    public static final int split_action_bar=0x7f0800b8;
+    public static final int spread=0x7f0800b9;
+    public static final int spread_inside=0x7f0800ba;
+    public static final int src_atop=0x7f0800bb;
+    public static final int src_in=0x7f0800bc;
+    public static final int src_over=0x7f0800bd;
+    public static final int standard=0x7f0800be;
+    public static final int start=0x7f0800bf;
+    public static final int startMatchBackButton=0x7f0800c0;
+    public static final int startMatchCreateRoomButton=0x7f0800c1;
+    public static final int startMatchInsertNameInstruction=0x7f0800c2;
+    public static final int startMatchJoinRoomButton=0x7f0800c3;
+    public static final int startMatchNameInput=0x7f0800c4;
+    public static final int startMatchNameInputBackground=0x7f0800c5;
+    public static final int startMatchOptionsButton=0x7f0800c6;
+    public static final int startMatchStartInstruction=0x7f0800c7;
+    public static final int status_bar_latest_event_content=0x7f0800c8;
+    public static final int submenuarrow=0x7f0800c9;
+    public static final int submit_area=0x7f0800ca;
+    public static final int tabMode=0x7f0800cb;
+    public static final int tag_transition_group=0x7f0800cc;
+    public static final int text=0x7f0800cd;
+    public static final int text2=0x7f0800ce;
+    public static final int textSpacerNoButtons=0x7f0800cf;
+    public static final int textSpacerNoTitle=0x7f0800d0;
+    public static final int time=0x7f0800d1;
+    public static final int title=0x7f0800d2;
+    public static final int titleDividerNoCustom=0x7f0800d3;
+    public static final int title_template=0x7f0800d4;
+    public static final int top=0x7f0800d5;
+    public static final int topPanel=0x7f0800d6;
+    public static final int uniform=0x7f0800d7;
+    public static final int up=0x7f0800d8;
+    public static final int useLogo=0x7f0800d9;
+    public static final int wide=0x7f0800da;
+    public static final int withText=0x7f0800db;
+    public static final int wrap=0x7f0800dc;
+    public static final int wrap_content=0x7f0800dd;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f090000;
@@ -3315,8 +3322,7 @@ public final class R {
     public static final int select_dialog_multichoice_material=0x7f0a0039;
     public static final int select_dialog_singlechoice_material=0x7f0a003a;
     public static final int support_simple_spinner_dropdown_item=0x7f0a003b;
-    public static final int teste=0x7f0a003c;
-    public static final int tooltip=0x7f0a003d;
+    public static final int tooltip=0x7f0a003c;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0b0000;
@@ -3391,19 +3397,22 @@ public final class R {
     public static final int optionsButtonText=0x7f0c0042;
     public static final int popUpConfirmation=0x7f0c0043;
     public static final int popUpNegation=0x7f0c0044;
-    public static final int project_id=0x7f0c0045;
-    public static final int s1=0x7f0c0046;
-    public static final int s2=0x7f0c0047;
-    public static final int s3=0x7f0c0048;
-    public static final int s4=0x7f0c0049;
-    public static final int s5=0x7f0c004a;
-    public static final int s6=0x7f0c004b;
-    public static final int s7=0x7f0c004c;
-    public static final int search_menu_title=0x7f0c004d;
-    public static final int splashMenuPlayButtonText=0x7f0c004e;
-    public static final int startMatchInsertNameInstructionText=0x7f0c004f;
-    public static final int startMatchTitleText=0x7f0c0050;
-    public static final int status_bar_notification_info_overflow=0x7f0c0051;
+    public static final int powerUpChoiceThemeTitleText=0x7f0c0045;
+    public static final int powerUpPlayerChoiceText=0x7f0c0046;
+    public static final int project_id=0x7f0c0047;
+    public static final int questionThemeTitleText=0x7f0c0048;
+    public static final int s1=0x7f0c0049;
+    public static final int s2=0x7f0c004a;
+    public static final int s3=0x7f0c004b;
+    public static final int s4=0x7f0c004c;
+    public static final int s5=0x7f0c004d;
+    public static final int s6=0x7f0c004e;
+    public static final int s7=0x7f0c004f;
+    public static final int search_menu_title=0x7f0c0050;
+    public static final int splashMenuPlayButtonText=0x7f0c0051;
+    public static final int startMatchInsertNameInstructionText=0x7f0c0052;
+    public static final int startMatchTitleText=0x7f0c0053;
+    public static final int status_bar_notification_info_overflow=0x7f0c0054;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;
@@ -7902,7 +7911,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>

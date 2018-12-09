@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBlue">
+    android:layout_height="match_parent">
 
     <ProgressBar
         android:id="@+id/questionsProgressbar"
@@ -29,11 +28,11 @@
         android:layout_alignTop="@+id/questionThemeContainer"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Vote no tema da Pergunta!"
+        android:text="@string/questionThemeTitleText"
         style="@style/iziThemeText" />
 
-    <ImageView
-        android:id="@+id/questionThemeWorldIcon"
+    <ImageButton
+        android:id="@+id/questionThemeworldIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/questionThemeTitle"
@@ -42,8 +41,8 @@
         android:layout_marginStart="20dp"
         android:background="@drawable/ic_button_theme_world"/>
 
-    <ImageView
-        android:id="@+id/questionThemeTvIcon"
+    <ImageButton
+        android:id="@+id/questionThemetvIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/questionThemeTitle"
@@ -52,8 +51,8 @@
         android:layout_marginStart="20dp"
         android:background="@drawable/ic_button_theme_tv"/>
 
-    <ImageView
-        android:id="@+id/questionThemeAnimalIcon"
+    <ImageButton
+        android:id="@+id/questionThemeanimalIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_below="@+id/questionThemeTitle"
@@ -76,7 +75,7 @@
         android:id="@+id/powerUpChoiceThemeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escolha o power up!"
+        android:text="@string/powerUpChoiceThemeTitleText"
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@+id/powerUpChoiceContainer"
         android:layout_marginTop="20dp"
@@ -129,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/powerUpChoiceFadeInIcon"
-        android:text="Agora, em quem usar?"
+        android:text="@string/powerUpPlayerChoiceText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         style="@style/iziThemeText"/>

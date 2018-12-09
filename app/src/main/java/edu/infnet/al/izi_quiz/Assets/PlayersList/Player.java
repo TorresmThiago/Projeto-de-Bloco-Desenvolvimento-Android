@@ -7,31 +7,6 @@ public class Player {
     long pwrUpScramble;
     long pwrUpFadeIn;
 
-
-    public long getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public long getPwrUpShuffle() {
-        return pwrUpScramble;
-    }
-
-    public void setPwrUpShuffle(int pwrUpShuffle) {
-        this.pwrUpScramble = pwrUpShuffle;
-    }
-
-    public long getPwrUpFadeIn() {
-        return pwrUpFadeIn;
-    }
-
-    public void setPwrUpFadeIn(int pwrUpFadeIn) {
-        this.pwrUpFadeIn = pwrUpFadeIn;
-    }
-
     public String getName() {
         return name;
     }

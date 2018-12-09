@@ -16,7 +16,7 @@ import edu.infnet.al.izi_quiz.R;
 public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.PlayerListViewHolder> {
 
     private final ArrayList<Player> playerArrayList;
-    Context context;
+    private Context context;
 
     public PlayerListAdapter(Context context, ArrayList<Player> playerArrayList) {
         this.context = context;

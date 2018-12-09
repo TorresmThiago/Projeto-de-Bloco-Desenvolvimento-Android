@@ -17,4 +17,7 @@
     <string name="NameInputHintText">Nome</string>
     <string name="startMatchInsertNameInstructionText">Escreva como quer ser reconhecido nas partidas!</string>
     <string name="createRoomStartMatchText">Começar!</string>
+    <string name="questionThemeTitleText">Vote no tema da Pergunta!</string>
+    <string name="powerUpChoiceThemeTitleText">Escolha o power up!</string>
+    <string name="powerUpPlayerChoiceText">Agora, em quem usar?</string>
 </resources>
