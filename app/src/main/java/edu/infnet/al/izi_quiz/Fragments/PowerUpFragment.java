@@ -13,17 +13,13 @@ import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 import edu.infnet.al.izi_quiz.Activities.MatchActivity;
 import edu.infnet.al.izi_quiz.Assets.FirebaseData.Votes;
@@ -52,11 +48,17 @@ public class PowerUpFragment extends Fragment{
     String[] questionThemes = {"world", "tv", "animal"};
     String[] powerUps = {"scramble", "fadein"};
 
+    TextView fadeInChargesTextView;
+    TextView scrambleChargesTextView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_match_powerup, container,false);
 
         matchActivity = (MatchActivity) getActivity();
+
+        fadeInChargesTextView = view.findViewById(R.id.powerUpChoiceFadeInCharges);
+        scrambleChargesTextView = view.findViewById(R.id.powerUpChoiceScrambleCharges);
 
         mProgressBar = view.findViewById(R.id.questionsProgressbar);
         mProgressBar.setProgress(0);
@@ -98,6 +100,9 @@ public class PowerUpFragment extends Fragment{
             });
         }
 
+        //Updates how many charges each power up has
+        updateSelectedPowerUp();
+
         //ProgressBar Animation
         ObjectAnimator animation = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 100);
         animation.setDuration(5000);
@@ -110,7 +115,7 @@ public class PowerUpFragment extends Fragment{
 
             @Override
             public void onFinish() {
-                //((MatchActivity) Objects.requireNonNull(getActivity())).goToQuestionsFragment();
+                //matchActivity.goToQuestionsFragment();
             }
         };
 
@@ -179,14 +184,22 @@ public class PowerUpFragment extends Fragment{
         }
     }
 
-    private void registerSelectedPowerUp() {
+    private void updateSelectedPowerUp() {
         final DatabaseReference playerRoot = roomRootReference.child("players").child(PLAYER_KEY);
         playerRoot.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     register(dataSnapshot);
+                    updateTextView(dataSnapshot);
                 }
+            }
+
+            private void updateTextView(DataSnapshot dataSnapshot) {
+                long fadeInCharges = (long) dataSnapshot.child("pwrUpFadeIn").getValue();
+                long scrambleCharges = (long) dataSnapshot.child("pwrUpScramble").getValue();
+                fadeInChargesTextView.setText("x" + Long.toString(fadeInCharges));
+                scrambleChargesTextView.setText("x" + Long.toString(scrambleCharges));
             }
 
             private void register(DataSnapshot dataSnapshot) {
