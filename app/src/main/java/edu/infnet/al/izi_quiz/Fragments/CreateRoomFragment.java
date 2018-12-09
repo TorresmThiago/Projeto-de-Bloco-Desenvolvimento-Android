@@ -30,6 +30,8 @@ import edu.infnet.al.izi_quiz.R;
 
 public class CreateRoomFragment extends Fragment {
 
+    public MainActivity mainActivity;
+
     private String PLAYERS_ROOT_KEY = "players";
     private String MATCHES_ROOT_KEY = "Matches";
     private String ROOM_STATE = "RoomState";
@@ -56,6 +58,7 @@ public class CreateRoomFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_create_room, container,false);
+        mainActivity = (MainActivity) getActivity();
 
         roomKeyTextView = view.findViewById(R.id.createRoomKey);
 
@@ -65,9 +68,9 @@ public class CreateRoomFragment extends Fragment {
         matchesRootReference = mRootReference.child(MATCHES_ROOT_KEY);
 
         if (getArguments() != null) {
-            ROOM_KEY = getArguments().getString("key");
-            PLAYER_NAME = getArguments().getString("name");
-            PLAYER_GUEST = getArguments().getBoolean("guest");
+            ROOM_KEY = getArguments().getString("ROOM_KEY", "");
+            PLAYER_NAME = getArguments().getString("PLAYER_NAME");
+            PLAYER_GUEST = getArguments().getBoolean("PLAYER_GUEST");
         }
 
         joinRoom();
@@ -108,7 +111,9 @@ public class CreateRoomFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null && dataSnapshot.getValue().toString().equals("Playing")){
-                    ((MainActivity)getActivity()).startMatch(view);
+                    mainActivity.PLAYER_KEY = PLAYER_KEY;
+                    mainActivity.ROOM_KEY = ROOM_KEY;
+                    mainActivity.startMatch(view);
                 }
             }
 
@@ -162,7 +167,7 @@ public class CreateRoomFragment extends Fragment {
             matchesRootReference.child(ROOM_KEY).setValue(null);
         }
 
-        ((MainActivity)getActivity()).goToStartMatchFragment(view);
+        mainActivity.goToStartMatchFragment(view);
     }
 
     private void updatePlayerList(Map<String,Object> users) {

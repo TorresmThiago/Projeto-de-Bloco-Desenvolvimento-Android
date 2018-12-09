@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -18,6 +19,11 @@ import edu.infnet.al.izi_quiz.Fragments.QuestionsFragment;
 import edu.infnet.al.izi_quiz.R;
 
 public class MatchActivity extends FragmentActivity {
+
+    boolean PLAYER_GUEST;
+    String PLAYER_KEY;
+    String ROOM_KEY;
+    int CURRENT_ROUND;
 
     Fragment questionsFragment = new QuestionsFragment();
     Fragment powerUpFragment = new PowerUpFragment();
@@ -29,6 +35,12 @@ public class MatchActivity extends FragmentActivity {
         setContentView(R.layout.activity_match);
 
         leaveMatch = new Dialog(this);
+
+        Intent intent = getIntent();
+        ROOM_KEY = intent.getStringExtra("ROOM_KEY");
+        PLAYER_KEY = intent.getStringExtra("PLAYER_KEY");
+        PLAYER_GUEST = intent.getBooleanExtra("PLAYER_GUEST", false);
+        CURRENT_ROUND = 0;
 
         goToPowerUpFragment();
     }
@@ -72,6 +84,17 @@ public class MatchActivity extends FragmentActivity {
     }
 
     public void goToPowerUpFragment() {
+
+        Bundle bundle = new Bundle();
+
+        CURRENT_ROUND = CURRENT_ROUND + 1;
+        bundle.putInt("CURRENT_ROUND", CURRENT_ROUND);
+        bundle.putString("PLAYER_KEY", PLAYER_KEY);
+        bundle.putString("ROOM_KEY", ROOM_KEY);
+
+        powerUpFragment = new PowerUpFragment();
+        powerUpFragment.setArguments(bundle);
+
         replaceFragment(powerUpFragment);
     }
 

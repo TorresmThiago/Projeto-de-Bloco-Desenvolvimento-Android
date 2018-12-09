@@ -24,10 +24,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.security.PublicKey;
+
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Fragments.CreateRoomFragment;
 import edu.infnet.al.izi_quiz.Fragments.JoinRoomFragment;
 import edu.infnet.al.izi_quiz.Fragments.MainMenuFragment;
+import edu.infnet.al.izi_quiz.Fragments.PowerUpFragment;
 import edu.infnet.al.izi_quiz.Fragments.SplashMenuFragment;
 import edu.infnet.al.izi_quiz.Fragments.StartMatchFragment;
 import edu.infnet.al.izi_quiz.R;
@@ -35,6 +38,8 @@ import edu.infnet.al.izi_quiz.R;
 public class MainActivity extends FragmentActivity {
 
     private String PLAYER_NAME;
+    public String PLAYER_KEY;
+    public String ROOM_KEY;
 
     private DatabaseReference mDatabase;
     ImageView menuBackgroundImage;
@@ -145,10 +150,9 @@ public class MainActivity extends FragmentActivity {
         boolean isNameValid = validateNameInput();
 
         if (isNameValid){
-
             Bundle bundle = new Bundle();
-            bundle.putBoolean("guest", false);
-            bundle.putString("name", PLAYER_NAME);
+            bundle.putBoolean("PLAYER_GUEST", false);
+            bundle.putString("PLAYER_NAME", PLAYER_NAME);
 
             createRoomFragment = new CreateRoomFragment();
             createRoomFragment.setArguments(bundle);
@@ -186,9 +190,9 @@ public class MainActivity extends FragmentActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null && !key.equals("") && dataSnapshot.hasChild(key)) {
                     Bundle bundle = new Bundle();
-                    bundle.putBoolean("guest", true);
-                    bundle.putString("name", PLAYER_NAME);
-                    bundle.putString("key", key);
+                    bundle.putString("PLAYER_NAME", PLAYER_NAME);
+                    bundle.putBoolean("PLAYER_GUEST", true);
+                    bundle.putString("ROOM_KEY", key);
 
                     createRoomFragment = new CreateRoomFragment();
                     createRoomFragment.setArguments(bundle);
@@ -219,6 +223,10 @@ public class MainActivity extends FragmentActivity {
 
     public void startMatch(View view) {
         Intent intent = new Intent(this, MatchActivity.class);
+
+        intent.putExtra("PLAYER_KEY", PLAYER_KEY);
+        intent.putExtra("ROOM_KEY", ROOM_KEY);
+
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         finishAffinity();
         startActivity(intent);
