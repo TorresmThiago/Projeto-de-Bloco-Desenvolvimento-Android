@@ -34,8 +34,8 @@ public class PowerUpFragment extends Fragment{
 
     public MatchActivity matchActivity;
 
-    String[] SELECTED_THEME = {"", "_votes"};
-    String SELECTED_POWERUP;
+    int SELECTED_THEME = -1;
+    int SELECTED_POWERUP = -1;
     String MATCHES_ROOT_KEY = "Matches";
 
     String ROOM_KEY;
@@ -46,6 +46,7 @@ public class PowerUpFragment extends Fragment{
     private DatabaseReference mRootReference;
     private DatabaseReference roomRootReference;
     private DatabaseReference votesRootReference;
+//    private DatabaseReference powerUpsRootReference;
 
     ProgressBar mProgressBar;
     String[] questionThemes = {"world", "tv", "animal"};
@@ -71,6 +72,7 @@ public class PowerUpFragment extends Fragment{
         mRootReference = firebaseDatabase.getReference();
         roomRootReference = mRootReference.child(MATCHES_ROOT_KEY).child(ROOM_KEY);
         votesRootReference = roomRootReference.child(CURRENT_ROUND).child("votes");
+//        powerUpsRootReference = roomRootReference.child(CURRENT_ROUND).child("powerUps");
 
         Votes votes = new Votes(0,0,0);
         votesRootReference.setValue(votes);
@@ -132,50 +134,33 @@ public class PowerUpFragment extends Fragment{
             Drawable drawable;
             if (themeButton.equals(button)){
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_theme_" + questionThemes[i] + "_selected", "drawable", this.getContext().getPackageName()));
-                SELECTED_THEME[0] = SELECTED_THEME[1];
-                SELECTED_THEME[1] = questionThemes[i];
+                SELECTED_THEME = i;
             } else {
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_theme_" + questionThemes[i], "drawable", this.getContext().getPackageName()));
             }
             themeButton.setBackground(drawable);
         }
-        registerThemeVote();
     }
 
     private void registerThemeVote() {
-        DatabaseReference unregisterVote = votesRootReference.child(SELECTED_THEME[0]);
-        unregisterVote.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                long votes = dataSnapshot.exists() ? (long) dataSnapshot.getValue() : 0;
-                unregister(votes);
-            }
-
-            private void unregister(long votes) {
-                votesRootReference.child(SELECTED_THEME[0]).setValue(votes - 1);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        DatabaseReference registerVote = votesRootReference.child(SELECTED_THEME[1]);
+        DatabaseReference registerVote = votesRootReference.child(questionThemes[SELECTED_THEME]);
         registerVote.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                long votes = dataSnapshot.exists() ? (long) dataSnapshot.getValue() : 0;
-                register(votes);
+                if(dataSnapshot.exists()){
+                    register(dataSnapshot);
+                }
             }
 
-            private void register(long votes) {
-                votesRootReference.child(SELECTED_THEME[1]).setValue(votes + 1);
+            private void register(DataSnapshot dataSnapshot) {
+                long votes = (long) dataSnapshot.getValue();
+                votesRootReference.child(questionThemes[SELECTED_THEME]).setValue(votes + 1);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Log.d(ROOM_KEY, "Problemas ao registrar o voto");
             }
         });
     }
@@ -186,7 +171,7 @@ public class PowerUpFragment extends Fragment{
             Drawable drawable;
             if (powerUpButton.equals(button)){
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_powerup_" + powerUps[i] + "_selected", "drawable", this.getContext().getPackageName()));
-                SELECTED_POWERUP = powerUps[i];
+                SELECTED_POWERUP = i;
             } else {
                 drawable = getResources().getDrawable(getResources().getIdentifier("ic_button_powerup_" + powerUps[i], "drawable", this.getContext().getPackageName()));
             }
@@ -194,4 +179,30 @@ public class PowerUpFragment extends Fragment{
         }
     }
 
+    private void registerSelectedPowerUp() {
+        final DatabaseReference playerRoot = roomRootReference.child("players").child(PLAYER_KEY);
+        playerRoot.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    register(dataSnapshot);
+                }
+            }
+
+            private void register(DataSnapshot dataSnapshot) {
+                if (SELECTED_POWERUP == 1) {
+                    long charges = (long) dataSnapshot.child("pwrUpFadeIn").getValue();
+                    playerRoot.child("pwrUpFadeIn").setValue(charges - 1);
+                } else if (SELECTED_POWERUP == 0) {
+                    long charges = (long) dataSnapshot.child("pwrUpScramble").getValue();
+                    playerRoot.child("pwrUpScramble").setValue(charges - 1);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d(ROOM_KEY, "Problemas ao cadastrar o powerUp");
+            }
+        });
+    }
 }
