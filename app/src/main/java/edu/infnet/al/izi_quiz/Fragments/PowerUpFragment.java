@@ -42,6 +42,7 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
     int SELECTED_POWERUP = -1;
     String SELECTED_PLAYER_KEY;
     String MATCHES_ROOT_KEY = "Matches";
+    boolean CAN_USE_POWERUP = true;
 
     String ROOM_KEY;
     String PLAYER_KEY;
@@ -122,7 +123,7 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
 
         //ProgressBar Animation
         ObjectAnimator animation = ObjectAnimator.ofInt(mProgressBar, "progress", 0, 100);
-        animation.setDuration(5000);
+        animation.setDuration(4000);
         animation.setInterpolator(new LinearInterpolator());
 
         //Countdown to handle right or wrong answers
@@ -134,8 +135,8 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
             public void onFinish() {
                 registerThemeVote();
                 updateSelectedPowerUp();
-                accessPlayersReference("selectPlayer");
-                //matchActivity.goToQuestionsFragment();
+                if (CAN_USE_POWERUP) { accessPlayersReference("selectPlayer");}
+                matchActivity.goToQuestionsFragment();
             }
         };
 
@@ -231,10 +232,18 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
             private void register(DataSnapshot dataSnapshot) {
                 if (SELECTED_POWERUP == 1) {
                     long charges = (long) dataSnapshot.child("pwrUpFadeIn").getValue();
-                    playerRoot.child("pwrUpFadeIn").setValue(charges - 1);
+                    if (charges == 0) {
+                        CAN_USE_POWERUP = false;
+                    } else {
+                        playerRoot.child("pwrUpFadeIn").setValue(charges - 1);
+                    }
                 } else if (SELECTED_POWERUP == 0) {
                     long charges = (long) dataSnapshot.child("pwrUpScramble").getValue();
-                    playerRoot.child("pwrUpScramble").setValue(charges - 1);
+                    if (charges == 0) {
+                        CAN_USE_POWERUP = false;
+                    } else  {
+                        playerRoot.child("pwrUpScramble").setValue(charges - 1);
+                    }
                 }
             }
 
@@ -249,7 +258,6 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
         playersRootReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("WHATFUCKINGEVER", String.valueOf(dataSnapshot.exists()));
                 if (dataSnapshot.exists() && action.equals("accessPlayersReference")){
                     updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
                 } else if (dataSnapshot.exists() && action.equals("selectPlayer")) {
