@@ -135,7 +135,7 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
             public void onFinish() {
                 registerThemeVote();
                 updateSelectedPowerUp();
-                if (CAN_USE_POWERUP) { accessPlayersReference("selectPlayer");}
+                if (CAN_USE_POWERUP && SELECTED_POWERUP != -1) { accessPlayersReference("selectPlayer");}
                 matchActivity.goToQuestionsFragment();
             }
         };

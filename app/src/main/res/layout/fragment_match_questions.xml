@@ -12,15 +12,26 @@
         android:layout_marginTop="10dp"
         style="@android:style/Widget.Material.Light.ProgressBar.Horizontal" />
 
-    <TextView
-        android:id="@+id/questionBox"
+    <ImageView
+        android:id="@+id/questionBoxContainer"
         android:layout_width="325dp"
         android:layout_height="170dp"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/questionsProgressbar"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ic_button_background_flat"
-        android:text="Mais de 50 caracteres são permitidos por pergunta, mas       não vamos exagerar também."
+        android:textAllCaps="false"
+        android:gravity="center"
+        style="@style/iziThemeText"/>
+
+    <TextView
+        android:id="@+id/questionBox"
+        android:layout_width="270dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/questionsProgressbar"
+        android:layout_centerHorizontal="true"
+        android:text=""
         android:textAllCaps="false"
         android:gravity="center"
         style="@style/iziThemeText"/>
@@ -36,7 +47,7 @@
         android:textSize="21sp"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background_striped"
-        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:text=""
         android:onClick="selectOption"
         style="@style/iziThemeText"/>
 
@@ -49,7 +60,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/ic_button_background_striped"
         android:onClick="selectOption"
-        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:text=""
         android:textAllCaps="false"
         style="@style/iziThemeText"/>
 
@@ -63,7 +74,7 @@
         android:textColor="@color/colorWhite"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background_striped"
-        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:text=""
         android:onClick="selectOption"
         style="@style/iziThemeText"/>
 
@@ -76,7 +87,7 @@
         android:layout_below="@+id/questionOption_3"
         android:textAllCaps="false"
         android:background="@drawable/ic_button_background_striped"
-        android:text="Em torno de 50 caracteres são permitidos por resposta"
+        android:text=""
         android:onClick="selectOption"
         style="@style/iziThemeText"/>
 

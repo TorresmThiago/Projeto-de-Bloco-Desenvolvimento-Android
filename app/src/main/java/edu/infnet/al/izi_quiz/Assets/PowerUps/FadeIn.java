@@ -9,7 +9,7 @@ public class FadeIn {
 
     public void fadeInTextView (TextView textView) {
         textView.startAnimation(fadeIn);
-        fadeIn.setDuration(1000);
+        fadeIn.setDuration(5000);
         fadeIn.setFillAfter(true);
     }
 }

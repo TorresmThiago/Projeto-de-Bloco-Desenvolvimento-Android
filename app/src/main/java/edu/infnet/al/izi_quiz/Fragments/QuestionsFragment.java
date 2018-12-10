@@ -23,7 +23,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.Map;
+import java.util.Random;
 
 import edu.infnet.al.izi_quiz.Activities.MatchActivity;
 import edu.infnet.al.izi_quiz.Activities.ResultsActivity;
@@ -39,19 +41,24 @@ public class QuestionsFragment extends Fragment {
     TextView question;
 
     ProgressBar mProgressBar;
-    Boolean GAME_ON;
     int correct;
     String idButtonSelected;
 
     String ROOM_KEY;
     String PLAYER_KEY;
-    String CURRENT_ROUND;
+    int CURRENT_ROUND;
+
+    Boolean GAME_ON;
+    String SELECTED_THEME;
+
+    ArrayList<Button> options = new ArrayList<>();
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference mRootReference;
     private DatabaseReference roomRootReference;
     private DatabaseReference votesRootReference;
     private DatabaseReference powerUpsReference;
+    private DatabaseReference questionsRootReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -63,14 +70,13 @@ public class QuestionsFragment extends Fragment {
         if (getArguments() != null) {
             ROOM_KEY = getArguments().getString("ROOM_KEY");
             PLAYER_KEY = getArguments().getString("PLAYER_KEY");
-            CURRENT_ROUND = "Round_" + getArguments().getInt("CURRENT_ROUND");
+            CURRENT_ROUND = getArguments().getInt("CURRENT_ROUND");
         }
 
         //Firebase
         firebaseDatabase = FirebaseDatabase.getInstance();
         mRootReference = firebaseDatabase.getReference();
         roomRootReference = mRootReference.child("Matches").child(ROOM_KEY);
-        votesRootReference = roomRootReference.child(CURRENT_ROUND).child("votes");
 
         mProgressBar = view.findViewById(R.id.questionsProgressbar);
         mProgressBar.setProgress(0);
@@ -78,7 +84,41 @@ public class QuestionsFragment extends Fragment {
         GAME_ON = true;
         correct =  1 + (int) (Math.random() * 4);
 
-        powerUpsReference = roomRootReference.child(CURRENT_ROUND).child("powerUps").child(PLAYER_KEY);
+        votesRootReference = roomRootReference.child("Round_" + CURRENT_ROUND).child("votes");
+        votesRootReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChildren()){
+                    countVotes(dataSnapshot);
+                }
+            }
+
+            private void countVotes(DataSnapshot dataSnapshot) {
+                String[] themes = {"world, tv, animal"};
+                long world = dataSnapshot.child("world").exists() ? (long) dataSnapshot.child("world").getValue() : 0;
+                long tv = dataSnapshot.child("tv").exists() ? (long) dataSnapshot.child("tv").getValue() : 0;
+                long animal = dataSnapshot.child("animal").exists() ? (long) dataSnapshot.child("animal").getValue() : 0;
+                if (world > tv && world > animal) {
+                    SELECTED_THEME = "world";
+                } else if (tv > world && tv > animal) {
+                    SELECTED_THEME = "tv";
+                }else if (animal > world && animal > tv){
+                    SELECTED_THEME = "animal";
+                }else {
+                    SELECTED_THEME = "animal";
+                }
+
+                setQuestion();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d(ROOM_KEY, "Erro ao executar powerUps");
+            }
+        });
+
+        powerUpsReference = roomRootReference.child("Round_" + CURRENT_ROUND).child("powerUps").child(PLAYER_KEY);
         powerUpsReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -114,6 +154,7 @@ public class QuestionsFragment extends Fragment {
                     selectOption(button, view);
                 }
             });
+            options.add(button);
         }
 
         //ProgressBar Animation
@@ -133,7 +174,7 @@ public class QuestionsFragment extends Fragment {
 
             @Override
             public void onFinish() {
-                if (CURRENT_ROUND.equals("Round_10")) {
+                if (CURRENT_ROUND == 10) {
                     goToResults();
                 } else {
                     ((MatchActivity) getActivity()).goToPowerUpFragment();
@@ -152,6 +193,40 @@ public class QuestionsFragment extends Fragment {
 
         FontChangeCrawler fontChanger = new FontChangeCrawler(getContext().getAssets(), "fonts/neutra_text_bold.OTF");
         fontChanger.replaceFonts((ViewGroup) this.getView());
+    }
+
+    private void setQuestion() {
+        questionsRootReference = mRootReference.child("Questions").child(SELECTED_THEME).child("question_" + CURRENT_ROUND);
+        questionsRootReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    setQuestionValues(dataSnapshot);
+                }
+            }
+
+            private void setQuestionValues(DataSnapshot dataSnapshot) {
+                String questionText = (String) dataSnapshot.child("question").getValue();
+                question.setText(questionText);
+                int current = 1;
+                for (int i = 1; i <= 4; i++) {
+                    Button button = options.get(i - 1);
+                    String value;
+                    if (i == correct){
+                        value = (String) dataSnapshot.child("correct").getValue();
+                    } else {
+                        value = (String) dataSnapshot.child("wrong_" + current).getValue();
+                        current++;
+                    }
+                    button.setText(value);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void selectOption(View button, View view) {
