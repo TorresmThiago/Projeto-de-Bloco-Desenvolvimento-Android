@@ -5,22 +5,22 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class Shuffle {
+public class Scramble {
 
-    public void shuffleTextView (TextView textView) {
+    public void scrambleTextView(TextView textView) {
 
         String text = textView.getText().toString();
         String[] words = text.split(" ");
 
         for (int i = 0; i < words.length; i++) {
-            words[i] = shuffleWord(words[i]);
+            words[i] = scrambleWord(words[i]);
         }
 
         text =  TextUtils.join(" ", words);
         textView.setText(text);
     }
 
-    public String shuffleWord(String word) {
+    public String scrambleWord(String word) {
         Random rnd = new Random();
         char[] letters = word.toCharArray();
 

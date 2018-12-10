@@ -20,7 +20,6 @@ import edu.infnet.al.izi_quiz.R;
 
 public class MatchActivity extends FragmentActivity {
 
-    boolean PLAYER_GUEST;
     String PLAYER_KEY;
     String ROOM_KEY;
     int CURRENT_ROUND;
@@ -39,7 +38,6 @@ public class MatchActivity extends FragmentActivity {
         Intent intent = getIntent();
         ROOM_KEY = intent.getStringExtra("ROOM_KEY");
         PLAYER_KEY = intent.getStringExtra("PLAYER_KEY");
-        PLAYER_GUEST = intent.getBooleanExtra("PLAYER_GUEST", false);
         CURRENT_ROUND = 0;
 
         goToPowerUpFragment();
@@ -80,6 +78,15 @@ public class MatchActivity extends FragmentActivity {
     }
 
     public void goToQuestionsFragment() {
+        Bundle bundle = new Bundle();
+
+        bundle.putInt("CURRENT_ROUND", CURRENT_ROUND);
+        bundle.putString("PLAYER_KEY", PLAYER_KEY);
+        bundle.putString("ROOM_KEY", ROOM_KEY);
+
+        questionsFragment = new QuestionsFragment();
+        questionsFragment.setArguments(bundle);
+
         replaceFragment(questionsFragment);
     }
 

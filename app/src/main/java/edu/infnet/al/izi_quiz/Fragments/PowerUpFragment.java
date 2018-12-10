@@ -270,7 +270,6 @@ public class PowerUpFragment extends Fragment implements PlayerListItemClick{
                     if (!entry.getKey().equals(PLAYER_KEY)){
                         Map singleUser = (Map) entry.getValue();
                         if (singleUser.get("key").equals(SELECTED_PLAYER_KEY)){
-                            Log.d("WHA", "They're equals");
                             powerUpsRootReference.child(SELECTED_PLAYER_KEY).child(powerUps[SELECTED_POWERUP]).setValue(true);
                         }
                     }
