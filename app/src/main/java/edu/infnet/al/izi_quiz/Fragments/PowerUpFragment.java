@@ -31,14 +31,16 @@ import edu.infnet.al.izi_quiz.Assets.FirebaseData.Votes;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.Player;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListAdapter;
+import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListItemClick;
 import edu.infnet.al.izi_quiz.R;
 
-public class PowerUpFragment extends Fragment{
+public class PowerUpFragment extends Fragment implements PlayerListItemClick{
 
     public MatchActivity matchActivity;
 
     int SELECTED_THEME = -1;
     int SELECTED_POWERUP = -1;
+    String SELECTED_PLAYER_KEY;
     String MATCHES_ROOT_KEY = "Matches";
 
     String ROOM_KEY;
@@ -49,7 +51,8 @@ public class PowerUpFragment extends Fragment{
     private DatabaseReference mRootReference;
     private DatabaseReference roomRootReference;
     private DatabaseReference votesRootReference;
-//    private DatabaseReference powerUpsRootReference;
+    private DatabaseReference playersRootReference;
+    private DatabaseReference powerUpsRootReference;
 
     private ArrayList<Player> playerList = new ArrayList<>();
     private PlayerListAdapter playerListAdapter;
@@ -85,7 +88,7 @@ public class PowerUpFragment extends Fragment{
         mRootReference = firebaseDatabase.getReference();
         roomRootReference = mRootReference.child(MATCHES_ROOT_KEY).child(ROOM_KEY);
         votesRootReference = roomRootReference.child(CURRENT_ROUND).child("votes");
-//        powerUpsRootReference = roomRootReference.child(CURRENT_ROUND).child("powerUps");
+        powerUpsRootReference = roomRootReference.child(CURRENT_ROUND).child("powerUps");
 
         Votes votes = new Votes(0,0,0);
         votesRootReference.setValue(votes);
@@ -111,34 +114,8 @@ public class PowerUpFragment extends Fragment{
             });
         }
 
-        DatabaseReference playersRootReference = mRootReference.child("Matches").child(ROOM_KEY).child("players");
-        playersRootReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getValue() != null){
-                    updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
-                }
-            }
-
-            private void updatePlayerList(Map<String, Object> users) {
-                playerList = new ArrayList<>();
-
-                for(Map.Entry<String, Object> entry : users.entrySet()) {
-                    if (!entry.getKey().equals(PLAYER_KEY)){
-                        Map singleUser = (Map) entry.getValue();
-                        Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"));
-                        playerList.add(newPlayer);
-                    }
-                }
-
-                updateRecycleView();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.d(ROOM_KEY, "Erro ao atualizar a lista de jogadores");
-            }
-        });
+        playersRootReference = mRootReference.child("Matches").child(ROOM_KEY).child("players");
+        accessPlayersReference("accessPlayersReference");
 
         //Updates how many charges each power up has
         updateSelectedPowerUp();
@@ -157,6 +134,7 @@ public class PowerUpFragment extends Fragment{
             public void onFinish() {
                 registerThemeVote();
                 updateSelectedPowerUp();
+                accessPlayersReference("selectPlayer");
                 //matchActivity.goToQuestionsFragment();
             }
         };
@@ -166,7 +144,6 @@ public class PowerUpFragment extends Fragment{
 
         //RecycleView
         mRecyclerView = view.findViewById(R.id.powerUpPlayerChoiceRecycleView);
-        playerList.add(new Player("Teste", 0, 0, 0 ));
         updateRecycleView();
 
         return view;
@@ -268,9 +245,61 @@ public class PowerUpFragment extends Fragment{
         });
     }
 
+    private void accessPlayersReference(final String action) {
+        playersRootReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Log.d("WHATFUCKINGEVER", String.valueOf(dataSnapshot.exists()));
+                if (dataSnapshot.exists() && action.equals("accessPlayersReference")){
+                    updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
+                } else if (dataSnapshot.exists() && action.equals("selectPlayer")) {
+                    selectPlayer((Map<String,Object>) dataSnapshot.getValue());
+                }
+            }
+
+            private void selectPlayer(Map<String, Object> users) {
+                for(Map.Entry<String, Object> entry : users.entrySet()) {
+                    if (!entry.getKey().equals(PLAYER_KEY)){
+                        Map singleUser = (Map) entry.getValue();
+                        if (singleUser.get("key").equals(SELECTED_PLAYER_KEY)){
+                            Log.d("WHA", "They're equals");
+                            powerUpsRootReference.child(SELECTED_PLAYER_KEY).child(powerUps[SELECTED_POWERUP]).setValue(true);
+                        }
+                    }
+                }
+            }
+
+            private void updatePlayerList(Map<String, Object> users) {
+                playerList = new ArrayList<>();
+                for(Map.Entry<String, Object> entry : users.entrySet()) {
+                    if (!entry.getKey().equals(PLAYER_KEY)){
+                        Map singleUser = (Map) entry.getValue();
+                        Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"), (String) singleUser.get("key"));
+                        playerList.add(newPlayer);
+                    }
+                }
+                updateRecycleView();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d(ROOM_KEY, "Erro ao atualizar a lista de jogadores");
+            }
+        });
+    }
+
     private void updateRecycleView() {
-        playerListAdapter = new PlayerListAdapter(this.getContext(), playerList);
+        playerListAdapter = new PlayerListAdapter(this.getContext(), playerList,this);
         mRecyclerView.setAdapter(playerListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+    }
+
+    @Override
+    public void onPlayerClick(Object object) {
+        Player player = (Player) object;
+        SELECTED_PLAYER_KEY = player.getKey();
+        player.setName(player.getName() + " - SELECIONADO");
+
+        updateRecycleView();
     }
 }

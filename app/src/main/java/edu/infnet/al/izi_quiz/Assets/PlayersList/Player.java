@@ -2,10 +2,19 @@ package edu.infnet.al.izi_quiz.Assets.PlayersList;
 
 public class Player {
 
+    public String key;
     public String name;
     public long points;
     public long pwrUpScramble;
     public long pwrUpFadeIn;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
 
 
     public long getPoints() {
@@ -40,10 +49,11 @@ public class Player {
         this.name = name;
     }
 
-    public Player(String name, long points, long pwrUpScramble, long pwrUpFadeIn) {
+    public Player(String name, long points, long pwrUpScramble, long pwrUpFadeIn, String key) {
+        this.key = key;
         this.name = name;
         this.points = points;
-        this.pwrUpScramble = pwrUpScramble;
         this.pwrUpFadeIn = pwrUpFadeIn;
+        this.pwrUpScramble = pwrUpScramble;
     }
 }

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,9 +27,10 @@ import edu.infnet.al.izi_quiz.Activities.MainActivity;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.Player;
 import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListAdapter;
+import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListItemClick;
 import edu.infnet.al.izi_quiz.R;
 
-public class CreateRoomFragment extends Fragment {
+public class CreateRoomFragment extends Fragment implements PlayerListItemClick{
 
     public MainActivity mainActivity;
 
@@ -152,9 +154,9 @@ public class CreateRoomFragment extends Fragment {
             matchesRootReference.child(ROOM_KEY).child(ROOM_STATE).setValue("Open");
         }
 
-        Player player = new Player(PLAYER_NAME, 0  ,3 ,3);
-        playerList.add(player);
         PLAYER_KEY = mRootReference.push().getKey();
+        Player player = new Player(PLAYER_NAME, 0  ,3 ,3, PLAYER_KEY);
+        playerList.add(player);
 
         matchesRootReference.child(ROOM_KEY).child(PLAYERS_ROOT_KEY).child(PLAYER_KEY).setValue(player);
         roomKeyTextView.setText(ROOM_KEY);
@@ -175,7 +177,7 @@ public class CreateRoomFragment extends Fragment {
 
         for(Map.Entry<String, Object> entry : users.entrySet()) {
             Map singleUser = (Map) entry.getValue();
-            Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"));
+            Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"), (String) singleUser.get("key"));
             playerList.add(newPlayer);
         }
 
@@ -184,7 +186,7 @@ public class CreateRoomFragment extends Fragment {
     }
 
     private void updateRecycleView() {
-        playerListAdapter = new PlayerListAdapter(this.getContext(), playerList);
+        playerListAdapter = new PlayerListAdapter(this.getContext(), playerList, this);
         mRecyclerView.setAdapter(playerListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
@@ -195,4 +197,8 @@ public class CreateRoomFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onPlayerClick(Object object) {
+
+    }
 }

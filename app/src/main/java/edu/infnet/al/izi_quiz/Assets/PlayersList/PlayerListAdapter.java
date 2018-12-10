@@ -15,10 +15,12 @@ import edu.infnet.al.izi_quiz.R;
 
 public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.PlayerListViewHolder> {
 
+    public static PlayerListItemClick playerListItemClick;
     private final ArrayList<Player> playerArrayList;
     private Context context;
 
-    public PlayerListAdapter(Context context, ArrayList<Player> playerArrayList) {
+    public PlayerListAdapter(Context context, ArrayList<Player> playerArrayList, PlayerListItemClick playerListItemClick) {
+        this.playerListItemClick = playerListItemClick;
         this.context = context;
         this.playerArrayList = playerArrayList;
     }
@@ -50,12 +52,20 @@ public class PlayerListAdapter extends RecyclerView.Adapter<PlayerListAdapter.Pl
         ImageView playerListBackground;
         TextView playerListName;
 
-        public PlayerListViewHolder(View itemView) {
+        public PlayerListViewHolder(final View itemView) {
             super(itemView);
 
             this.playerListBackground = itemView.findViewById(R.id.ItemListBackground);
             this.playerListName = itemView.findViewById(R.id.ItemListName);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    playerListItemClick.onPlayerClick(playerArrayList.get(getLayoutPosition()));
+                }
+            });
         }
+
     }
 
 }
