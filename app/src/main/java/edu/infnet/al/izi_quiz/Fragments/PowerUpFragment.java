@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,9 +23,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 import edu.infnet.al.izi_quiz.Activities.MatchActivity;
 import edu.infnet.al.izi_quiz.Assets.FirebaseData.Votes;
 import edu.infnet.al.izi_quiz.Assets.FontChangeCrawler;
+import edu.infnet.al.izi_quiz.Assets.PlayersList.Player;
+import edu.infnet.al.izi_quiz.Assets.PlayersList.PlayerListAdapter;
 import edu.infnet.al.izi_quiz.R;
 
 public class PowerUpFragment extends Fragment{
@@ -43,6 +50,10 @@ public class PowerUpFragment extends Fragment{
     private DatabaseReference roomRootReference;
     private DatabaseReference votesRootReference;
 //    private DatabaseReference powerUpsRootReference;
+
+    private ArrayList<Player> playerList = new ArrayList<>();
+    private PlayerListAdapter playerListAdapter;
+    private RecyclerView mRecyclerView;
 
     ProgressBar mProgressBar;
     String[] questionThemes = {"world", "tv", "animal"};
@@ -100,6 +111,35 @@ public class PowerUpFragment extends Fragment{
             });
         }
 
+        DatabaseReference playersRootReference = mRootReference.child("Matches").child(ROOM_KEY).child("players");
+        playersRootReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.getValue() != null){
+                    updatePlayerList((Map<String,Object>) dataSnapshot.getValue());
+                }
+            }
+
+            private void updatePlayerList(Map<String, Object> users) {
+                playerList = new ArrayList<>();
+
+                for(Map.Entry<String, Object> entry : users.entrySet()) {
+                    if (!entry.getKey().equals(PLAYER_KEY)){
+                        Map singleUser = (Map) entry.getValue();
+                        Player newPlayer = new Player((String) singleUser.get("name"), (long) singleUser.get("points"),(long) singleUser.get("pwrUpScramble"),(long) singleUser.get("pwrUpFadeIn"));
+                        playerList.add(newPlayer);
+                    }
+                }
+
+                updateRecycleView();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.d(ROOM_KEY, "Erro ao atualizar a lista de jogadores");
+            }
+        });
+
         //Updates how many charges each power up has
         updateSelectedPowerUp();
 
@@ -115,12 +155,19 @@ public class PowerUpFragment extends Fragment{
 
             @Override
             public void onFinish() {
+                registerThemeVote();
+                updateSelectedPowerUp();
                 //matchActivity.goToQuestionsFragment();
             }
         };
 
         mCountDownTimer.start();
         animation.start();
+
+        //RecycleView
+        mRecyclerView = view.findViewById(R.id.powerUpPlayerChoiceRecycleView);
+        playerList.add(new Player("Teste", 0, 0, 0 ));
+        updateRecycleView();
 
         return view;
     }
@@ -148,26 +195,28 @@ public class PowerUpFragment extends Fragment{
     }
 
     private void registerThemeVote() {
-        DatabaseReference registerVote = votesRootReference.child(questionThemes[SELECTED_THEME]);
-        registerVote.addListenerForSingleValueEvent(new ValueEventListener() {
+        if (SELECTED_THEME != -1) {
+            DatabaseReference registerVote = votesRootReference.child(questionThemes[SELECTED_THEME]);
+            registerVote.addListenerForSingleValueEvent(new ValueEventListener() {
 
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    register(dataSnapshot);
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        register(dataSnapshot);
+                    }
                 }
-            }
 
-            private void register(DataSnapshot dataSnapshot) {
-                long votes = (long) dataSnapshot.getValue();
-                votesRootReference.child(questionThemes[SELECTED_THEME]).setValue(votes + 1);
-            }
+                private void register(DataSnapshot dataSnapshot) {
+                    long votes = (long) dataSnapshot.getValue();
+                    votesRootReference.child(questionThemes[SELECTED_THEME]).setValue(votes + 1);
+                }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.d(ROOM_KEY, "Problemas ao registrar o voto");
-            }
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.d(ROOM_KEY, "Problemas ao registrar o voto");
+                }
+            });
+        }
     }
 
     public void selectPowerUp(View button, View view) {
@@ -217,5 +266,11 @@ public class PowerUpFragment extends Fragment{
                 Log.d(ROOM_KEY, "Problemas ao cadastrar o powerUp");
             }
         });
+    }
+
+    private void updateRecycleView() {
+        playerListAdapter = new PlayerListAdapter(this.getContext(), playerList);
+        mRecyclerView.setAdapter(playerListAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
     }
 }
