@@ -78,7 +78,7 @@ android:layout_height="match_parent">
         android:textSize="18dp"
         android:textColor="@color/colorWhite"
         android:textAllCaps="false"
-        android:background="@drawable/ic_button_background_striped"
+        android:background="@drawable/ic_button_startgame"
         android:onClick="startMatch"/>
 
 </RelativeLayout>

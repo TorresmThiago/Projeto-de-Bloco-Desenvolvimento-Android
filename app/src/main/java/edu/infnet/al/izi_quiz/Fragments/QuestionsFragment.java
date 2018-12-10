@@ -24,8 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Random;
 
 import edu.infnet.al.izi_quiz.Activities.MatchActivity;
 import edu.infnet.al.izi_quiz.Activities.ResultsActivity;
@@ -59,6 +57,7 @@ public class QuestionsFragment extends Fragment {
     private DatabaseReference votesRootReference;
     private DatabaseReference powerUpsReference;
     private DatabaseReference questionsRootReference;
+    private DatabaseReference playerRootReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -77,6 +76,7 @@ public class QuestionsFragment extends Fragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         mRootReference = firebaseDatabase.getReference();
         roomRootReference = mRootReference.child("Matches").child(ROOM_KEY);
+        playerRootReference = roomRootReference.child("players").child(PLAYER_KEY);
 
         mProgressBar = view.findViewById(R.id.questionsProgressbar);
         mProgressBar.setProgress(0);
@@ -94,7 +94,6 @@ public class QuestionsFragment extends Fragment {
             }
 
             private void countVotes(DataSnapshot dataSnapshot) {
-                String[] themes = {"world, tv, animal"};
                 long world = dataSnapshot.child("world").exists() ? (long) dataSnapshot.child("world").getValue() : 0;
                 long tv = dataSnapshot.child("tv").exists() ? (long) dataSnapshot.child("tv").getValue() : 0;
                 long animal = dataSnapshot.child("animal").exists() ? (long) dataSnapshot.child("animal").getValue() : 0;
@@ -245,14 +244,39 @@ public class QuestionsFragment extends Fragment {
             Button otherButtons = view.findViewById(getResources().getIdentifier("questionOption_" + i, "id", this.getContext().getPackageName()));
             if (i == correct){
                 otherButtons.setBackgroundResource(R.drawable.ic_button_answer_right);
+                countPointsUp();
             } else if (("questionOption_" + i).equals(idButtonSelected)){
                 otherButtons.setBackgroundResource(R.drawable.ic_button_answer_wrong);
             }
         }
     }
 
+    private void countPointsUp() {
+        playerRootReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child("points").exists()){
+                    count(dataSnapshot);
+                }
+            }
+
+            private void count(DataSnapshot dataSnapshot) {
+                long points = (long) dataSnapshot.child("points").getValue();
+                playerRootReference.child("points").setValue(points + 1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
     public void goToResults() {
         Intent intent = new Intent(this.getContext(), ResultsActivity.class);
+
+        intent.putExtra("ROOM_KEY", ROOM_KEY);
+
         startActivity(intent);
     }
 
